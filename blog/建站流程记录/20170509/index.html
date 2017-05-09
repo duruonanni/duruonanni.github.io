@@ -79,8 +79,6 @@
 
 
 
-  
-
 
   <link rel="alternate" href="/atom.xml" title="杜若喃呢" type="application/atom+xml" />
 
@@ -100,7 +98,7 @@
 <meta property="og:url" content="http://duruonanni.github.io/blog/建站流程记录/20170509/index.html">
 <meta property="og:site_name" content="杜若喃呢">
 <meta property="og:description" content="写在之前的话本文是笔者在搭建本站时收集记录的建站过程.在搭建过程中,由于相关知识的匮缺,看不懂一些教程中省略的部分或是一些专业术语,走了一些弯路.但磕绊终究是成功建好了本站.也有了此小文.本文适用于对Hexo建站感兴趣但畏惧专业术语的非科班出身同学.我其中对一些网上多数教程稍省略不清楚的地方进行了解释. 希望能帮助到需要的人.由于笔者也只是前端和建站的初学者,多有不足之处,还望批评指正.   本文">
-<meta property="og:updated_time" content="2017-05-08T16:20:40.803Z">
+<meta property="og:updated_time" content="2017-05-09T02:51:33.282Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo建站流程">
 <meta name="twitter:description" content="写在之前的话本文是笔者在搭建本站时收集记录的建站过程.在搭建过程中,由于相关知识的匮缺,看不懂一些教程中省略的部分或是一些专业术语,走了一些弯路.但磕绊终究是成功建好了本站.也有了此小文.本文适用于对Hexo建站感兴趣但畏惧专业术语的非科班出身同学.我其中对一些网上多数教程稍省略不清楚的地方进行了解释. 希望能帮助到需要的人.由于笔者也只是前端和建站的初学者,多有不足之处,还望批评指正.   本文">
@@ -424,7 +422,7 @@
 <p>说明: </p>
 <ul>
 <li>以上<code>Node.js</code>是Hexo需要的运行环境;<code>git</code>用于网站的发布与托管.下载后全部按照默认要求安装即可.<br>ATT: </li>
-<li>若git安装完成后在文件管理器中右键无<code>Git bash here</code>选项,参考此教程:<em><a href="http://blog.csdn.net/u014527912/article/details/51723735" title="右键添加gitbash" target="_blank" rel="external">右键-添加Git Bash Here菜单</a></em>  </li>
+<li>若git安装完成后在<em>文件管理器</em>中右键无<code>Git bash here</code>选项,参考此教程:<em><a href="http://blog.csdn.net/u014527912/article/details/51723735" title="右键添加gitbash" target="_blank" rel="external">右键-添加Git Bash Here菜单</a></em>  </li>
 </ul>
 </blockquote>
 <h2 id="二-Hexo的安装和blog文件夹的初始化"><a href="#二-Hexo的安装和blog文件夹的初始化" class="headerlink" title="二. Hexo的安装和blog文件夹的初始化"></a>二. Hexo的安装和blog文件夹的初始化</h2><h3 id="1-安装hexo"><a href="#1-安装hexo" class="headerlink" title="1) 安装hexo"></a>1) 安装hexo</h3><blockquote>
@@ -443,7 +441,7 @@
 <h3 id="3-在git-bash中选定blog文件夹"><a href="#3-在git-bash中选定blog文件夹" class="headerlink" title="3) 在git bash中选定blog文件夹"></a>3) 在<code>git bash</code>中选定<code>blog</code>文件夹</h3><blockquote>
 <ul>
 <li>选定方法一: 在该文件管理器中的该文件夹内鼠标右键点击<em>Git Bash Here</em>  </li>
-<li>选定方法二: 在git Bash中输入文件夹的绝对路径,eg:<code>cd c:/cusumerfiles/blog</code>(cd [blog文件夹位置])  </li>
+<li>选定方法二: 在git bash中输入文件夹的绝对路径,eg:<code>cd c:/cusumerfiles/blog</code>( cd [blog文件夹位置] )  </li>
 </ul>
 </blockquote>
 <h3 id="4-初始化blog文件夹"><a href="#4-初始化blog文件夹" class="headerlink" title="4) 初始化blog文件夹"></a>4) 初始化<code>blog</code>文件夹</h3><blockquote>
@@ -456,25 +454,26 @@
 <h3 id="5-安装npm"><a href="#5-安装npm" class="headerlink" title="5) 安装npm"></a>5) 安装npm</h3><blockquote>
 <p>方法:    </p>
 <ul>
-<li>在<code>git bash</code>中输入: <code>npm install</code>  <pre><code>至此,Hexo安装完成  
-</code></pre></li>
+<li>在<code>git bash</code>中输入: <code>npm install</code>  </li>
 </ul>
 </blockquote>
-<h3 id="6-在本地预览博客效果"><a href="#6-在本地预览博客效果" class="headerlink" title="6) 在本地预览博客效果"></a>6) 在本地预览博客效果</h3><blockquote>
+<pre><code>至此,Hexo安装完成  
+</code></pre><h3 id="6-在本地预览博客效果"><a href="#6-在本地预览博客效果" class="headerlink" title="6) 在本地预览博客效果"></a>6) 在本地预览博客效果</h3><blockquote>
 <p>方法:    </p>
 <ul>
 <li>在<code>git bash</code>中输入: <code>hexo server</code></li>
-<li>在浏览器中打开 <strong> <a href="http://loacalhost:4000" target="_blank" rel="external">http://loacalhost:4000</a> </strong> 即可预览默认博客页面,在git Bash中输入ctrl+c退出预览</li>
+<li>在浏览器中打开 <strong> <a href="http://loacalhost:4000" target="_blank" rel="external">http://loacalhost:4000</a> </strong> 即可预览默认博客页面</li>
+<li>在git Bash中输入<em>ctrl+c</em>退出预览</li>
 </ul>
 </blockquote>
-<h2 id="三-Hexo的基本配置"><a href="#三-Hexo的基本配置" class="headerlink" title="三. Hexo的基本配置"></a>三. Hexo的基本配置</h2><p>此配置涉及到网址,网站名称,拥有者,文章发布形式等信息.</p>
+<h2 id="三-Hexo的基本配置"><a href="#三-Hexo的基本配置" class="headerlink" title="三. Hexo的基本配置"></a>三. Hexo的基本配置</h2><p>此配置涉及到<strong>网址</strong>,<strong>网站名称</strong>,<strong>拥有者</strong>,<strong>文章发布形式</strong>等信息.</p>
 <blockquote>
 <p>方法:</p>
 <ul>
 <li>在Blog根目录下,找到_config.yml文件.使用文本编辑器打开(推荐使用<a href="https://notepad-plus-plus.org" title="notepad++" target="_blank" rel="external">notepad++</a>或者<a href="http://www.sublimetext.com/" title="sublime" target="_blank" rel="external">sublime Text 3</a>软件)进行设置,具体方法见本站:<a href="https://duruonanni.github.io/blog/Hexo站点设置/20170508/" title="Hexo站点设置">Hexo站点设置</a></li>
 </ul>
 </blockquote>
-<h2 id="四-Hexo主题设置"><a href="#四-Hexo主题设置" class="headerlink" title="四.    Hexo主题设置"></a>四.    Hexo主题设置</h2><p>Hexo的特点就是拥有许多或清新或绚丽的主题,选择一款中意的主题,进行一些简单的设置,就能让博客更加赏心悦目.以下是主题设置的方法,本文以<code>NexT</code>主题为例设置:  </p>
+<h2 id="四-Hexo主题设置"><a href="#四-Hexo主题设置" class="headerlink" title="四.    Hexo主题设置"></a>四.    Hexo主题设置</h2><p>Hexo的特点就是拥有许多或清新或绚丽的主题(自带的主题名称叫<code>landscape</code>),选择一款中意的主题,进行一些简单的设置,就能让博客更加赏心悦目.以下是主题设置的方法,本文以<code>NexT</code>主题为例设置:  </p>
 <h3 id="1-进入Hexo官方主题商店预览-选定喜欢的主题"><a href="#1-进入Hexo官方主题商店预览-选定喜欢的主题" class="headerlink" title="1) 进入Hexo官方主题商店预览,选定喜欢的主题"></a>1) 进入<a href="https://hexo.io/themes/" title="Hexo官方主题商店" target="_blank" rel="external">Hexo官方主题商店</a>预览,选定喜欢的主题</h3><blockquote>
 <ul>
 <li>以NexT主题为例 主题详情页: <a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">http://theme-next.iissnan.com/getting-started.html</a></li>
@@ -483,13 +482,13 @@
 </blockquote>
 <h3 id="2-NexT主题安装"><a href="#2-NexT主题安装" class="headerlink" title="2) NexT主题安装"></a>2) NexT主题安装</h3><blockquote>
 <ul>
-<li>在将git bash定位到blog文件夹,键入:<br>  <code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code>.<br>  成功则将会在blog-&gt;themes文件夹下新建next文件夹  </li>
+<li>在将<code>git bash</code>定位到blog文件夹,键入:<br>  <code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code>.<br>  成功则将会在blog-&gt;themes文件夹下新建next文件夹  </li>
 <li>ATT: 务必保存一个next文件夹内的 <code>_config.yml</code>文件备份.  </li>
 </ul>
 </blockquote>
 <h3 id="3-NexT主题启用"><a href="#3-NexT主题启用" class="headerlink" title="3) NexT主题启用"></a>3) NexT主题启用</h3><blockquote>
 <ul>
-<li><p>使用文本编辑器打开<code>blog</code>下的<code>config.yml</code>,找到<code>theme</code>字段,将原始值<code>landscape</code>用<code>#</code>注释掉(防止今后需要时候找回),新建主题<code>theme: next</code></p>
+<li><p>使用文本编辑器打开<code>blog</code>下的<code>config.yml</code>,找到<code>theme</code>字段,将原始值<code>landscape</code>用<code>#</code>注释掉(方便今后需要时候找回),新建主题<code>theme: next</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 主题</div><div class="line">## Themes: https://hexo.io/themes/</div><div class="line">#theme: false #禁用主题</div><div class="line">#theme: landscape #默认主题</div><div class="line">theme: next</div></pre></td></tr></table></figure>
 </li>
 <li><p>ATT: 在切换主题之后,验证之前,最好使用<code>hexo clean</code> 来清除Hexo的缓存  </p>
@@ -512,24 +511,23 @@
 <li>在设置主题时,可打开了Hexo本地调试模式(<code>hexo server --debug</code>),在设定主题效果后,即刻保存相应的config.yml文件并刷新浏览器,可在浏览器即刻上预览更改的效果.取消调试在在<code>git bash</code>中键入<code>ctrl+c</code>快捷键  </li>
 </ul>
 </blockquote>
-<h2 id="五-Hexo插件设置"><a href="#五-Hexo插件设置" class="headerlink" title="五. Hexo插件设置"></a>五. Hexo插件设置</h2><p>通过插件可为站点添加: <strong>显示运行时间</strong>,<strong>日历</strong>,<strong>添加RSS</strong>,<strong>添加友链等功能</strong>.  </p>
+<h2 id="五-Hexo插件设置"><a href="#五-Hexo插件设置" class="headerlink" title="五. Hexo插件设置"></a>五. Hexo插件设置</h2><p>通过插件可为站点添加: <strong>显示运行时间</strong>,<strong>日历</strong>,<strong>添加RSS</strong>,<strong>添加友链</strong>等功能.  </p>
 <blockquote>
 <ul>
 <li>hexo插件位于: blog/node_modules 目录下</li>
 <li>官方插件详情地址是: <a href="http://hexo.io/plugins/" target="_blank" rel="external">http://hexo.io/plugins/</a>  </li>
 </ul>
 </blockquote>
-<h2 id="六-将网站托管到Github-pages"><a href="#六-将网站托管到Github-pages" class="headerlink" title="六. 将网站托管到Github pages"></a>六. 将网站托管到<code>Github pages</code></h2><p><a href="https://github.com" title="github" target="_blank" rel="external">Github</a>是全球最大的开源程序托管平台,有无数极具创造力和分享精神的<code>Programmers</code> &amp; <code>Engineers</code>在上面创造改变世界的代码.是为数不多的,即便是我国环境下也能顺畅访问的大网站.<br><a href="https://pages.github.com" title="github pages" target="_blank" rel="external">GitHub pages</a>是<code>github</code>上一个项目,他允许用户实时展示自己的网站与正在进行的项目.<br>我们就将使用<code>GitHub pages</code>对我们本地创建好的<code>Hexo</code>博客网站进行托管和发布.<br>操作完成后,任何人就都可以通过域名在互联网上访问你的网站了. </p>
+<h2 id="六-将网站托管到Github-pages"><a href="#六-将网站托管到Github-pages" class="headerlink" title="六. 将网站托管到Github pages"></a>六. 将网站托管到<code>Github pages</code></h2><p><a href="https://github.com" title="github" target="_blank" rel="external">Github</a>是全球最大的开源程序托管平台,有无数极具创造力和分享精神的<code>Programmers</code> &amp; <code>Engineers</code>在上面创造改变世界的代码.<!--是为数不多的,即便是我国环境下也能顺畅访问的大网站.--><br><a href="https://pages.github.com" title="github pages" target="_blank" rel="external">GitHub pages</a>是<code>github</code>上一个项目,他允许用户实时展示自己的网站与正在进行的项目.<br>我们就将使用<code>GitHub pages</code>对我们本地创建好的<code>Hexo</code>博客网站进行托管和发布.<br>操作完成后,任何人就都可以通过域名在互联网上访问你的网站了. </p>
 <h3 id="1-注册github账号"><a href="#1-注册github账号" class="headerlink" title="1) 注册github账号"></a>1) 注册github账号</h3><blockquote>
 <p>直接进入<a href="https://github.com" title="github" target="_blank" rel="external">Github</a>官网,使用邮箱注册账号即可.<br>ATT:<br>    慎重填写<code>Github账号名</code>,这会是你的网站域名.  </p>
 </blockquote>
 <h3 id="2-配置SSH-keys-建立本地与github的联系"><a href="#2-配置SSH-keys-建立本地与github的联系" class="headerlink" title="2) 配置SSH keys(建立本地与github的联系)"></a>2) 配置SSH keys(建立本地与github的联系)</h3><h4 id="①-检查SSH-keys设置"><a href="#①-检查SSH-keys设置" class="headerlink" title="① 检查SSH keys设置"></a>① 检查SSH keys设置</h4><blockquote>
-<p>ps: 以下所有的<em>输入</em>均指在<code>git bash</code>中输入,输入完成请记得<strong>回车</strong>  </p>
+<p>ps: <strong>以下所有的<em>输入</em>均指在<code>git bash</code>中输入</strong>,输入完成请记得<strong>回车</strong>  </p>
 <p>在<code>git bash</code>输入:<em>cd ~/.ssh</em>  </p>
-<h4 id="②-生成SSH-key-输入-ssh-keygen-t-rsa-C-“邮件地址-youremail-com”"><a href="#②-生成SSH-key-输入-ssh-keygen-t-rsa-C-“邮件地址-youremail-com”" class="headerlink" title="② 生成SSH key 输入:$ ssh-keygen -t rsa -C “邮件地址@youremail.com”"></a>② 生成SSH key 输入:$ ssh-keygen -t rsa -C “邮件地址@youremail.com”</h4><p>ATT:</p>
-<ul>
-<li>注意此处区分大小写,那个<code>C</code>是大写  </li>
-</ul>
+</blockquote>
+<h4 id="②-生成SSH-key-输入-ssh-keygen-t-rsa-C-“邮件地址-youremail-com”"><a href="#②-生成SSH-key-输入-ssh-keygen-t-rsa-C-“邮件地址-youremail-com”" class="headerlink" title="② 生成SSH key 输入: ssh-keygen -t rsa -C “邮件地址@youremail.com”"></a>② 生成SSH key 输入: ssh-keygen -t rsa -C “邮件地址@youremail.com”</h4><blockquote>
+<p>ATT:<br>注意此处区分大小写,那个<code>C</code>是大写  </p>
 <p>首次连接会出现key fingerprint警告,输入yes继续<br><code>Enter file in which to save the key (/c/Users/Administrator/.ssh/id_rsa)</code><br>此处意思是选择密匙存放位置,默认即可,回车继续<br><code>Enter passphrase (empty for no passphrase)</code><br>公匙密码,不需要密码则直接回车</p>
 <ul>
 <li>若输入了密码,在此处以及确认密码输入时都不会显示明文密码(应该是保护隐私的缘故),继续输入即可.  </li>
@@ -545,12 +543,17 @@
 <ol>
 <li>找到<strong>2)</strong>中配置公匙的路径(参见本文中的默认路径即可),用文本编辑器打开并复制 <code>id_rsa.pub</code>文件中的所有内容.  </li>
 <li>打开浏览器中的Github个人主页,依次点击:<code>Settings</code>—&gt;<code>SSH keys</code>—&gt;<code>Add SSH key</code>  </li>
-<li>在Title文本框中输入任意字符,在key文本框中粘贴刚才复制的公匙,保存.自此,操作完成.  <h4 id="③-测试链接"><a href="#③-测试链接" class="headerlink" title="③ 测试链接"></a>③ 测试链接</h4>在git bash中输入: <code>ssh -T git@github.com</code><br>首次连接会出现密钥指纹警告，输入<code>yes</code>回车即可<br>显示 <code>You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>则操作成功  </li>
+<li>在Title文本框中输入任意字符,在key文本框中粘贴刚才复制的公匙,保存.自此,操作完成.  </li>
 </ol>
+</blockquote>
+<h4 id="③-测试链接"><a href="#③-测试链接" class="headerlink" title="③ 测试链接"></a>③ 测试链接</h4><blockquote>
+<p>在git bash中输入: <code>ssh -T git@github.com</code><br>首次连接会出现密钥指纹警告，输入<code>yes</code>回车即可<br>显示 <code>You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>则操作成功  </p>
 </blockquote>
 <h3 id="4-在Github中创建项目"><a href="#4-在Github中创建项目" class="headerlink" title="4) 在Github中创建项目"></a>4) 在<code>Github</code>中创建项目</h3><h4 id="①-向Hexo安装插件-hexo-deployer-git"><a href="#①-向Hexo安装插件-hexo-deployer-git" class="headerlink" title="① 向Hexo安装插件 hexo-deployer-git"></a>① 向Hexo安装插件 <code>hexo-deployer-git</code></h4><blockquote>
 <p>说明: 此插件用于向GitHub部署静态页面<br>方法: 输入: <code>npm install hexo-deployer-git --save</code>  </p>
-<h4 id="②-修改-config-yml文件"><a href="#②-修改-config-yml文件" class="headerlink" title="② 修改_config.yml文件"></a>② 修改<code>_config.yml</code>文件</h4><p>用文本编辑器打开blog文件夹中的 config.yml文件,下拉至最后找到deploy栏,进行如下修改:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">deploy:  </div><div class="line">   type: git (部署类型若有问题，其他类型自行google之)  </div><div class="line">   repository: https://github.com/yourname/yourname.github.io.git  </div><div class="line">   (yourname改成你的项目名,注意两个名字必须一致)  </div><div class="line">   branch: master</div><div class="line">   plugins: -hexo-generator-feed</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="②-修改-config-yml文件"><a href="#②-修改-config-yml文件" class="headerlink" title="② 修改_config.yml文件"></a>② 修改<code>_config.yml</code>文件</h4><blockquote>
+<p>用文本编辑器打开blog文件夹中的 config.yml文件,下拉至最后找到deploy栏,进行如下修改:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">deploy:  </div><div class="line">   type: git (部署类型若有问题，其他类型自行google之)  </div><div class="line">   repository: https://github.com/yourname/yourname.github.io.git  </div><div class="line">   (yourname改成你的项目名,注意两个名字必须一致)  </div><div class="line">   branch: master</div><div class="line">   plugins: -hexo-generator-feed</div></pre></td></tr></table></figure></p>
 <p>改完成后保存  </p>
 </blockquote>
 <h4 id="③-部署网页"><a href="#③-部署网页" class="headerlink" title="③ 部署网页"></a>③ 部署网页</h4><blockquote>
@@ -751,7 +754,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在之前的话"><span class="nav-number">1.</span> <span class="nav-text">写在之前的话</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本文主要参考了"><span class="nav-number">1.1.</span> <span class="nav-text">本文主要参考了:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我使用的软件版本"><span class="nav-number">1.2.</span> <span class="nav-text">我使用的软件版本:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一-环境搭建"><span class="nav-number">2.</span> <span class="nav-text">一. 环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-下载并安装-Node-js"><span class="nav-number">2.1.</span> <span class="nav-text">1) 下载并安装 Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-下载并安装git"><span class="nav-number">2.2.</span> <span class="nav-text">2) 下载并安装git</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-Hexo的安装和blog文件夹的初始化"><span class="nav-number">3.</span> <span class="nav-text">二. Hexo的安装和blog文件夹的初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装hexo"><span class="nav-number">3.1.</span> <span class="nav-text">1) 安装hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-新建blog文件夹"><span class="nav-number">3.2.</span> <span class="nav-text">2) 新建blog文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-在git-bash中选定blog文件夹"><span class="nav-number">3.3.</span> <span class="nav-text">3) 在git bash中选定blog文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-初始化blog文件夹"><span class="nav-number">3.4.</span> <span class="nav-text">4) 初始化blog文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-安装npm"><span class="nav-number">3.5.</span> <span class="nav-text">5) 安装npm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-在本地预览博客效果"><span class="nav-number">3.6.</span> <span class="nav-text">6) 在本地预览博客效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-Hexo的基本配置"><span class="nav-number">4.</span> <span class="nav-text">三. Hexo的基本配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-Hexo主题设置"><span class="nav-number">5.</span> <span class="nav-text">四.    Hexo主题设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-进入Hexo官方主题商店预览-选定喜欢的主题"><span class="nav-number">5.1.</span> <span class="nav-text">1) 进入Hexo官方主题商店预览,选定喜欢的主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-NexT主题安装"><span class="nav-number">5.2.</span> <span class="nav-text">2) NexT主题安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-NexT主题启用"><span class="nav-number">5.3.</span> <span class="nav-text">3) NexT主题启用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-调试新主题"><span class="nav-number">5.4.</span> <span class="nav-text">4) 调试新主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-主题详细设置"><span class="nav-number">5.5.</span> <span class="nav-text">5) 主题详细设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五-Hexo插件设置"><span class="nav-number">6.</span> <span class="nav-text">五. Hexo插件设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六-将网站托管到Github-pages"><span class="nav-number">7.</span> <span class="nav-text">六. 将网站托管到Github pages</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-注册github账号"><span class="nav-number">7.1.</span> <span class="nav-text">1) 注册github账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-配置SSH-keys-建立本地与github的联系"><span class="nav-number">7.2.</span> <span class="nav-text">2) 配置SSH keys(建立本地与github的联系)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①-检查SSH-keys设置"><span class="nav-number">7.2.1.</span> <span class="nav-text">① 检查SSH keys设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②-生成SSH-key-输入-ssh-keygen-t-rsa-C-“邮件地址-youremail-com”"><span class="nav-number">7.2.2.</span> <span class="nav-text">② 生成SSH key 输入:$ ssh-keygen -t rsa -C “邮件地址@youremail.com”</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-在Github创建-GitHub-Pages-项目"><span class="nav-number">7.3.</span> <span class="nav-text">3) 在Github创建 GitHub Pages 项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①-新建仓库"><span class="nav-number">7.3.1.</span> <span class="nav-text">① 新建仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②-向github添加SSH公匙"><span class="nav-number">7.3.2.</span> <span class="nav-text">② 向github添加SSH公匙</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③-测试链接"><span class="nav-number">7.3.3.</span> <span class="nav-text">③ 测试链接</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-在Github中创建项目"><span class="nav-number">7.4.</span> <span class="nav-text">4) 在Github中创建项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①-向Hexo安装插件-hexo-deployer-git"><span class="nav-number">7.4.1.</span> <span class="nav-text">① 向Hexo安装插件 hexo-deployer-git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②-修改-config-yml文件"><span class="nav-number">7.4.2.</span> <span class="nav-text">② 修改_config.yml文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③-部署网页"><span class="nav-number">7.4.3.</span> <span class="nav-text">③ 部署网页</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④-通过浏览器确定是否部署成功"><span class="nav-number">7.4.4.</span> <span class="nav-text">④ 通过浏览器确定是否部署成功</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在之前的话"><span class="nav-number">1.</span> <span class="nav-text">写在之前的话</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本文主要参考了"><span class="nav-number">1.1.</span> <span class="nav-text">本文主要参考了:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我使用的软件版本"><span class="nav-number">1.2.</span> <span class="nav-text">我使用的软件版本:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一-环境搭建"><span class="nav-number">2.</span> <span class="nav-text">一. 环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-下载并安装-Node-js"><span class="nav-number">2.1.</span> <span class="nav-text">1) 下载并安装 Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-下载并安装git"><span class="nav-number">2.2.</span> <span class="nav-text">2) 下载并安装git</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-Hexo的安装和blog文件夹的初始化"><span class="nav-number">3.</span> <span class="nav-text">二. Hexo的安装和blog文件夹的初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装hexo"><span class="nav-number">3.1.</span> <span class="nav-text">1) 安装hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-新建blog文件夹"><span class="nav-number">3.2.</span> <span class="nav-text">2) 新建blog文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-在git-bash中选定blog文件夹"><span class="nav-number">3.3.</span> <span class="nav-text">3) 在git bash中选定blog文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-初始化blog文件夹"><span class="nav-number">3.4.</span> <span class="nav-text">4) 初始化blog文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-安装npm"><span class="nav-number">3.5.</span> <span class="nav-text">5) 安装npm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-在本地预览博客效果"><span class="nav-number">3.6.</span> <span class="nav-text">6) 在本地预览博客效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-Hexo的基本配置"><span class="nav-number">4.</span> <span class="nav-text">三. Hexo的基本配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-Hexo主题设置"><span class="nav-number">5.</span> <span class="nav-text">四.    Hexo主题设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-进入Hexo官方主题商店预览-选定喜欢的主题"><span class="nav-number">5.1.</span> <span class="nav-text">1) 进入Hexo官方主题商店预览,选定喜欢的主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-NexT主题安装"><span class="nav-number">5.2.</span> <span class="nav-text">2) NexT主题安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-NexT主题启用"><span class="nav-number">5.3.</span> <span class="nav-text">3) NexT主题启用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-调试新主题"><span class="nav-number">5.4.</span> <span class="nav-text">4) 调试新主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-主题详细设置"><span class="nav-number">5.5.</span> <span class="nav-text">5) 主题详细设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五-Hexo插件设置"><span class="nav-number">6.</span> <span class="nav-text">五. Hexo插件设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六-将网站托管到Github-pages"><span class="nav-number">7.</span> <span class="nav-text">六. 将网站托管到Github pages</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-注册github账号"><span class="nav-number">7.1.</span> <span class="nav-text">1) 注册github账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-配置SSH-keys-建立本地与github的联系"><span class="nav-number">7.2.</span> <span class="nav-text">2) 配置SSH keys(建立本地与github的联系)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①-检查SSH-keys设置"><span class="nav-number">7.2.1.</span> <span class="nav-text">① 检查SSH keys设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②-生成SSH-key-输入-ssh-keygen-t-rsa-C-“邮件地址-youremail-com”"><span class="nav-number">7.2.2.</span> <span class="nav-text">② 生成SSH key 输入: ssh-keygen -t rsa -C “邮件地址@youremail.com”</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-在Github创建-GitHub-Pages-项目"><span class="nav-number">7.3.</span> <span class="nav-text">3) 在Github创建 GitHub Pages 项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①-新建仓库"><span class="nav-number">7.3.1.</span> <span class="nav-text">① 新建仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②-向github添加SSH公匙"><span class="nav-number">7.3.2.</span> <span class="nav-text">② 向github添加SSH公匙</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③-测试链接"><span class="nav-number">7.3.3.</span> <span class="nav-text">③ 测试链接</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-在Github中创建项目"><span class="nav-number">7.4.</span> <span class="nav-text">4) 在Github中创建项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①-向Hexo安装插件-hexo-deployer-git"><span class="nav-number">7.4.1.</span> <span class="nav-text">① 向Hexo安装插件 hexo-deployer-git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②-修改-config-yml文件"><span class="nav-number">7.4.2.</span> <span class="nav-text">② 修改_config.yml文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③-部署网页"><span class="nav-number">7.4.3.</span> <span class="nav-text">③ 部署网页</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④-通过浏览器确定是否部署成功"><span class="nav-number">7.4.4.</span> <span class="nav-text">④ 通过浏览器确定是否部署成功</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
