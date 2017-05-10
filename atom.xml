@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://duruonanni.github.io/"/>
-  <updated>2017-05-09T02:51:33.282Z</updated>
+  <updated>2017-05-10T04:57:12.256Z</updated>
   <id>http://duruonanni.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://duruonanni.github.io/blog/%E5%BB%BA%E7%AB%99%E6%B5%81%E7%A8%8B%E8%AE%B0%E5%BD%95/20170509/"/>
     <id>http://duruonanni.github.io/blog/建站流程记录/20170509/</id>
     <published>2017-05-08T16:20:40.797Z</published>
-    <updated>2017-05-09T02:51:33.282Z</updated>
+    <updated>2017-05-10T04:57:12.256Z</updated>
     
     <content type="html"><![CDATA[<h2 id="写在之前的话"><a href="#写在之前的话" class="headerlink" title="写在之前的话"></a>写在之前的话</h2><p>本文是笔者在搭建本站时收集记录的建站过程.在搭建过程中,由于相关知识的匮缺,看不懂一些教程中省略的部分或是一些专业术语,走了一些弯路.但磕绊终究是成功建好了本站.也有了此小文.<br><strong>本文适用于对Hexo建站感兴趣但畏惧专业术语的非科班出身同学.我其中对一些网上多数教程稍省略不清楚的地方进行了解释.</strong> 希望能帮助到需要的人.<br><em>由于笔者也只是前端和建站的初学者,多有不足之处,还望批评指正.</em>  </p>
 <h3 id="本文主要参考了"><a href="#本文主要参考了" class="headerlink" title="本文主要参考了:"></a>本文主要参考了:</h3><blockquote>
@@ -92,11 +92,11 @@
 <h3 id="5-安装npm"><a href="#5-安装npm" class="headerlink" title="5) 安装npm"></a>5) 安装npm</h3><blockquote>
 <p>方法:    </p>
 <ul>
-<li>在<code>git bash</code>中输入: <code>npm install</code>  </li>
+<li>在<code>git bash</code>中输入: <code>npm install</code>    </li>
 </ul>
 </blockquote>
-<pre><code>至此,Hexo安装完成  
-</code></pre><h3 id="6-在本地预览博客效果"><a href="#6-在本地预览博客效果" class="headerlink" title="6) 在本地预览博客效果"></a>6) 在本地预览博客效果</h3><blockquote>
+<p>至此,Hexo安装完成  </p>
+<h3 id="6-在本地预览博客效果"><a href="#6-在本地预览博客效果" class="headerlink" title="6) 在本地预览博客效果"></a>6) 在本地预览博客效果</h3><blockquote>
 <p>方法:    </p>
 <ul>
 <li>在<code>git bash</code>中输入: <code>hexo server</code></li>
