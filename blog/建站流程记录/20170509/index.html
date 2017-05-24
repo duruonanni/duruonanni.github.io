@@ -98,7 +98,7 @@
 <meta property="og:url" content="http://duruonanni.github.io/blog/建站流程记录/20170509/index.html">
 <meta property="og:site_name" content="杜若喃呢">
 <meta property="og:description" content="写在之前的话本文是笔者在搭建本站时收集记录的建站过程.在搭建过程中,由于相关知识的匮缺,看不懂一些教程中省略的部分或是一些专业术语,走了一些弯路.但磕绊终究是成功建好了本站.也有了此小文.本文适用于对Hexo建站感兴趣但畏惧专业术语的非科班出身同学.我其中对一些网上多数教程稍省略不清楚的地方进行了解释. 希望能帮助到需要的人.由于笔者也只是前端和建站的初学者,多有不足之处,还望批评指正.   本文">
-<meta property="og:updated_time" content="2017-05-10T04:57:12.256Z">
+<meta property="og:updated_time" content="2017-05-15T00:10:17.107Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo建站流程">
 <meta name="twitter:description" content="写在之前的话本文是笔者在搭建本站时收集记录的建站过程.在搭建过程中,由于相关知识的匮缺,看不懂一些教程中省略的部分或是一些专业术语,走了一些弯路.但磕绊终究是成功建好了本站.也有了此小文.本文适用于对Hexo建站感兴趣但畏惧专业术语的非科班出身同学.我其中对一些网上多数教程稍省略不清楚的地方进行了解释. 希望能帮助到需要的人.由于笔者也只是前端和建站的初学者,多有不足之处,还望批评指正.   本文">
@@ -222,6 +222,16 @@
               <i class="menu-item-icon fa fa-fw fa-tag"></i> <br />
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-zone">
+          <a href="/zone" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-pencil-square"></i> <br />
+            
+            碎碎念
           </a>
         </li>
       
@@ -384,25 +394,36 @@
 </tr>
 </tbody>
 </table>
-<h2 id="一-环境搭建"><a href="#一-环境搭建" class="headerlink" title="一. 环境搭建"></a>一. 环境搭建</h2><h3 id="1-下载并安装-Node-js"><a href="#1-下载并安装-Node-js" class="headerlink" title="1) 下载并安装 Node.js"></a>1) 下载并安装 <a href="https://nodejs.org/en/" title="Node.js" target="_blank" rel="external">Node.js</a></h3><h3 id="2-下载并安装git"><a href="#2-下载并安装git" class="headerlink" title="2) 下载并安装git"></a>2) 下载并安装<a href="https://git-scm.com" title="git" target="_blank" rel="external">git</a></h3><blockquote>
-<p>说明: </p>
+<h2 id="一-环境搭建"><a href="#一-环境搭建" class="headerlink" title="一. 环境搭建"></a>一. 环境搭建</h2><h3 id="1-下载并安装-Node-js"><a href="#1-下载并安装-Node-js" class="headerlink" title="1) 下载并安装 Node.js"></a>1) 下载并安装 <a href="https://nodejs.org/en/" title="Node.js" target="_blank" rel="external">Node.js</a></h3><h3 id="2-下载并安装git"><a href="#2-下载并安装git" class="headerlink" title="2) 下载并安装git"></a>2) 下载并安装<a href="https://git-scm.com" title="git" target="_blank" rel="external">git</a></h3><p>说明: </p>
+<blockquote>
 <ul>
-<li>以上<code>Node.js</code>是Hexo需要的运行环境;<code>git</code>用于网站的发布与托管.下载后全部按照默认要求安装即可.<br>ATT: </li>
+<li>以上<code>Node.js</code>是Hexo需要的运行环境;<code>git</code>用于网站的发布与托管.下载后全部按照默认要求安装即可.  </li>
+</ul>
+</blockquote>
+<p>ATT: </p>
+<blockquote>
+<ul>
 <li>若git安装完成后在<em>文件管理器</em>中右键无<code>Git bash here</code>选项,参考此教程:<em><a href="http://blog.csdn.net/u014527912/article/details/51723735" title="右键添加gitbash" target="_blank" rel="external">右键-添加Git Bash Here菜单</a></em>  </li>
 </ul>
 </blockquote>
-<h2 id="二-Hexo的安装和blog文件夹的初始化"><a href="#二-Hexo的安装和blog文件夹的初始化" class="headerlink" title="二. Hexo的安装和blog文件夹的初始化"></a>二. Hexo的安装和blog文件夹的初始化</h2><h3 id="1-安装hexo"><a href="#1-安装hexo" class="headerlink" title="1) 安装hexo"></a>1) 安装hexo</h3><blockquote>
-<p>方法: </p>
+<h2 id="二-Hexo的安装和blog文件夹的初始化"><a href="#二-Hexo的安装和blog文件夹的初始化" class="headerlink" title="二. Hexo的安装和blog文件夹的初始化"></a>二. Hexo的安装和blog文件夹的初始化</h2><h3 id="1-安装hexo"><a href="#1-安装hexo" class="headerlink" title="1) 安装hexo"></a>1) 安装hexo</h3><p>方法: </p>
+<blockquote>
 <ul>
-<li>打开新安装的<code>git bash</code>软件,在其中输入    <code>npm install hexo-cli -g</code>,<strong>回车确认</strong><br>ATT:</li>
+<li>打开新安装的<code>git bash</code>软件,在其中输入    <code>npm install hexo-cli -g</code>,<strong>回车确认</strong>  </li>
+</ul>
+</blockquote>
+<p>ATT:</p>
+<blockquote>
+<ul>
 <li>在<code>git bash</code>中输入的所有代码都要以<strong>回车确认</strong>才有效;</li>
 <li>可为避免输入错误,可直接复制此代码,在<code>git bash</code>中以<strong>shift+insert</strong>组合键粘贴;</li>
 <li>检查是否安装成功,可输入 <code>Hexo version</code>(显示Hexo版本则安装成功);</li>
 <li>遇到提示<code>Local hexo not found in ~</code>问题,继续输入:<code>npm install hexo --save</code>;</li>
 </ul>
 </blockquote>
-<h3 id="2-新建blog文件夹"><a href="#2-新建blog文件夹" class="headerlink" title="2) 新建blog文件夹"></a>2) 新建<code>blog</code>文件夹</h3><blockquote>
-<p>方法: 在电脑适当位置新建一个blog(也可以命名为其他,本文全使用blog代指此文件夹)文件夹,用于存放Hexo博客相关文件;  </p>
+<h3 id="2-新建blog文件夹"><a href="#2-新建blog文件夹" class="headerlink" title="2) 新建blog文件夹"></a>2) 新建<code>blog</code>文件夹</h3><p>方法:  </p>
+<blockquote>
+<p>电脑适当位置新建一个blog(也可以命名为其他,本文全使用blog代指此文件夹)文件夹,用于存放Hexo博客相关文件;  </p>
 </blockquote>
 <h3 id="3-在git-bash中选定blog文件夹"><a href="#3-在git-bash中选定blog文件夹" class="headerlink" title="3) 在git bash中选定blog文件夹"></a>3) 在<code>git bash</code>中选定<code>blog</code>文件夹</h3><blockquote>
 <ul>
@@ -410,31 +431,30 @@
 <li>选定方法二: 在git bash中输入文件夹的绝对路径,eg:<code>cd c:/cusumerfiles/blog</code>( cd [blog文件夹位置] )  </li>
 </ul>
 </blockquote>
-<h3 id="4-初始化blog文件夹"><a href="#4-初始化blog文件夹" class="headerlink" title="4) 初始化blog文件夹"></a>4) 初始化<code>blog</code>文件夹</h3><blockquote>
-<p>方法:    </p>
+<h3 id="4-初始化blog文件夹"><a href="#4-初始化blog文件夹" class="headerlink" title="4) 初始化blog文件夹"></a>4) 初始化<code>blog</code>文件夹</h3><p>方法:    </p>
+<blockquote>
 <ul>
 <li>在<code>git bash</code>中输入: <code>hexo init</code><br>ATT: </li>
 <li>初始化完成后,文件夹内会多出一些文件  </li>
 </ul>
 </blockquote>
-<h3 id="5-安装npm"><a href="#5-安装npm" class="headerlink" title="5) 安装npm"></a>5) 安装npm</h3><blockquote>
-<p>方法:    </p>
+<h3 id="5-安装npm"><a href="#5-安装npm" class="headerlink" title="5) 安装npm"></a>5) 安装npm</h3><p>方法:    </p>
+<blockquote>
 <ul>
 <li>在<code>git bash</code>中输入: <code>npm install</code>    </li>
 </ul>
 </blockquote>
 <p>至此,Hexo安装完成  </p>
-<h3 id="6-在本地预览博客效果"><a href="#6-在本地预览博客效果" class="headerlink" title="6) 在本地预览博客效果"></a>6) 在本地预览博客效果</h3><blockquote>
-<p>方法:    </p>
+<h3 id="6-在本地预览博客效果"><a href="#6-在本地预览博客效果" class="headerlink" title="6) 在本地预览博客效果"></a>6) 在本地预览博客效果</h3><p>方法:    </p>
+<blockquote>
 <ul>
 <li>在<code>git bash</code>中输入: <code>hexo server</code></li>
 <li>在浏览器中打开 <strong> <a href="http://loacalhost:4000" target="_blank" rel="external">http://loacalhost:4000</a> </strong> 即可预览默认博客页面</li>
 <li>在git Bash中输入<em>ctrl+c</em>退出预览</li>
 </ul>
 </blockquote>
-<h2 id="三-Hexo的基本配置"><a href="#三-Hexo的基本配置" class="headerlink" title="三. Hexo的基本配置"></a>三. Hexo的基本配置</h2><p>此配置涉及到<strong>网址</strong>,<strong>网站名称</strong>,<strong>拥有者</strong>,<strong>文章发布形式</strong>等信息.</p>
+<h2 id="三-Hexo的基本配置"><a href="#三-Hexo的基本配置" class="headerlink" title="三. Hexo的基本配置"></a>三. Hexo的基本配置</h2><p>此配置涉及到<strong>网址</strong>,<strong>网站名称</strong>,<strong>拥有者</strong>,<strong>文章发布形式</strong>等信息.<br>方法:  </p>
 <blockquote>
-<p>方法:</p>
 <ul>
 <li>在Blog根目录下,找到_config.yml文件.使用文本编辑器打开(推荐使用<a href="https://notepad-plus-plus.org" title="notepad++" target="_blank" rel="external">notepad++</a>或者<a href="http://www.sublimetext.com/" title="sublime" target="_blank" rel="external">sublime Text 3</a>软件)进行设置,具体方法见本站:<a href="https://duruonanni.github.io/blog/Hexo站点设置/20170508/" title="Hexo站点设置">Hexo站点设置</a></li>
 </ul>
