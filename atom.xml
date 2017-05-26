@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://duruonanni.github.io/"/>
-  <updated>2017-05-15T00:10:17.107Z</updated>
+  <updated>2017-05-26T06:55:33.406Z</updated>
   <id>http://duruonanni.github.io/</id>
   
   <author>
@@ -16,11 +16,276 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Markdown语法练习</title>
+    <link href="http://duruonanni.github.io/blog/Markdown%E8%AF%AD%E6%B3%95%E7%BB%83%E4%B9%A0/20170525/"/>
+    <id>http://duruonanni.github.io/blog/Markdown语法练习/20170525/</id>
+    <published>2017-05-25T15:47:30.000Z</published>
+    <updated>2017-05-26T06:55:33.406Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Markdown-语法练习"><a href="#Markdown-语法练习" class="headerlink" title="Markdown 语法练习"></a>Markdown 语法练习</h1><h2 id="写在之前的话"><a href="#写在之前的话" class="headerlink" title="写在之前的话"></a>写在之前的话</h2><p>本文主要是我在学习Markdown语法之后的总结记录.<br>本文只介绍Markdown的语法,不涉及任何HTML的知识.若觉得网上Markdown教程参杂着HTML等难以理解,相信本文能让大家高效掌握这门简单方便的’博客专用’标记语言.  </p>
+<p>喏,开始吧.🐱‍👓</p>
+<h2 id="1-Markdown简介"><a href="#1-Markdown简介" class="headerlink" title="1. Markdown简介"></a>1. Markdown简介</h2><p>Markdown是一种兼容HTML的轻量级纯文本标记语言,其作用是在写文章的同时对文字进行排版和布局.<br>常用于自媒体或Bloger撰写记录(如wordpress,ghost,jekyll,hexo都使用这种语言发布文章).<br>Markdown使用一些简单易懂的标记实现对文档的排版,同时也兼容<a href="http://www.markdown.cn/" title="Markdown语法说明" target="_blank" rel="external">HTML</a>的语法.<br>使用markdown语法写出文本的后缀名使<code>.md</code>.<br>本文主要参考了:<a href="http://www.markdown.cn/" title="Markdown语法说明" target="_blank" rel="external">易读易写:Markdown-语法说明</a>.</p>
+<p>Markdown一大特点就是是可以兼容HTML的语法.下面在插入一段HTML的<strong>无序列表</strong>进行验证.<br><strong>Test</strong></p>
+<ul><br>    <li> This is list 1<br>    </li><li> This is list 2<br></li></ul>
+
+<p><strong>HTML代码</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;ul&gt;</div><div class="line">	&lt;li&gt; This is list 1</div><div class="line">	&lt;li&gt; This is list 2</div><div class="line">&lt;/ul&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="2-Markdown编辑器推荐"><a href="#2-Markdown编辑器推荐" class="headerlink" title="2. Markdown编辑器推荐"></a>2. Markdown编辑器推荐</h2><p>对Markdown的初学者,建议使用的编辑器能满足以下要求:  </p>
+<ol>
+<li>Markdown<strong>语法高亮</strong>,可以在编辑的同时使用不同颜色表明语法的标记;</li>
+<li>Markdown<strong>实时预览</strong>,可以在编辑同时预览编写出来格式的成品效果,即写即见;  </li>
+<li>预览效果接近博客中呈现的效果;  </li>
+</ol>
+<p>在此,我推荐的学习用Markdown编辑器是:<br><strong><a href="https://www.zybuluo.com/mdeditor" title="CmdMarkdown" target="_blank" rel="external">CmdMarkdown在线编辑器</a></strong><br>目前,我使用的Markdown编辑器是<a href="https://notepad-plus-plus.org/" title="npp" target="_blank" rel="external">notepad++</a>,搭配一些插件.<br>使用notepad++的原因是:    </p>
+<ol>
+<li>简洁,我讨厌为了单独的markdown就去下载什么专用编辑器,也不喜欢在线编辑的方式;</li>
+<li>习惯,notepad++是很棒的editor,最开始学习HTML我就使用它.它的交互逻辑和外观都让我喜欢;</li>
+<li>notepad++可以通过添加markdown的xml语法规则轻松实现语法高亮;</li>
+<li>notepad++可以引入<code>MarkdownViwer++</code>插件实现类似<code>CmdMarkdown</code>编辑器类似的双屏预览效果(但是有些语法的预览效果并不好,不过习惯了觉得不用预览也没毛病);  </li>
+</ol>
+<p>关于我对notepad++的调教,还是略有心得,就以后再单开一帖进行说明啦~😂</p>
+<h2 id="3-Markdown常用语法"><a href="#3-Markdown常用语法" class="headerlink" title="3. Markdown常用语法"></a>3. Markdown常用语法</h2><h3 id="1-文本标题"><a href="#1-文本标题" class="headerlink" title="1). 文本标题"></a>1). <span id="title">文本标题</span></h3><p>通常使用atx形式的语法来标记文本标题,这是指:</p>
+<blockquote>
+<p>在行首插入 1 到 6 个 <strong>#</strong> ，对应到标题 1 到 6 阶.   </p>
+</blockquote>
+<p>eg:   </p>
+<blockquote>
+<h1 id="H1-这是1阶标题"><a href="#H1-这是1阶标题" class="headerlink" title="H1 这是1阶标题"></a>H1 这是1阶标题</h1><h2 id="H2-这是2阶标题"><a href="#H2-这是2阶标题" class="headerlink" title="H2 这是2阶标题"></a>H2 这是2阶标题</h2><h6 id="H6-这是6阶标题"><a href="#H6-这是6阶标题" class="headerlink" title="H6 这是6阶标题"></a>H6 这是6阶标题</h6></blockquote>
+<p>markdown:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># H1 这是1阶标题</div><div class="line">## H2 这是2阶标题</div><div class="line">###### H6 这是6阶标题</div></pre></td></tr></table></figure></p>
+<p>att:</p>
+<blockquote>
+<ul>
+<li><code>#</code>后面需要加一个空格</li>
+<li>不同阶的标题对应的字体大小与间距不同</li>
+<li>网页或阅读器可根据不同阶的标题而自动生成文章目录</li>
+<li>不要使用标题语法来改变正文文字大小,会导致文章目录混乱</li>
+<li>改变文字颜色和大小,建议使用HTML对应的语法</li>
+<li>在<a href="http://www.w3school.com.cn/html/index.asp" title="HTML学习" target="_blank" rel="external">W3schlool</a>可以学到简单的HTML语法,这里就不介绍了哈</li>
+</ul>
+</blockquote>
+<h3 id="2-文本的强调-粗体和斜体"><a href="#2-文本的强调-粗体和斜体" class="headerlink" title="2). 文本的强调(粗体和斜体)"></a>2). 文本的强调(粗体和斜体)</h3><p>Markdown 使用星号<code>*</code>和下划线<code>_</code>作为标记强调字词的符号.  </p>
+<blockquote>
+<p>被<strong>一</strong>对<code>*</code>或<code>_</code>包围的字词会被转成斜体;<br>被<strong>两</strong>对<code>*</code>或<code>_</code>包围的字词会被转成粗体;  </p>
+</blockquote>
+<p>eg:</p>
+<blockquote>
+<p>原文: 雾失楼台，月迷津度，桃源望断无寻处<br>斜体: <em>雾失楼台，月迷津度，桃源望断无寻处</em><br>粗体: <strong>雾失楼台，月迷津度，桃源望断无寻处</strong>  </p>
+</blockquote>
+<p>markdown:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">斜体: *雾失楼台，月迷津度，桃源望断无寻处*</div><div class="line">粗体: __雾失楼台，月迷津度，桃源望断无寻处__</div></pre></td></tr></table></figure></p>
+<p>att:</p>
+<blockquote>
+<ul>
+<li>使用星号<code>*</code>和下划线<code>_</code>都可以,但是什么符号开启标签，就要用什么符号结束</li>
+<li>Markdown不具备<a href="http://baike.baidu.com/item/%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/86397?fromtitle=%E8%BD%AC%E4%B9%89%E7%AC%A6&amp;fromid=6151115" title="转义符" target="_blank" rel="external">转义符</a>,如果你的<code>*</code>和<code>_</code>两边都有空白的话，它们就只会被当成普通的符号.如 * 星号, _ 下划线.</li>
+</ul>
+</blockquote>
+<h3 id="3-文本的换行"><a href="#3-文本的换行" class="headerlink" title="3). 文本的换行"></a>3). 文本的换行</h3><p>和我们常用的txt格式不同,markdown里面不能直接通过一个<code>enter</code>(回车键)换行.它常用的换行语法有两种:</p>
+<blockquote>
+<ol>
+<li>在打算换行的文本后面添加一个空行,也就是连按两下<code>回车键</code>啦;</li>
+<li>在打算换行的文本后面加入<strong>两个空格</strong>,再回车换行;  </li>
+</ol>
+</blockquote>
+<p>att: </p>
+<blockquote>
+<ul>
+<li>有些区块元素,如<a href="#title">标题</a>,区块引用,列表等.是单个回车即可换行的 </li>
+</ul>
+</blockquote>
+<h3 id="4-文本的分割线"><a href="#4-文本的分割线" class="headerlink" title="4). 文本的分割线"></a>4). 文本的分割线</h3><p>使用<code>---</code>或<code>***</code>来生成水平分割线<br>eg:<br>《浣溪沙》欧阳修</p>
+<hr>
+<p>堤上游人逐画船,拍堤春水四垂天.绿杨楼外出秋千<br>白发戴花君莫笑,六么催拍盏频传.人生何处似尊前</p>
+<hr>
+<p>markdown:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">《浣溪沙》欧阳修</div><div class="line">***</div><div class="line">堤上游人逐画船,拍堤春水四垂天.绿杨楼外出秋千  </div><div class="line">白发戴花君莫笑,六么催拍盏频传.人生何处似尊前  </div><div class="line"></div><div class="line">***</div></pre></td></tr></table></figure></p>
+<p>att:  </p>
+<blockquote>
+<ul>
+<li><code>-</code>或者<code>*</code>连续超过3个就可被识别为分割线;</li>
+<li>请务必保证使用分割线的该行中没有其他文本;</li>
+<li>因为<code>---</code>还可以表示标题的Setext形式,为避免冲突,建议只使用<code>***</code>语法;</li>
+<li>非要使用<code>---</code>,就必须要在它的前后都空一行;</li>
+<li>当然,也可以使用HTML语法<code>&lt;br/&gt;</code>实现分割线;</li>
+</ul>
+</blockquote>
+<h3 id="5-区块引用"><a href="#5-区块引用" class="headerlink" title="5). 区块引用"></a>5). <span id="blockquote">区块引用</span></h3><p>区块引用的效果是将文字(通常是说明,引用类文字)放在一个独立的框中,使文本排版更清晰.在不同的编辑器中,区块引用显示的效果略有不同.<br>区块引用的语法是在被引用文字之前添加<code>&gt;</code>符号.<br>eg:<br>这是一段普通文字</p>
+<blockquote>
+<p>这是一段被区块引用的文字</p>
+<blockquote>
+<p>区块引用支持多层嵌套,可用<code>&gt;&gt;</code>或更多个<code>&gt;</code>表示  </p>
+</blockquote>
+</blockquote>
+<p>att:</p>
+<blockquote>
+<p>为避免冲突,在使用<code>&gt;</code>引用后,需添加一个空格再写正文<br>若两块引用之间未添加其他有效元素,这两块引用会默认被放在一个框里<br>跳出引用框的方式是<strong>换行</strong><br>引用中可正常使用markwodn的其他语法  </p>
+</blockquote>
+<h3 id="6-列表"><a href="#6-列表" class="headerlink" title="6). 列表"></a>6). 列表</h3><p>Markdown 支持有序列表和无序列表.<br>无序列表使用<code>*</code>,<code>+</code>,<code>-</code>标记;<br>有序列表使用数字连英语句号.<br>eg:<br><strong>无序列表</strong></p>
+<blockquote>
+<ul>
+<li>red<ul>
+<li>purple</li>
+<li>pink</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>green</li>
+</ul>
+<ul>
+<li>blue    </li>
+</ul>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>有序列表</strong></p>
+<ol>
+<li>seal</li>
+<li>whale</li>
+<li>penguin  </li>
+</ol>
+</blockquote>
+<p>markdown:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">**无序列表**</div><div class="line">&gt; * red</div><div class="line">&gt;	* purple</div><div class="line">&gt;	* pink</div><div class="line">&gt; - green</div><div class="line">&gt; + blue  </div><div class="line"></div><div class="line">&gt; **有序列表**</div><div class="line">1. seal</div><div class="line">2. whale</div><div class="line">3. penguin</div></pre></td></tr></table></figure></p>
+<p>att:</p>
+<blockquote>
+<ul>
+<li>千万记得空格</li>
+<li>列表支持多层级嵌套(如上面的无序列表那样),在需要多级嵌套的列表前插入<code>tab</code>(制表键)</li>
+</ul>
+</blockquote>
+<h3 id="7-代码块"><a href="#7-代码块" class="headerlink" title="7). 代码块"></a>7). 代码块</h3><p>代码块实现的效果是将块中的文本以深色方框圈示出来.<br>代码块通常用于标记特定语法元素或成段的代码内容,也可以用来标记任何需要在文本中被突出强调的内容.<br>使用一个一对    <strong> ` </strong>     符号框选行内代码块;<br>使用连续三个一对    <strong> ` </strong>     符号框选多行代码块;<br>eg:  </p>
+<blockquote>
+<p>行内代码块演示:<br> <code>&lt;code&gt;</code>,<code>&lt;script&gt;</code>,<code>console</code>,<code>printf</code>  </p>
+<hr>
+<p>多行代码块演示,如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">	&lt;title&gt;Markdown basic learning from Duruonanni&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;p&gt;Hello Duruo&lt;/p&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>att:</p>
+<blockquote>
+<ul>
+<li><strong> ` </strong>这个符号在键盘上排数字1的左边,注意和<strong> ‘ </strong>(小引号)的区分;</li>
+<li><strong>多行代码块</strong>和<strong><a href="#blockquote">区块引用</a></strong>的区别:<blockquote>
+<ul>
+<li>多行代码块引用的文本会直接显示其符号代码本身,引用中标示的题目,加粗等等排版都不会有效显示出来;</li>
+<li>区块引用的文本,其中的标记代码以其产生的效果呈现;</li>
+<li>在多数编辑器中,使用多行代码块产生的区块默认会在其开头自动添加行号;</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h3 id="8-超链接"><a href="#8-超链接" class="headerlink" title="8). 超链接"></a>8). 超链接</h3><p>Markdown 中输入的网址能<strong>自动转换成可点击的形式</strong>.此外,Markdown 还 支持两种形式的链接语法： <strong>行内式</strong>和<strong>参考式</strong>两种形式.<br>两种方法中,链接文字都使用<strong>[方括号]</strong>来标记.  </p>
+<h4 id="行内式超链接语法举例"><a href="#行内式超链接语法举例" class="headerlink" title="行内式超链接语法举例:"></a><strong>行内式</strong>超链接语法举例:</h4><p><code>This is [an example](http://example.com/ &quot;Title&quot;) inline link.</code><br>效果如下:<br>This is <a href="http://duruonanni.github.io" title="Title">an example</a> inline link.</p>
+<h4 id="行内式超链接语法详解"><a href="#行内式超链接语法详解" class="headerlink" title="行内式超链接语法详解:"></a><strong>行内式</strong>超链接语法详解:</h4><ul>
+<li>[]中括号中的内容为超链接文字</li>
+<li>()小括号前部分为超链接地址</li>
+<li>()小括号后部分为对链接的说明,可省略,前后部分用空格区分  </li>
+<li>链接说明必须用双引号或单引号或括号包围起来(就统一用双引号吧)</li>
+</ul>
+<hr>
+<h4 id="参考试超链接语法举例"><a href="#参考试超链接语法举例" class="headerlink" title="参考试超链接语法举例:"></a><strong>参考试</strong>超链接语法举例:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">I get 10 times more traffic from [Bing][1] than from</div><div class="line">[Yahoo][2] or [apple][3].</div><div class="line"></div><div class="line">	[1]: http://www.bing.com       &quot;Bing&quot;</div><div class="line">	[2]: http://search.yahoo.com/  &quot;Yahoo Search&quot;</div><div class="line">	[3]: http://apple.com 	&quot;apple&quot;</div></pre></td></tr></table></figure>
+<p>效果如下:<br>I get 10 times more traffic from <a href="http://www.markdown.cn/" title="Markdown语法说明" target="_blank" rel="external">Bing</a> than from<a href="https://zh.wikipedia.org/wiki/HTML" title="HTML" target="_blank" rel="external">Yahoo</a> or <a href="http://baike.baidu.com/item/%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/86397?fromtitle=%E8%BD%AC%E4%B9%89%E7%AC%A6&amp;fromid=6151115" title="转义符" target="_blank" rel="external">Apple</a>.  </p>
+<h4 id="参考试超链接语法详解"><a href="#参考试超链接语法详解" class="headerlink" title="参考试超链接语法详解:"></a><strong>参考试</strong>超链接语法详解:</h4><ul>
+<li>在正文中,前面一个[]中括号放超链接文字</li>
+<li>后面一个[]中括号中放这个超链接文字对应的编号</li>
+<li>后面的说明不会出现在正文中,其以编号对应超链接指向的地址</li>
+<li>使用参考试的超链接可重复定义,只要标号相同即可</li>
+<li>链接的说明内容可以集中放在文章末尾,像论文的参考文献那样</li>
+<li>建议多使用<strong>参考试</strong>超链接</li>
+</ul>
+<h3 id="9-图片"><a href="#9-图片" class="headerlink" title="9). 图片"></a>9). 图片</h3><p>Markdown支持通过超链接插入图片,具体的语法如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![douwei_shanheshui](http://storage.live.com/items/AEE68C12565C1619!174692:/douwei_shanheshui.jpg?authkey=AJoh90nl3u6Wj4U &quot;山河水.窦唯&quot;)</div></pre></td></tr></table></figure></p>
+<h4 id="插入图片语法说明"><a href="#插入图片语法说明" class="headerlink" title="插入图片语法说明:"></a>插入图片语法说明:</h4><ul>
+<li>首先一个叹号!</li>
+<li>接着一个[]方括号,在其中键入图片的替代文字(就是图片失效时显示的替代文字)</li>
+<li>最后跟()小括号,前半部分是引用图片的地址</li>
+<li>()小括号中,后半部分引号包起来的是对图片的说明,可省略  </li>
+</ul>
+<h4 id="以上插入图片举例的效果如下"><a href="#以上插入图片举例的效果如下" class="headerlink" title="以上插入图片举例的效果如下:"></a>以上插入图片举例的效果如下:</h4><p><img src="http://storage.live.com/items/AEE68C12565C1619!174692:/douwei_shanheshui.jpg?authkey=AJoh90nl3u6Wj4U" alt="douwei_shanheshui">  </p>
+<h4 id="att"><a href="#att" class="headerlink" title="att:"></a>att:</h4><ul>
+<li>此法插入的图片,无法调整位置和大小,若需要调整,请自行学习HTML对应语法</li>
+<li>此法插入图片的路径,可以是一个url地址,可以是文本所在文件夹的相对位置</li>
+<li>若使用markdown写的带图文章需要发布在网上,建议将使用<a href="http://baike.baidu.com/item/%E5%9B%BE%E5%BA%8A" title="图床介绍" target="_blank" rel="external">图床</a>生成图片链接</li>
+<li>本文使用<strong>Onedrive</strong>做图床</li>
+</ul>
+<h3 id="9-非常用标记"><a href="#9-非常用标记" class="headerlink" title="9). 非常用标记"></a>9). 非常用标记</h3><p>下面简单介绍几个Markdown中我认为的不重要的非常用标记:  </p>
+<h4 id="9-1-表格"><a href="#9-1-表格" class="headerlink" title="9.1 表格"></a>9.1 表格</h4><p>是的,Markdown可以用来生成简单的表格,其生成的表格效果如下:  </p>
+<table>
+<thead>
+<tr>
+<th>浓香型</th>
+<th style="text-align:center">酱香型</th>
+<th style="text-align:right">清香型</th>
+<th style="text-align:center">米香型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>五粮液</td>
+<td style="text-align:center">茅 台</td>
+<td style="text-align:right">汾 酒</td>
+<td style="text-align:center">三花酒</td>
+</tr>
+<tr>
+<td>泸州老窖</td>
+<td style="text-align:center">郎 酒</td>
+<td style="text-align:right">二锅头</td>
+<td style="text-align:center">冰峪庄园</td>
+</tr>
+<tr>
+<td>首行是</td>
+<td style="text-align:center">表格标题</td>
+<td style="text-align:right">注意观察</td>
+<td style="text-align:center">对齐方向</td>
+</tr>
+</tbody>
+</table>
+<p>对应的语法如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">| 浓香型 | 酱香型 | 清香型 | 米香型 |</div><div class="line">| ------ | :----: | -----: | :----: |</div><div class="line">| 五粮液 | 茅 台  | 汾 酒  | 三花酒 |</div><div class="line">| 泸州老窖 | 郎 酒 | 二锅头 | 冰峪庄园 |</div></pre></td></tr></table></figure></p>
+<p>说明:</p>
+<ul>
+<li>使用<code>|</code>对表格进行划分,表格与内容之间用<strong>空格</strong>隔开</li>
+<li><code>------:</code>为右对齐;<code>:-----</code>为左对齐;<code>:----:</code>为居中对齐</li>
+<li>默认使用居中对齐,对齐方式对该列有效</li>
+<li>写在对齐方式上排的是标题,默认会加粗</li>
+<li>在不同编辑器中对这种表格的兼容性不同</li>
+<li>这种制表的方法其实比较简陋,所以不建议使用这种制表方式</li>
+<li>制表格,建议使用HTML对应的语法  </li>
+</ul>
+<h4 id="9-2-Todolist-待办事项"><a href="#9-2-Todolist-待办事项" class="headerlink" title="9.2 Todolist(待办事项)"></a>9.2 Todolist(待办事项)</h4><p>是的,Markdown可以生成Todolist,其生成的效果如下:  </p>
+<ul>
+<li>[ ] Markdown-语法说明<ul>
+<li>[x] Markdown简介</li>
+<li>[x] Markdown常用语法说明</li>
+<li>[ ] Markdown 编辑器</li>
+</ul>
+</li>
+<li>[ ] 纯<code>Javascript</code>编写<code>1024</code>小游戏  </li>
+</ul>
+<p>对应语法如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- [ ] Markdown-语法说明</div><div class="line">	- [x] Markdown简介</div><div class="line">	- [x] Markdown常用语法说明</div><div class="line">	- [ ] Markdown 编辑器</div><div class="line">- [ ] 纯`Javascript`编写`1024`小游戏</div></pre></td></tr></table></figure></p>
+<p>说明:</p>
+<ul>
+<li>看例子应该很好理解,就不长谈了.就这样啦~</li>
+</ul>
+<h4 id="9-3-更不常用的标记"><a href="#9-3-更不常用的标记" class="headerlink" title="9.3 更不常用的标记"></a>9.3 更不常用的标记</h4><p>此外,Markdown还可以制作,流程图,序列图,甘特图等等等.<br>但是这些并不常用,在此就暂且略过啦~</p>
+<h2 id="3-学完Markdown做什么"><a href="#3-学完Markdown做什么" class="headerlink" title="3. 学完Markdown做什么"></a>3. 学完<code>Markdown</code>做什么</h2><p>学完Markdown,当然就可以愉快的在博客中畅所欲言啦.<br>当然,若要实现文章更漂亮的排版(eg:文字的<font color="pink" size="5em">颜色大小</font>啦,图片的大小位置调整啊,文本背景设置啊,等等等).<br>你就需要继续学习<a href="https://zh.wikipedia.org/wiki/HTML" title="HTML" target="_blank" rel="external">HTML</a>和<a href="http://baike.baidu.com/item/CSS/5457?fromtitle=%E7%BA%A7%E8%81%94%E6%A0%B7%E5%BC%8F%E8%A1%A8&amp;fromid=4312047" title="CSS介绍" target="_blank" rel="external">CSS</a>了.<br>此外,要实现一些诸如<strong>自动插入文章字数,写文章时间等</strong>,你还需要学一些基础的<a href="http://baike.baidu.com/item/javascript" title="javascript" target="_blank" rel="external">JavaScript</a>脚本.<br>路漫漫其修远兮,照着这个既定的路径,就会在技术求索的路上停不下来了.  </p>
+<p>喏,就这样吧~🐱‍👤</p>
+<!-- 参考文献 -->
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Markdown-语法练习&quot;&gt;&lt;a href=&quot;#Markdown-语法练习&quot; class=&quot;headerlink&quot; title=&quot;Markdown 语法练习&quot;&gt;&lt;/a&gt;Markdown 语法练习&lt;/h1&gt;&lt;h2 id=&quot;写在之前的话&quot;&gt;&lt;a href=&quot;#写在之
+    
+    </summary>
+    
+      <category term="教程 markdown" scheme="http://duruonanni.github.io/categories/%E6%95%99%E7%A8%8B-markdown/"/>
+    
+    
+      <category term="hexo markdown" scheme="http://duruonanni.github.io/tags/hexo-markdown/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo建站流程</title>
     <link href="http://duruonanni.github.io/blog/%E5%BB%BA%E7%AB%99%E6%B5%81%E7%A8%8B%E8%AE%B0%E5%BD%95/20170509/"/>
     <id>http://duruonanni.github.io/blog/建站流程记录/20170509/</id>
     <published>2017-05-08T16:20:40.797Z</published>
-    <updated>2017-05-15T00:10:17.107Z</updated>
+    <updated>2017-05-26T06:18:25.960Z</updated>
     
     <content type="html"><![CDATA[<h2 id="写在之前的话"><a href="#写在之前的话" class="headerlink" title="写在之前的话"></a>写在之前的话</h2><p>本文是笔者在搭建本站时收集记录的建站过程.在搭建过程中,由于相关知识的匮缺,看不懂一些教程中省略的部分或是一些专业术语,走了一些弯路.但磕绊终究是成功建好了本站.也有了此小文.<br><strong>本文适用于对Hexo建站感兴趣但畏惧专业术语的非科班出身同学.我其中对一些网上多数教程稍省略不清楚的地方进行了解释.</strong> 希望能帮助到需要的人.<br><em>由于笔者也只是前端和建站的初学者,多有不足之处,还望批评指正.</em>  </p>
 <h3 id="本文主要参考了"><a href="#本文主要参考了" class="headerlink" title="本文主要参考了:"></a>本文主要参考了:</h3><blockquote>
@@ -59,13 +324,14 @@
 <h2 id="一-环境搭建"><a href="#一-环境搭建" class="headerlink" title="一. 环境搭建"></a>一. 环境搭建</h2><h3 id="1-下载并安装-Node-js"><a href="#1-下载并安装-Node-js" class="headerlink" title="1) 下载并安装 Node.js"></a>1) 下载并安装 <a href="https://nodejs.org/en/" title="Node.js" target="_blank" rel="external">Node.js</a></h3><h3 id="2-下载并安装git"><a href="#2-下载并安装git" class="headerlink" title="2) 下载并安装git"></a>2) 下载并安装<a href="https://git-scm.com" title="git" target="_blank" rel="external">git</a></h3><p>说明: </p>
 <blockquote>
 <ul>
-<li>以上<code>Node.js</code>是Hexo需要的运行环境;<code>git</code>用于网站的发布与托管.下载后全部按照默认要求安装即可.  </li>
+<li>以上<code>Node.js</code>是Hexo需要的运行环境;<code>git</code>用于网站的发布与托管.</li>
+<li>以上两个软件,下载后全部按照默认要求安装即可.  </li>
 </ul>
 </blockquote>
 <p>ATT: </p>
 <blockquote>
 <ul>
-<li>若git安装完成后在<em>文件管理器</em>中右键无<code>Git bash here</code>选项,参考此教程:<em><a href="http://blog.csdn.net/u014527912/article/details/51723735" title="右键添加gitbash" target="_blank" rel="external">右键-添加Git Bash Here菜单</a></em>  </li>
+<li>若git安装完成后在<strong>文件管理器</strong>中右键无<code>Git bash here</code>选项,参考此教程:<em><a href="http://blog.csdn.net/u014527912/article/details/51723735" title="右键添加gitbash" target="_blank" rel="external">右键-添加Git Bash Here菜单</a></em>  </li>
 </ul>
 </blockquote>
 <h2 id="二-Hexo的安装和blog文件夹的初始化"><a href="#二-Hexo的安装和blog文件夹的初始化" class="headerlink" title="二. Hexo的安装和blog文件夹的初始化"></a>二. Hexo的安装和blog文件夹的初始化</h2><h3 id="1-安装hexo"><a href="#1-安装hexo" class="headerlink" title="1) 安装hexo"></a>1) 安装hexo</h3><p>方法: </p>
@@ -85,18 +351,23 @@
 </blockquote>
 <h3 id="2-新建blog文件夹"><a href="#2-新建blog文件夹" class="headerlink" title="2) 新建blog文件夹"></a>2) 新建<code>blog</code>文件夹</h3><p>方法:  </p>
 <blockquote>
-<p>电脑适当位置新建一个blog(也可以命名为其他,本文全使用blog代指此文件夹)文件夹,用于存放Hexo博客相关文件;  </p>
+<p>电脑适当位置新建一个blog文件夹(也可以命名为其他,本文全使用blog代指此文件夹),用于存放Hexo博客相关文件;  </p>
 </blockquote>
 <h3 id="3-在git-bash中选定blog文件夹"><a href="#3-在git-bash中选定blog文件夹" class="headerlink" title="3) 在git bash中选定blog文件夹"></a>3) 在<code>git bash</code>中选定<code>blog</code>文件夹</h3><blockquote>
 <ul>
-<li>选定方法一: 在该文件管理器中的该文件夹内鼠标右键点击<em>Git Bash Here</em>  </li>
+<li>选定方法一: 在该文件管理器中的该文件夹内鼠标右键点击<strong>Git Bash Here</strong></li>
 <li>选定方法二: 在git bash中输入文件夹的绝对路径,eg:<code>cd c:/cusumerfiles/blog</code>( cd [blog文件夹位置] )  </li>
 </ul>
 </blockquote>
 <h3 id="4-初始化blog文件夹"><a href="#4-初始化blog文件夹" class="headerlink" title="4) 初始化blog文件夹"></a>4) 初始化<code>blog</code>文件夹</h3><p>方法:    </p>
 <blockquote>
 <ul>
-<li>在<code>git bash</code>中输入: <code>hexo init</code><br>ATT: </li>
+<li>在<code>git bash</code>中输入: <code>hexo init</code>  </li>
+</ul>
+</blockquote>
+<p>ATT: </p>
+<blockquote>
+<ul>
 <li>初始化完成后,文件夹内会多出一些文件  </li>
 </ul>
 </blockquote>
@@ -112,13 +383,14 @@
 <ul>
 <li>在<code>git bash</code>中输入: <code>hexo server</code></li>
 <li>在浏览器中打开 <strong> <a href="http://loacalhost:4000" target="_blank" rel="external">http://loacalhost:4000</a> </strong> 即可预览默认博客页面</li>
-<li>在git Bash中输入<em>ctrl+c</em>退出预览</li>
+<li>在git Bash中输入<strong>ctrl+c</strong>退出预览</li>
 </ul>
 </blockquote>
 <h2 id="三-Hexo的基本配置"><a href="#三-Hexo的基本配置" class="headerlink" title="三. Hexo的基本配置"></a>三. Hexo的基本配置</h2><p>此配置涉及到<strong>网址</strong>,<strong>网站名称</strong>,<strong>拥有者</strong>,<strong>文章发布形式</strong>等信息.<br>方法:  </p>
 <blockquote>
 <ul>
-<li>在Blog根目录下,找到_config.yml文件.使用文本编辑器打开(推荐使用<a href="https://notepad-plus-plus.org" title="notepad++" target="_blank" rel="external">notepad++</a>或者<a href="http://www.sublimetext.com/" title="sublime" target="_blank" rel="external">sublime Text 3</a>软件)进行设置,具体方法见本站:<a href="https://duruonanni.github.io/blog/Hexo站点设置/20170508/" title="Hexo站点设置">Hexo站点设置</a></li>
+<li>在Blog根目录下,找到<code>_config.yml</code>文件.使用文本编辑器打开(推荐使用<a href="https://notepad-plus-plus.org" title="notepad++" target="_blank" rel="external">notepad++</a>或者<a href="http://www.sublimetext.com/" title="sublime" target="_blank" rel="external">sublime Text 3</a>软件)进行设置</li>
+<li>配置的具体方法见本站:<a href="https://duruonanni.github.io/blog/Hexo站点设置/20170508/" title="Hexo站点设置">Hexo站点设置</a></li>
 </ul>
 </blockquote>
 <h2 id="四-Hexo主题设置"><a href="#四-Hexo主题设置" class="headerlink" title="四.    Hexo主题设置"></a>四.    Hexo主题设置</h2><p>Hexo的特点就是拥有许多或清新或绚丽的主题(自带的主题名称叫<code>landscape</code>),选择一款中意的主题,进行一些简单的设置,就能让博客更加赏心悦目.以下是主题设置的方法,本文以<code>NexT</code>主题为例设置:  </p>
@@ -145,8 +417,7 @@
 </blockquote>
 <h3 id="4-调试新主题"><a href="#4-调试新主题" class="headerlink" title="4) 调试新主题"></a>4) 调试新主题</h3><blockquote>
 <ul>
-<li>使用Hexo的本地调试模式验证新主题效果,在<code>git bash</code>中输入:  <pre><code>`hexo server --debug`
-</code></pre></li>
+<li>使用Hexo的本地调试模式验证新主题效果,在<code>git bash</code>中输入:<code>hexo server --debug</code></li>
 <li>在浏览器打开: <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 验证主题是否正常使用  </li>
 <li>调试完成后,在<code>git bash</code>中键入<code>ctrl+c</code>快捷键组合取消调试</li>
 </ul>
@@ -154,9 +425,10 @@
 <h3 id="5-主题详细设置"><a href="#5-主题详细设置" class="headerlink" title="5) 主题详细设置"></a>5) 主题详细设置</h3><blockquote>
 <ul>
 <li>详见<a href="http://theme-next.iissnan.com/getting-started.html" title="NexT主题文档" target="_blank" rel="external">Next主题的官方文档</a>  </li>
-<li>之后我也会写一个自己站点的主题设置方案,暂时todo list 吧~</li>
-<li>ATT: </li>
-<li>在设置主题时,可打开了Hexo本地调试模式(<code>hexo server --debug</code>),在设定主题效果后,即刻保存相应的config.yml文件并刷新浏览器,可在浏览器即刻上预览更改的效果.取消调试在在<code>git bash</code>中键入<code>ctrl+c</code>快捷键  </li>
+<li><p>之后我也会写一个自己站点的主题设置方案,暂时todo list 吧~  </p>
+</li>
+<li><p>ATT:在设置主题时,可打开了Hexo本地调试模式(<code>hexo server</code>),在设定主题效果后,即刻保存相应的<strong>config.yml</strong>文件并刷新浏览器,可在浏览器即刻上预览更改的效果.取消调试在在<code>git bash</code>中键入<code>ctrl+c</code>快捷键  </p>
+</li>
 </ul>
 </blockquote>
 <h2 id="五-Hexo插件设置"><a href="#五-Hexo插件设置" class="headerlink" title="五. Hexo插件设置"></a>五. Hexo插件设置</h2><p>通过插件可为站点添加: <strong>显示运行时间</strong>,<strong>日历</strong>,<strong>添加RSS</strong>,<strong>添加友链</strong>等功能.  </p>
@@ -166,12 +438,19 @@
 <li>官方插件详情地址是: <a href="http://hexo.io/plugins/" target="_blank" rel="external">http://hexo.io/plugins/</a>  </li>
 </ul>
 </blockquote>
-<h2 id="六-将网站托管到Github-pages"><a href="#六-将网站托管到Github-pages" class="headerlink" title="六. 将网站托管到Github pages"></a>六. 将网站托管到<code>Github pages</code></h2><p><a href="https://github.com" title="github" target="_blank" rel="external">Github</a>是全球最大的开源程序托管平台,有无数极具创造力和分享精神的<code>Programmers</code> &amp; <code>Engineers</code>在上面创造改变世界的代码.<!--是为数不多的,即便是我国环境下也能顺畅访问的大网站.--><br><a href="https://pages.github.com" title="github pages" target="_blank" rel="external">GitHub pages</a>是<code>github</code>上一个项目,他允许用户实时展示自己的网站与正在进行的项目.<br>我们就将使用<code>GitHub pages</code>对我们本地创建好的<code>Hexo</code>博客网站进行托管和发布.<br>操作完成后,任何人就都可以通过域名在互联网上访问你的网站了. </p>
-<h3 id="1-注册github账号"><a href="#1-注册github账号" class="headerlink" title="1) 注册github账号"></a>1) 注册github账号</h3><blockquote>
-<p>直接进入<a href="https://github.com" title="github" target="_blank" rel="external">Github</a>官网,使用邮箱注册账号即可.<br>ATT:<br>    慎重填写<code>Github账号名</code>,这会是你的网站域名.  </p>
+<h2 id="六-将网站托管到Github-pages"><a href="#六-将网站托管到Github-pages" class="headerlink" title="六. 将网站托管到Github pages"></a>六. 将网站托管到Github pages</h2><p><a href="https://github.com" title="github" target="_blank" rel="external">Github</a>是全球最大的开源程序托管平台,有无数极具创造力和分享精神的<code>Programmers</code> &amp; <code>Engineers</code>在上面创造改变世界的代码.<!--是为数不多的,即便是我国环境下也能顺畅访问的大网站.--><br><a href="https://pages.github.com" title="github pages" target="_blank" rel="external">GitHub pages</a>是<code>github</code>上一个项目,他允许用户实时展示自己的网站与正在进行的项目.<br>我们就将使用<code>GitHub pages</code>对我们本地创建好的<code>Hexo</code>博客网站进行托管和发布.<br>操作完成后,任何人就都可以通过域名在互联网上访问你的网站了.<br>ATT:</p>
+<blockquote>
+<ul>
+<li><code>Github pages</code>是免费的,因此有一些限制,但创建流量不高的个人网站完全够用.具体限制是:<br>  单个仓库大小不超过1GB，上传单个文件大小不能超过100MB，通过浏览器上传不能超过25MB个人网站项目也不例外，最大空间1GB个人网站项目每个月访问请求数不能超过10万次，总流量不能超过100GB个人网站项目一小时创建数量不能超过10个.</li>
+<li>可在此网站查看<code>Github pages</code>的使用政策:<br>   <a href="https://help.github.com/articles/what-is-github-pages/#recommended-limits" target="_blank" rel="external">https://help.github.com/articles/what-is-github-pages/#recommended-limits</a></li>
+</ul>
 </blockquote>
-<h3 id="2-配置SSH-keys-建立本地与github的联系"><a href="#2-配置SSH-keys-建立本地与github的联系" class="headerlink" title="2) 配置SSH keys(建立本地与github的联系)"></a>2) 配置SSH keys(建立本地与github的联系)</h3><h4 id="①-检查SSH-keys设置"><a href="#①-检查SSH-keys设置" class="headerlink" title="① 检查SSH keys设置"></a>① 检查SSH keys设置</h4><blockquote>
-<p>ps: <strong>以下所有的<em>输入</em>均指在<code>git bash</code>中输入</strong>,输入完成请记得<strong>回车</strong>  </p>
+<h3 id="1-注册github账号"><a href="#1-注册github账号" class="headerlink" title="1) 注册github账号"></a>1) 注册github账号</h3><blockquote>
+<p>直接进入<a href="https://github.com" title="github" target="_blank" rel="external">Github</a>官网,使用邮箱注册账号即可.  </p>
+<p>ATT: 慎重填写<code>Github账号名</code>,这会是你的网站域名.  </p>
+</blockquote>
+<h3 id="2-配置SSH-keys-建立本地与github的联系"><a href="#2-配置SSH-keys-建立本地与github的联系" class="headerlink" title="2) 配置SSH keys(建立本地与github的联系)"></a><span id="2">2)</span> 配置SSH keys(建立本地与github的联系)</h3><h4 id="①-检查SSH-keys设置"><a href="#①-检查SSH-keys设置" class="headerlink" title="① 检查SSH keys设置"></a>① 检查SSH keys设置</h4><blockquote>
+<p>ps: <strong>以下所有的输入均指在<code>git bash</code>中输入</strong>,输入完成请记得<strong>回车</strong>  </p>
 <p>在<code>git bash</code>输入:<em>cd ~/.ssh</em>  </p>
 </blockquote>
 <h4 id="②-生成SSH-key-输入-ssh-keygen-t-rsa-C-“邮件地址-youremail-com”"><a href="#②-生成SSH-key-输入-ssh-keygen-t-rsa-C-“邮件地址-youremail-com”" class="headerlink" title="② 生成SSH key 输入: ssh-keygen -t rsa -C “邮件地址@youremail.com”"></a>② 生成SSH key 输入: ssh-keygen -t rsa -C “邮件地址@youremail.com”</h4><blockquote>
@@ -189,7 +468,7 @@
 <h4 id="②-向github添加SSH公匙"><a href="#②-向github添加SSH公匙" class="headerlink" title="② 向github添加SSH公匙"></a>② 向github添加SSH公匙</h4><blockquote>
 <p>方法:</p>
 <ol>
-<li>找到<strong>2)</strong>中配置公匙的路径(参见本文中的默认路径即可),用文本编辑器打开并复制 <code>id_rsa.pub</code>文件中的所有内容.  </li>
+<li>找到<a href="#2"><strong>2)</strong></a>中配置公匙的路径(参见本文中的默认路径即可),用文本编辑器打开并复制 <code>id_rsa.pub</code>文件中的所有内容.  </li>
 <li>打开浏览器中的Github个人主页,依次点击:<code>Settings</code>—&gt;<code>SSH keys</code>—&gt;<code>Add SSH key</code>  </li>
 <li>在Title文本框中输入任意字符,在key文本框中粘贴刚才复制的公匙,保存.自此,操作完成.  </li>
 </ol>
@@ -205,12 +484,21 @@
 <p>改完成后保存  </p>
 </blockquote>
 <h4 id="③-部署网页"><a href="#③-部署网页" class="headerlink" title="③ 部署网页"></a>③ 部署网页</h4><blockquote>
-<p>在 git bash 中输入: hexo generate    回车(生成静态网页)<br>在 git bash 继续输: hexo deploy    回车(开始部署网站)  </p>
+<p>在 git bash 中输入: <code>hexo generate</code>    回车(生成静态网页)<br>在 git bash 继续输: <code>hexo deploy</code>    回车(开始部署网站)  </p>
 </blockquote>
 <h4 id="④-通过浏览器确定是否部署成功"><a href="#④-通过浏览器确定是否部署成功" class="headerlink" title="④ 通过浏览器确定是否部署成功"></a>④ 通过浏览器确定是否部署成功</h4><blockquote>
 <p>在浏览器地址栏输入: <a href="http://yourname.github.io" target="_blank" rel="external">http://yourname.github.io</a>    (yourname为你的项目名)<br>显示hexo默认界面则成功</p>
 </blockquote>
+<h2 id="写在最后的话"><a href="#写在最后的话" class="headerlink" title="写在最后的话"></a>写在最后的话</h2><p>教程有对如何建站进行了讲解.建站的完成,自然意味着博客冒险之路的开始咯.诚然,建站完成之后还有很多工作需要做呢.<br>本文的站点建设,几乎不涉及任何知识点,只是依葫芦画瓢的简单操作.<br>之后,我觉得我们应该至少掌握如下技能:</p>
+<ul>
+<li>[x] [Hexo站点设置][14],更详细的掌握这个站点的各个功能,让自己的操作更得心应手;  </li>
+<li>[x] [Markdown语言的学习][15],hexo中发布文章就是使用这个语言的,掌握好就能写出漂亮排版的文章;  </li>
+<li>[ ] 英语,具备一定的英语基础,对之后的进阶,我认为是最重要的.能做到无障碍阅读英语文献,就能更容易理解编程建站中原理性的问题.<br>最后,若在依照本教程建站时出现任何问题,请留言或邮件联系我.<br>对本站有什么建议,也欢迎<strong>留言</strong>.</li>
+</ul>
+<p>喏,就这样啦~🐱‍👤</p>
+<p><img src="http://storage.live.com/items/AEE68C12565C1619!174695:/Something_Just_Like_This.png?authkey=AJoh90nl3u6Wj4U" alt="somenoe just like this" title="Something_Just_Like_This"></p>
 <!--参考文献:(不会出现在正文里)-->
+<p>[14]:<br>[15]: </p>
 ]]></content>
     
     <summary type="html">
@@ -219,8 +507,10 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://duruonanni.github.io/categories/hexo/"/>
+      <category term="教程 hexo" scheme="http://duruonanni.github.io/categories/%E6%95%99%E7%A8%8B-hexo/"/>
     
+    
+      <category term="教程 hexo" scheme="http://duruonanni.github.io/tags/%E6%95%99%E7%A8%8B-hexo/"/>
     
   </entry>
   
@@ -229,12 +519,24 @@
     <link href="http://duruonanni.github.io/blog/Hexo%E7%AB%99%E7%82%B9%E8%AE%BE%E7%BD%AE/20170508/"/>
     <id>http://duruonanni.github.io/blog/Hexo站点设置/20170508/</id>
     <published>2017-05-08T11:25:01.000Z</published>
-    <updated>2017-05-23T12:11:55.071Z</updated>
+    <updated>2017-05-26T08:56:30.678Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="写在之前的话"><a href="#写在之前的话" class="headerlink" title="写在之前的话"></a>写在之前的话</h2><p>本文适用于已通过各路Hexo教程完成建站,需要了解Hexo站点设置的同学.若尚未完成建站,请先行阅读’<todo:建站流程记录>‘.<br>本文内容主要参考了Setsuna’s Blog:<a href="http://www.isetsuna.com/hexo/install-config/" title="Hexo博客系列" target="_blank" rel="external">Hexo博客系列</a>,张学志の博客:<a href="http://blog.csdn.net/xuezhisdc/article/details/53130383" title="hexo配置教程" target="_blank" rel="external">hexo配置教程</a>,<a href="https://hexo.io/zh-cn/docs/configuration.html" title="hexo官方文档" target="_blank" rel="external">hexo官方文档</a>.在此一并感谢~</todo:建站流程记录></p>
+    <content type="html"><![CDATA[<h2 id="写在之前的话"><a href="#写在之前的话" class="headerlink" title="写在之前的话"></a>写在之前的话</h2><p>本文主要结合我建站时的经历,对配置Hexo的<code>_config.yml</code>文件配置说明,以及hexo的常用指令的介绍.<br>本文适用于已通过各路Hexo教程完成建站后,需要了解Hexo站点设置的同学.若尚未完成建站,请先行阅读<strong><a href="https://duruonanni.github.io/blog/%E5%BB%BA%E7%AB%99%E6%B5%81%E7%A8%8B%E8%AE%B0%E5%BD%95/20170509/" title="Hexo建站流程">todo:建站流程记录</a></strong>.<br>本文内容主要参考了:  </p>
+<ul>
+<li>Setsuna’s Blog:<a href="http://www.isetsuna.com/hexo/install-config/" title="Hexo博客系列" target="_blank" rel="external">Hexo博客系列</a>  </li>
+<li>张学志の博客:<a href="http://blog.csdn.net/xuezhisdc/article/details/53130383" title="hexo配置教程" target="_blank" rel="external">hexo配置教程</a>  </li>
+<li><a href="https://hexo.io/zh-cn/docs/configuration.html" title="hexo官方文档" target="_blank" rel="external">hexo官方文档</a><br>在此一并感谢~  </li>
+</ul>
 <p>由于笔者也是前端与建站的初学者,技浅才疏.如有错误或不足,还望批评指正~</p>
 <h2 id="一-Blog文件夹详解"><a href="#一-Blog文件夹详解" class="headerlink" title="一. Blog文件夹详解"></a>一. Blog文件夹详解</h2><!--参考:https://hexo.io/zh-cn/docs/setup.html -->
-<h3 id="建站成功后-Blog文件夹内可见如下目录"><a href="#建站成功后-Blog文件夹内可见如下目录" class="headerlink" title="建站成功后,Blog文件夹内可见如下目录:"></a>建站成功后,Blog文件夹内可见如下目录:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── _config.yml 	# Hexo的配置文件</div><div class="line">├── package.json 	# Hexo版本信息及插件信息</div><div class="line">├── .deploy_git 	# </div><div class="line">├── node_modules 	# </div><div class="line">├── public 	# 存放souce文件夹解析出的文件</div><div class="line">├── scaffolds 	# 模板文件夹</div><div class="line">├── source 	# 资源文件夹</div><div class="line">|   ├── _drafts # 存放md格式的草稿文章,默认不发布草稿</div><div class="line">|   └── _posts # 存放用于发布的md格式文章</div><div class="line">└── themes 	# 主题文件</div></pre></td></tr></table></figure>
+<p>att:  </p>
+<blockquote>
+<ul>
+<li><code>Blog</code>文件夹是我的Hexo初始化根目录名称</li>
+<li>下面目录中<code>#</code>之后的内容是我写的注释,用于解释各个文件及文件夹的作用<h3 id="建站成功后-Blog文件夹内可见如下目录"><a href="#建站成功后-Blog文件夹内可见如下目录" class="headerlink" title="建站成功后,Blog文件夹内可见如下目录:"></a>建站成功后,Blog文件夹内可见如下目录:</h3></li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── _config.yml 	# Hexo的配置文件</div><div class="line">├── package.json 	# Hexo版本信息及插件信息</div><div class="line">├── .deploy_git 	# </div><div class="line">├── node_modules 	# </div><div class="line">├── public 	# 存放souce文件夹解析出的文件</div><div class="line">├── scaffolds 	# 模板文件夹</div><div class="line">├── source 	# 资源文件夹</div><div class="line">|   ├── _drafts # 存放md格式的草稿文章,默认不发布草稿</div><div class="line">|   └── _posts # 存放用于发布的md格式文章</div><div class="line">└── themes 	# 主题文件</div></pre></td></tr></table></figure>
 <h2 id="二-Hexo的-config-yml配置详解"><a href="#二-Hexo的-config-yml配置详解" class="headerlink" title="二. Hexo的_config.yml配置详解"></a>二. Hexo的_config.yml配置详解</h2><!-- 参考1:https://hexo.io/zh-cn/docs/configuration.html -->
 <!--参考2:http://blog.csdn.net/xuezhisdc/article/details/53130383 -->
 <h3 id="配置前的说明"><a href="#配置前的说明" class="headerlink" title="配置前的说明:"></a>配置前的说明:</h3><blockquote>
@@ -242,16 +544,16 @@
 <li>Hexo的_config.yml的储存位置: blog/_config.yml;</li>
 <li>在改动配置前,请务必保存一份原始配置,确保出现故障可及时还原;</li>
 <li>在配置文件时,冒号后面一定要加一个空格才能识别;</li>
-<li>为方便对配置进行二次设置,可使用<code>#</code>对配置内容进行注释  <!--一个句子后加两个空格换行有效 --></li>
+<li>为方便对配置进行二次设置,可使用<code>#</code>对配置内容进行注释; </li>
+<li>参考我在下面的注释,可帮助各位理解Hexo中<code>_config.yml</code>文件的配置;<!--一个句子后加两个空格换行有效,机智 -->
+</li>
 </ul>
 </blockquote>
 <h3 id="我的配置如下"><a href="#我的配置如下" class="headerlink" title="我的配置如下"></a>我的配置如下</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div></pre></td><td class="code"><pre><div class="line"># Hexo Configuration 配置文件</div><div class="line">## Docs: https://hexo.io/docs/configuration.html</div><div class="line">## Source: https://github.com/hexojs/hexo/</div><div class="line"></div><div class="line"># Site 网站标题</div><div class="line">title: 杜若喃呢</div><div class="line"># 网站副标题</div><div class="line">subtitle: 山中人兮芳杜若</div><div class="line"># 网站描述</div><div class="line">description: Life is a gift,never take it for granted.</div><div class="line"># 网站作者</div><div class="line">author: Xiangyu Kong</div><div class="line"># 网站语言:需要主题支持</div><div class="line">language: zh-Hans</div><div class="line"># 时区,默认电脑本地时区</div><div class="line">timezone: Asia/Shanghai</div><div class="line"></div><div class="line"># URL 网址</div><div class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</div><div class="line"># 网址</div><div class="line">url: http://duruonanni.github.io</div><div class="line"># 网站根目录.如果网站本身就在根目录下(比如我这样),不管他</div><div class="line">root: /</div><div class="line"># 网站生成文件格式</div><div class="line">permalink: blog/:title/:year:month:day/</div><div class="line">permalink_defaults:</div><div class="line"></div><div class="line"># Directory 配置目录名(通常没必要修改)</div><div class="line"># 资源文件夹，放在里面的文件会上传到github中</div><div class="line">source_dir: source</div><div class="line"># 公共文件夹，存放生成的静态文件</div><div class="line">public_dir: public</div><div class="line"># 标签文件夹，默认是tags.实际存放在source/tags中</div><div class="line">tag_dir: tags</div><div class="line"># 档案文件夹，默认是archives</div><div class="line">archive_dir: archives</div><div class="line"># 类别文件夹，默认是categories.实际存放在source/categories中</div><div class="line">category_dir: categories</div><div class="line"># 代码文件夹，默认是downloads/code</div><div class="line">code_dir: downloads/code</div><div class="line"># 语言文件夹,默认跟language相同</div><div class="line">i18n_dir: :lang</div><div class="line"># 不需要渲染的文件,可使用glob表达式来匹配路径。</div><div class="line">skip_render: [Readme.md]</div><div class="line"></div><div class="line"># Writing 文章内容</div><div class="line"># File name of new posts 新文章名称</div><div class="line">new_post_name: :title.md</div><div class="line"># 默认布局 除了post外,Hexo默认还支持page和draft布局</div><div class="line">default_layout: post</div><div class="line"># Transform title into titlecase 把标题转换为 titlecase</div><div class="line">titlecase: false</div><div class="line"># 新标签打开方式,true是打开一个外部链接</div><div class="line">external_link: true</div><div class="line"># 转换文件名,值为0不转,1小写,2大写</div><div class="line">filename_case: 0</div><div class="line"># 显示草稿</div><div class="line">render_drafts: false</div><div class="line"># 启用 Asset 文件夹</div><div class="line">post_asset_folder: false</div><div class="line"># 把链接改为与根目录的相对位址</div><div class="line">## 默认情况下，Hexo生成的超链接都是绝对地址.通常情况下，建议如此</div><div class="line">relative_link: false</div><div class="line"># 显示未来的文章</div><div class="line">future: true</div><div class="line"># 代码高亮</div><div class="line">highlight:</div><div class="line">  enable: true</div><div class="line">  line_number: true</div><div class="line">  auto_detect: false</div><div class="line">  tab_replace:</div><div class="line"></div><div class="line"># Category &amp; Tag 分类 &amp; 标签</div><div class="line">default_category: uncategorized</div><div class="line">category_map:</div><div class="line">tag_map:</div><div class="line"></div><div class="line"># Date / Time format 日期 / 时间格式 </div><div class="line">## Hexo 使用 Moment.js 来解析和显示时间</div><div class="line">## Hexo uses Moment.js to parse and display date</div><div class="line">## You can customize the date format as defined in</div><div class="line">## http://momentjs.com/docs/#/displaying/format/</div><div class="line">date_format: YYYY-MM-DD</div><div class="line">time_format: HH:mm:ss</div><div class="line"></div><div class="line"># Pagination 分页</div><div class="line"># 0则关闭分页功能,全部在1页</div><div class="line">## Set per_page to 0 to disable pagination 设置每页显示文章量</div><div class="line">per_page: 10</div><div class="line">## 分页路径，在public中可以看到</div><div class="line">pagination_dir: page</div><div class="line"></div><div class="line"># Extensions 扩展插件</div><div class="line">## Plugins: https://hexo.io/plugins/</div><div class="line">plugins: </div><div class="line"># 生成RSS的插件</div><div class="line"> -hexo-generator-feed</div><div class="line">## Themes: https://hexo.io/themes/</div><div class="line"># 主题</div><div class="line">## Themes: https://hexo.io/themes/</div><div class="line">#theme: false #禁用主题</div><div class="line">#theme: landscape #默认主题</div><div class="line">theme: next</div><div class="line"></div><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line"></div><div class="line"># 发布</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  # 部署到github上</div><div class="line">  repository: https://github.com/duruonanni/duruonanni.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
-<h2 id="三-Hexo常用指令"><a href="#三-Hexo常用指令" class="headerlink" title="三. Hexo常用指令"></a>三. Hexo常用指令</h2><blockquote>
-<p>ATT: </p>
+<h2 id="三-Hexo常用指令"><a href="#三-Hexo常用指令" class="headerlink" title="三. Hexo常用指令"></a>三. Hexo常用指令</h2><p>ATT:  </p>
 <ul>
 <li>以下指令建议在<code>Git bash</code>中操作,不建议用CMD;  </li>
 </ul>
-</blockquote>
 <h3 id="1-init-初始化一个网站"><a href="#1-init-初始化一个网站" class="headerlink" title="1. init # 初始化一个网站"></a>1. init # 初始化一个网站</h3><blockquote>
 <p>语法:     <code>hexo init [folder]</code><br>说明:     <code>folder</code> 是网站在本地储存使用的文件夹名,我用的是blog<br>ATT:  </p>
 <ul>
@@ -268,28 +570,37 @@
 <p>语法:     <code>hexo new &lt;title&gt;</code><br>说明: </p>
 <ul>
 <li><code>title</code>写文章名</li>
-<li>此语法默认会将新建的文章放到<em>blog–souce–_posts</em>文件夹中,你可以在新建的文章中使用Markdown语法编辑内容,最终<em>_posts</em>文件夹中的文章会默认以时间顺序发布到你的网站上面.<br>ATT: </li>
-<li>这里更推荐以<code>发表草稿</code>的方式新建文章,具体方法如下:<br>– 使用语法: <code>hexo new draft &lt;title&gt;</code> 将文章新建到<em>blog–souce–_drafts</em>文件夹中,你可以在此处对文章进行编辑.待确认发布时,使用语法:<code>hexo publish draft &lt;filename&gt;</code>,可将选定的文章传到<em>_posts</em>文件夹.<br>– 这样的好处是,可以先给文章打好草稿,直接推送写好的成品.可避免未写完的文章放到电脑其他位置弄乱弄丢.(不建议直接在<em>_posts</em>文件夹中编辑文章)  </li>
+<li>此语法默认会将新建的文章放到<code>blog--souce--_posts</code>文件夹中,你可以在新建的文章中使用Markdown语法编辑内容,最终<code>_posts</code>文件夹中的文章会默认以时间顺序发布到你的网站上面.<br>ATT: </li>
+<li>Hexo中文章的文本格式需要是Markdown(后缀名<code>.md</code>)</li>
+<li>关于Markdown的常用语法,可参见我近期的总结[Markdown语法练习][5]</li>
+<li>这里更推荐以<code>发表草稿</code>的方式新建文章,具体方法如下:  <blockquote>
+<ul>
+<li>使用语法: <code>hexo new draft &lt;title&gt;</code> 将文章新建到<em>blog–souce–_drafts</em>文件夹中,你可以在此处对文章进行编辑.待确认发布时,使用语法:<code>hexo publish draft &lt;filename&gt;</code>,可将选定的文章传到<code>_posts</code>文件夹.  </li>
+<li>这样的好处是,可以先给文章打好草稿,直接推送写好的成品.可避免未写完的文章放到电脑其他位置弄乱弄丢.(不建议直接在<code>_posts</code>文件夹中编辑文章)  </li>
+</ul>
+</blockquote>
+</li>
 </ul>
 </blockquote>
 <h3 id="4-server-启动服务器"><a href="#4-server-启动服务器" class="headerlink" title="4. server # 启动服务器"></a>4. server # 启动服务器</h3><blockquote>
-<p>语法:     <code>hexo server</code> 可简写成 <code>hexo s</code><br>说明:     启动服务器,使站点可在网址:<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>  预览站点.按<em>ctrl+c</em>结束预览<br>ATT:</p>
+<p>语法:     <code>hexo server</code> 可简写成 <code>hexo s</code><br>说明:     启动服务器,使站点可通过浏览器,在网址:<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>  预览站点.按<strong>ctrl+c</strong>结束预览<br>ATT:</p>
 <ul>
 <li>启用此语法后,能看到站点中你事先编辑好的内容,此时改变blog文件夹中内容不会在站点内体现,需要退出后再次启动才能看到变动.</li>
-<li>为实时对站点内容进行调整,可使用语法:<code>hexo server --debug</code>进入本地调试模式,并将调试日志写入<em>debug.log</em>文件中.此时做出的所有调整都能在网站上动态体现.</li>
+<li>为实时对站点内容进行调整,可使用语法:<code>hexo server --debug</code>进入本地调试模式,并将调试日志写入<strong>debug.log</strong>文件中.此时做出的所有调整都能在网站上动态体现.</li>
 </ul>
 </blockquote>
 <h3 id="5-deoloy-部署网站"><a href="#5-deoloy-部署网站" class="headerlink" title="5. deoloy # 部署网站"></a>5. deoloy # 部署网站</h3><blockquote>
-<p>语法:     <code>hexo deploy</code> 可简写成 <code>hexo d</code><br>说明:     将站点内容部署到服务器上,使所有人能通过域名访问新发布的文章<br>ATT:     建议使用 ‘hexo d -g’ 语法,在部署之前预先生成静态文件.</p>
+<p>语法:     <code>hexo deploy</code> 可简写成 <code>hexo d</code><br>说明:     将站点内容部署到服务器上,使所有人能通过域名访问新发布的文章<br>ATT:     建议使用 ‘hexo d -g’ 语法,在部署之前预先生成静态文件.  </p>
 </blockquote>
-<p>至此:完  </p>
+<p>至此:完~🐱‍👤 </p>
 <p><img src="http://storage.live.com/items/AEE68C12565C1619!174679:/YuYu Hakusho.jpg?authkey=AJoh90nl3u6Wj4U" alt="YoYo hakuso"></p>
-<p><img src="/path/to/images/YuYuHakusho.jpg" alt="YuYu Hakusho"><br><!--参考:(不会出现在正文里)--></p>
+<!--参考:(不会出现在正文里)-->
+<p>[5]: </p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;写在之前的话&quot;&gt;&lt;a href=&quot;#写在之前的话&quot; class=&quot;headerlink&quot; title=&quot;写在之前的话&quot;&gt;&lt;/a&gt;写在之前的话&lt;/h2&gt;&lt;p&gt;本文适用于已通过各路Hexo教程完成建站,需要了解Hexo站点设置的同学.若尚未完成建站,请先行阅读’&lt;to
+      &lt;h2 id=&quot;写在之前的话&quot;&gt;&lt;a href=&quot;#写在之前的话&quot; class=&quot;headerlink&quot; title=&quot;写在之前的话&quot;&gt;&lt;/a&gt;写在之前的话&lt;/h2&gt;&lt;p&gt;本文主要结合我建站时的经历,对配置Hexo的&lt;code&gt;_config.yml&lt;/code&gt;文件配置说明,以
     
     </summary>
     

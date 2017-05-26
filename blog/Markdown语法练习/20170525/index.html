@@ -1,0 +1,1060 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="hexo markdown," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="杜若喃呢" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="Markdown 语法练习写在之前的话本文主要是我在学习Markdown语法之后的总结记录.本文只介绍Markdown的语法,不涉及任何HTML的知识.若觉得网上Markdown教程参杂着HTML等难以理解,相信本文能让大家高效掌握这门简单方便的’博客专用’标记语言.   喏,开始吧.🐱‍👓 1. Markdown简介Markdown是一种兼容HTML的轻量级纯文本标记语言,其作用是在写文章的">
+<meta name="keywords" content="hexo markdown">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown语法练习">
+<meta property="og:url" content="http://duruonanni.github.io/blog/Markdown语法练习/20170525/index.html">
+<meta property="og:site_name" content="杜若喃呢">
+<meta property="og:description" content="Markdown 语法练习写在之前的话本文主要是我在学习Markdown语法之后的总结记录.本文只介绍Markdown的语法,不涉及任何HTML的知识.若觉得网上Markdown教程参杂着HTML等难以理解,相信本文能让大家高效掌握这门简单方便的’博客专用’标记语言.   喏,开始吧.🐱‍👓 1. Markdown简介Markdown是一种兼容HTML的轻量级纯文本标记语言,其作用是在写文章的">
+<meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!174692:/douwei_shanheshui.jpg?authkey=AJoh90nl3u6Wj4U">
+<meta property="og:updated_time" content="2017-05-26T06:55:33.406Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Markdown语法练习">
+<meta name="twitter:description" content="Markdown 语法练习写在之前的话本文主要是我在学习Markdown语法之后的总结记录.本文只介绍Markdown的语法,不涉及任何HTML的知识.若觉得网上Markdown教程参杂着HTML等难以理解,相信本文能让大家高效掌握这门简单方便的’博客专用’标记语言.   喏,开始吧.🐱‍👓 1. Markdown简介Markdown是一种兼容HTML的轻量级纯文本标记语言,其作用是在写文章的">
+<meta name="twitter:image" content="http://storage.live.com/items/AEE68C12565C1619!174692:/douwei_shanheshui.jpg?authkey=AJoh90nl3u6Wj4U">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://duruonanni.github.io/blog/Markdown语法练习/20170525/"/>
+
+
+
+
+
+  <title>Markdown语法练习 | 杜若喃呢</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">杜若喃呢</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">山中人兮芳杜若</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-anchor"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tag"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-zone">
+          <a href="/zone" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-pencil-square"></i> <br />
+            
+            碎碎念
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user-circle-o"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://duruonanni.github.io/blog/Markdown语法练习/20170525/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xiangyu Kong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杜若喃呢">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Markdown语法练习</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-25T23:47:30+08:00">
+                2017-05-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程-markdown/" itemprop="url" rel="index">
+                    <span itemprop="name">教程 markdown</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Markdown-语法练习"><a href="#Markdown-语法练习" class="headerlink" title="Markdown 语法练习"></a>Markdown 语法练习</h1><h2 id="写在之前的话"><a href="#写在之前的话" class="headerlink" title="写在之前的话"></a>写在之前的话</h2><p>本文主要是我在学习Markdown语法之后的总结记录.<br>本文只介绍Markdown的语法,不涉及任何HTML的知识.若觉得网上Markdown教程参杂着HTML等难以理解,相信本文能让大家高效掌握这门简单方便的’博客专用’标记语言.  </p>
+<p>喏,开始吧.🐱‍👓</p>
+<h2 id="1-Markdown简介"><a href="#1-Markdown简介" class="headerlink" title="1. Markdown简介"></a>1. Markdown简介</h2><p>Markdown是一种兼容HTML的轻量级纯文本标记语言,其作用是在写文章的同时对文字进行排版和布局.<br>常用于自媒体或Bloger撰写记录(如wordpress,ghost,jekyll,hexo都使用这种语言发布文章).<br>Markdown使用一些简单易懂的标记实现对文档的排版,同时也兼容<a href="http://www.markdown.cn/" title="Markdown语法说明" target="_blank" rel="external">HTML</a>的语法.<br>使用markdown语法写出文本的后缀名使<code>.md</code>.<br>本文主要参考了:<a href="http://www.markdown.cn/" title="Markdown语法说明" target="_blank" rel="external">易读易写:Markdown-语法说明</a>.</p>
+<p>Markdown一大特点就是是可以兼容HTML的语法.下面在插入一段HTML的<strong>无序列表</strong>进行验证.<br><strong>Test</strong></p>
+<ul><br>    <li> This is list 1<br>    </li><li> This is list 2<br></li></ul>
+
+<p><strong>HTML代码</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;ul&gt;</div><div class="line">	&lt;li&gt; This is list 1</div><div class="line">	&lt;li&gt; This is list 2</div><div class="line">&lt;/ul&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="2-Markdown编辑器推荐"><a href="#2-Markdown编辑器推荐" class="headerlink" title="2. Markdown编辑器推荐"></a>2. Markdown编辑器推荐</h2><p>对Markdown的初学者,建议使用的编辑器能满足以下要求:  </p>
+<ol>
+<li>Markdown<strong>语法高亮</strong>,可以在编辑的同时使用不同颜色表明语法的标记;</li>
+<li>Markdown<strong>实时预览</strong>,可以在编辑同时预览编写出来格式的成品效果,即写即见;  </li>
+<li>预览效果接近博客中呈现的效果;  </li>
+</ol>
+<p>在此,我推荐的学习用Markdown编辑器是:<br><strong><a href="https://www.zybuluo.com/mdeditor" title="CmdMarkdown" target="_blank" rel="external">CmdMarkdown在线编辑器</a></strong><br>目前,我使用的Markdown编辑器是<a href="https://notepad-plus-plus.org/" title="npp" target="_blank" rel="external">notepad++</a>,搭配一些插件.<br>使用notepad++的原因是:    </p>
+<ol>
+<li>简洁,我讨厌为了单独的markdown就去下载什么专用编辑器,也不喜欢在线编辑的方式;</li>
+<li>习惯,notepad++是很棒的editor,最开始学习HTML我就使用它.它的交互逻辑和外观都让我喜欢;</li>
+<li>notepad++可以通过添加markdown的xml语法规则轻松实现语法高亮;</li>
+<li>notepad++可以引入<code>MarkdownViwer++</code>插件实现类似<code>CmdMarkdown</code>编辑器类似的双屏预览效果(但是有些语法的预览效果并不好,不过习惯了觉得不用预览也没毛病);  </li>
+</ol>
+<p>关于我对notepad++的调教,还是略有心得,就以后再单开一帖进行说明啦~😂</p>
+<h2 id="3-Markdown常用语法"><a href="#3-Markdown常用语法" class="headerlink" title="3. Markdown常用语法"></a>3. Markdown常用语法</h2><h3 id="1-文本标题"><a href="#1-文本标题" class="headerlink" title="1). 文本标题"></a>1). <span id="title">文本标题</span></h3><p>通常使用atx形式的语法来标记文本标题,这是指:</p>
+<blockquote>
+<p>在行首插入 1 到 6 个 <strong>#</strong> ，对应到标题 1 到 6 阶.   </p>
+</blockquote>
+<p>eg:   </p>
+<blockquote>
+<h1 id="H1-这是1阶标题"><a href="#H1-这是1阶标题" class="headerlink" title="H1 这是1阶标题"></a>H1 这是1阶标题</h1><h2 id="H2-这是2阶标题"><a href="#H2-这是2阶标题" class="headerlink" title="H2 这是2阶标题"></a>H2 这是2阶标题</h2><h6 id="H6-这是6阶标题"><a href="#H6-这是6阶标题" class="headerlink" title="H6 这是6阶标题"></a>H6 这是6阶标题</h6></blockquote>
+<p>markdown:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># H1 这是1阶标题</div><div class="line">## H2 这是2阶标题</div><div class="line">###### H6 这是6阶标题</div></pre></td></tr></table></figure></p>
+<p>att:</p>
+<blockquote>
+<ul>
+<li><code>#</code>后面需要加一个空格</li>
+<li>不同阶的标题对应的字体大小与间距不同</li>
+<li>网页或阅读器可根据不同阶的标题而自动生成文章目录</li>
+<li>不要使用标题语法来改变正文文字大小,会导致文章目录混乱</li>
+<li>改变文字颜色和大小,建议使用HTML对应的语法</li>
+<li>在<a href="http://www.w3school.com.cn/html/index.asp" title="HTML学习" target="_blank" rel="external">W3schlool</a>可以学到简单的HTML语法,这里就不介绍了哈</li>
+</ul>
+</blockquote>
+<h3 id="2-文本的强调-粗体和斜体"><a href="#2-文本的强调-粗体和斜体" class="headerlink" title="2). 文本的强调(粗体和斜体)"></a>2). 文本的强调(粗体和斜体)</h3><p>Markdown 使用星号<code>*</code>和下划线<code>_</code>作为标记强调字词的符号.  </p>
+<blockquote>
+<p>被<strong>一</strong>对<code>*</code>或<code>_</code>包围的字词会被转成斜体;<br>被<strong>两</strong>对<code>*</code>或<code>_</code>包围的字词会被转成粗体;  </p>
+</blockquote>
+<p>eg:</p>
+<blockquote>
+<p>原文: 雾失楼台，月迷津度，桃源望断无寻处<br>斜体: <em>雾失楼台，月迷津度，桃源望断无寻处</em><br>粗体: <strong>雾失楼台，月迷津度，桃源望断无寻处</strong>  </p>
+</blockquote>
+<p>markdown:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">斜体: *雾失楼台，月迷津度，桃源望断无寻处*</div><div class="line">粗体: __雾失楼台，月迷津度，桃源望断无寻处__</div></pre></td></tr></table></figure></p>
+<p>att:</p>
+<blockquote>
+<ul>
+<li>使用星号<code>*</code>和下划线<code>_</code>都可以,但是什么符号开启标签，就要用什么符号结束</li>
+<li>Markdown不具备<a href="http://baike.baidu.com/item/%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/86397?fromtitle=%E8%BD%AC%E4%B9%89%E7%AC%A6&amp;fromid=6151115" title="转义符" target="_blank" rel="external">转义符</a>,如果你的<code>*</code>和<code>_</code>两边都有空白的话，它们就只会被当成普通的符号.如 * 星号, _ 下划线.</li>
+</ul>
+</blockquote>
+<h3 id="3-文本的换行"><a href="#3-文本的换行" class="headerlink" title="3). 文本的换行"></a>3). 文本的换行</h3><p>和我们常用的txt格式不同,markdown里面不能直接通过一个<code>enter</code>(回车键)换行.它常用的换行语法有两种:</p>
+<blockquote>
+<ol>
+<li>在打算换行的文本后面添加一个空行,也就是连按两下<code>回车键</code>啦;</li>
+<li>在打算换行的文本后面加入<strong>两个空格</strong>,再回车换行;  </li>
+</ol>
+</blockquote>
+<p>att: </p>
+<blockquote>
+<ul>
+<li>有些区块元素,如<a href="#title">标题</a>,区块引用,列表等.是单个回车即可换行的 </li>
+</ul>
+</blockquote>
+<h3 id="4-文本的分割线"><a href="#4-文本的分割线" class="headerlink" title="4). 文本的分割线"></a>4). 文本的分割线</h3><p>使用<code>---</code>或<code>***</code>来生成水平分割线<br>eg:<br>《浣溪沙》欧阳修</p>
+<hr>
+<p>堤上游人逐画船,拍堤春水四垂天.绿杨楼外出秋千<br>白发戴花君莫笑,六么催拍盏频传.人生何处似尊前</p>
+<hr>
+<p>markdown:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">《浣溪沙》欧阳修</div><div class="line">***</div><div class="line">堤上游人逐画船,拍堤春水四垂天.绿杨楼外出秋千  </div><div class="line">白发戴花君莫笑,六么催拍盏频传.人生何处似尊前  </div><div class="line"></div><div class="line">***</div></pre></td></tr></table></figure></p>
+<p>att:  </p>
+<blockquote>
+<ul>
+<li><code>-</code>或者<code>*</code>连续超过3个就可被识别为分割线;</li>
+<li>请务必保证使用分割线的该行中没有其他文本;</li>
+<li>因为<code>---</code>还可以表示标题的Setext形式,为避免冲突,建议只使用<code>***</code>语法;</li>
+<li>非要使用<code>---</code>,就必须要在它的前后都空一行;</li>
+<li>当然,也可以使用HTML语法<code>&lt;br/&gt;</code>实现分割线;</li>
+</ul>
+</blockquote>
+<h3 id="5-区块引用"><a href="#5-区块引用" class="headerlink" title="5). 区块引用"></a>5). <span id="blockquote">区块引用</span></h3><p>区块引用的效果是将文字(通常是说明,引用类文字)放在一个独立的框中,使文本排版更清晰.在不同的编辑器中,区块引用显示的效果略有不同.<br>区块引用的语法是在被引用文字之前添加<code>&gt;</code>符号.<br>eg:<br>这是一段普通文字</p>
+<blockquote>
+<p>这是一段被区块引用的文字</p>
+<blockquote>
+<p>区块引用支持多层嵌套,可用<code>&gt;&gt;</code>或更多个<code>&gt;</code>表示  </p>
+</blockquote>
+</blockquote>
+<p>att:</p>
+<blockquote>
+<p>为避免冲突,在使用<code>&gt;</code>引用后,需添加一个空格再写正文<br>若两块引用之间未添加其他有效元素,这两块引用会默认被放在一个框里<br>跳出引用框的方式是<strong>换行</strong><br>引用中可正常使用markwodn的其他语法  </p>
+</blockquote>
+<h3 id="6-列表"><a href="#6-列表" class="headerlink" title="6). 列表"></a>6). 列表</h3><p>Markdown 支持有序列表和无序列表.<br>无序列表使用<code>*</code>,<code>+</code>,<code>-</code>标记;<br>有序列表使用数字连英语句号.<br>eg:<br><strong>无序列表</strong></p>
+<blockquote>
+<ul>
+<li>red<ul>
+<li>purple</li>
+<li>pink</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>green</li>
+</ul>
+<ul>
+<li>blue    </li>
+</ul>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>有序列表</strong></p>
+<ol>
+<li>seal</li>
+<li>whale</li>
+<li>penguin  </li>
+</ol>
+</blockquote>
+<p>markdown:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">**无序列表**</div><div class="line">&gt; * red</div><div class="line">&gt;	* purple</div><div class="line">&gt;	* pink</div><div class="line">&gt; - green</div><div class="line">&gt; + blue  </div><div class="line"></div><div class="line">&gt; **有序列表**</div><div class="line">1. seal</div><div class="line">2. whale</div><div class="line">3. penguin</div></pre></td></tr></table></figure></p>
+<p>att:</p>
+<blockquote>
+<ul>
+<li>千万记得空格</li>
+<li>列表支持多层级嵌套(如上面的无序列表那样),在需要多级嵌套的列表前插入<code>tab</code>(制表键)</li>
+</ul>
+</blockquote>
+<h3 id="7-代码块"><a href="#7-代码块" class="headerlink" title="7). 代码块"></a>7). 代码块</h3><p>代码块实现的效果是将块中的文本以深色方框圈示出来.<br>代码块通常用于标记特定语法元素或成段的代码内容,也可以用来标记任何需要在文本中被突出强调的内容.<br>使用一个一对    <strong> ` </strong>     符号框选行内代码块;<br>使用连续三个一对    <strong> ` </strong>     符号框选多行代码块;<br>eg:  </p>
+<blockquote>
+<p>行内代码块演示:<br> <code>&lt;code&gt;</code>,<code>&lt;script&gt;</code>,<code>console</code>,<code>printf</code>  </p>
+<hr>
+<p>多行代码块演示,如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">	&lt;title&gt;Markdown basic learning from Duruonanni&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;p&gt;Hello Duruo&lt;/p&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>att:</p>
+<blockquote>
+<ul>
+<li><strong> ` </strong>这个符号在键盘上排数字1的左边,注意和<strong> ‘ </strong>(小引号)的区分;</li>
+<li><strong>多行代码块</strong>和<strong><a href="#blockquote">区块引用</a></strong>的区别:<blockquote>
+<ul>
+<li>多行代码块引用的文本会直接显示其符号代码本身,引用中标示的题目,加粗等等排版都不会有效显示出来;</li>
+<li>区块引用的文本,其中的标记代码以其产生的效果呈现;</li>
+<li>在多数编辑器中,使用多行代码块产生的区块默认会在其开头自动添加行号;</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h3 id="8-超链接"><a href="#8-超链接" class="headerlink" title="8). 超链接"></a>8). 超链接</h3><p>Markdown 中输入的网址能<strong>自动转换成可点击的形式</strong>.此外,Markdown 还 支持两种形式的链接语法： <strong>行内式</strong>和<strong>参考式</strong>两种形式.<br>两种方法中,链接文字都使用<strong>[方括号]</strong>来标记.  </p>
+<h4 id="行内式超链接语法举例"><a href="#行内式超链接语法举例" class="headerlink" title="行内式超链接语法举例:"></a><strong>行内式</strong>超链接语法举例:</h4><p><code>This is [an example](http://example.com/ &quot;Title&quot;) inline link.</code><br>效果如下:<br>This is <a href="http://duruonanni.github.io" title="Title">an example</a> inline link.</p>
+<h4 id="行内式超链接语法详解"><a href="#行内式超链接语法详解" class="headerlink" title="行内式超链接语法详解:"></a><strong>行内式</strong>超链接语法详解:</h4><ul>
+<li>[]中括号中的内容为超链接文字</li>
+<li>()小括号前部分为超链接地址</li>
+<li>()小括号后部分为对链接的说明,可省略,前后部分用空格区分  </li>
+<li>链接说明必须用双引号或单引号或括号包围起来(就统一用双引号吧)</li>
+</ul>
+<hr>
+<h4 id="参考试超链接语法举例"><a href="#参考试超链接语法举例" class="headerlink" title="参考试超链接语法举例:"></a><strong>参考试</strong>超链接语法举例:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">I get 10 times more traffic from [Bing][1] than from</div><div class="line">[Yahoo][2] or [apple][3].</div><div class="line"></div><div class="line">	[1]: http://www.bing.com       &quot;Bing&quot;</div><div class="line">	[2]: http://search.yahoo.com/  &quot;Yahoo Search&quot;</div><div class="line">	[3]: http://apple.com 	&quot;apple&quot;</div></pre></td></tr></table></figure>
+<p>效果如下:<br>I get 10 times more traffic from <a href="http://www.markdown.cn/" title="Markdown语法说明" target="_blank" rel="external">Bing</a> than from<a href="https://zh.wikipedia.org/wiki/HTML" title="HTML" target="_blank" rel="external">Yahoo</a> or <a href="http://baike.baidu.com/item/%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/86397?fromtitle=%E8%BD%AC%E4%B9%89%E7%AC%A6&amp;fromid=6151115" title="转义符" target="_blank" rel="external">Apple</a>.  </p>
+<h4 id="参考试超链接语法详解"><a href="#参考试超链接语法详解" class="headerlink" title="参考试超链接语法详解:"></a><strong>参考试</strong>超链接语法详解:</h4><ul>
+<li>在正文中,前面一个[]中括号放超链接文字</li>
+<li>后面一个[]中括号中放这个超链接文字对应的编号</li>
+<li>后面的说明不会出现在正文中,其以编号对应超链接指向的地址</li>
+<li>使用参考试的超链接可重复定义,只要标号相同即可</li>
+<li>链接的说明内容可以集中放在文章末尾,像论文的参考文献那样</li>
+<li>建议多使用<strong>参考试</strong>超链接</li>
+</ul>
+<h3 id="9-图片"><a href="#9-图片" class="headerlink" title="9). 图片"></a>9). 图片</h3><p>Markdown支持通过超链接插入图片,具体的语法如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![douwei_shanheshui](http://storage.live.com/items/AEE68C12565C1619!174692:/douwei_shanheshui.jpg?authkey=AJoh90nl3u6Wj4U &quot;山河水.窦唯&quot;)</div></pre></td></tr></table></figure></p>
+<h4 id="插入图片语法说明"><a href="#插入图片语法说明" class="headerlink" title="插入图片语法说明:"></a>插入图片语法说明:</h4><ul>
+<li>首先一个叹号!</li>
+<li>接着一个[]方括号,在其中键入图片的替代文字(就是图片失效时显示的替代文字)</li>
+<li>最后跟()小括号,前半部分是引用图片的地址</li>
+<li>()小括号中,后半部分引号包起来的是对图片的说明,可省略  </li>
+</ul>
+<h4 id="以上插入图片举例的效果如下"><a href="#以上插入图片举例的效果如下" class="headerlink" title="以上插入图片举例的效果如下:"></a>以上插入图片举例的效果如下:</h4><p><img src="http://storage.live.com/items/AEE68C12565C1619!174692:/douwei_shanheshui.jpg?authkey=AJoh90nl3u6Wj4U" alt="douwei_shanheshui">  </p>
+<h4 id="att"><a href="#att" class="headerlink" title="att:"></a>att:</h4><ul>
+<li>此法插入的图片,无法调整位置和大小,若需要调整,请自行学习HTML对应语法</li>
+<li>此法插入图片的路径,可以是一个url地址,可以是文本所在文件夹的相对位置</li>
+<li>若使用markdown写的带图文章需要发布在网上,建议将使用<a href="http://baike.baidu.com/item/%E5%9B%BE%E5%BA%8A" title="图床介绍" target="_blank" rel="external">图床</a>生成图片链接</li>
+<li>本文使用<strong>Onedrive</strong>做图床</li>
+</ul>
+<h3 id="9-非常用标记"><a href="#9-非常用标记" class="headerlink" title="9). 非常用标记"></a>9). 非常用标记</h3><p>下面简单介绍几个Markdown中我认为的不重要的非常用标记:  </p>
+<h4 id="9-1-表格"><a href="#9-1-表格" class="headerlink" title="9.1 表格"></a>9.1 表格</h4><p>是的,Markdown可以用来生成简单的表格,其生成的表格效果如下:  </p>
+<table>
+<thead>
+<tr>
+<th>浓香型</th>
+<th style="text-align:center">酱香型</th>
+<th style="text-align:right">清香型</th>
+<th style="text-align:center">米香型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>五粮液</td>
+<td style="text-align:center">茅 台</td>
+<td style="text-align:right">汾 酒</td>
+<td style="text-align:center">三花酒</td>
+</tr>
+<tr>
+<td>泸州老窖</td>
+<td style="text-align:center">郎 酒</td>
+<td style="text-align:right">二锅头</td>
+<td style="text-align:center">冰峪庄园</td>
+</tr>
+<tr>
+<td>首行是</td>
+<td style="text-align:center">表格标题</td>
+<td style="text-align:right">注意观察</td>
+<td style="text-align:center">对齐方向</td>
+</tr>
+</tbody>
+</table>
+<p>对应的语法如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">| 浓香型 | 酱香型 | 清香型 | 米香型 |</div><div class="line">| ------ | :----: | -----: | :----: |</div><div class="line">| 五粮液 | 茅 台  | 汾 酒  | 三花酒 |</div><div class="line">| 泸州老窖 | 郎 酒 | 二锅头 | 冰峪庄园 |</div></pre></td></tr></table></figure></p>
+<p>说明:</p>
+<ul>
+<li>使用<code>|</code>对表格进行划分,表格与内容之间用<strong>空格</strong>隔开</li>
+<li><code>------:</code>为右对齐;<code>:-----</code>为左对齐;<code>:----:</code>为居中对齐</li>
+<li>默认使用居中对齐,对齐方式对该列有效</li>
+<li>写在对齐方式上排的是标题,默认会加粗</li>
+<li>在不同编辑器中对这种表格的兼容性不同</li>
+<li>这种制表的方法其实比较简陋,所以不建议使用这种制表方式</li>
+<li>制表格,建议使用HTML对应的语法  </li>
+</ul>
+<h4 id="9-2-Todolist-待办事项"><a href="#9-2-Todolist-待办事项" class="headerlink" title="9.2 Todolist(待办事项)"></a>9.2 Todolist(待办事项)</h4><p>是的,Markdown可以生成Todolist,其生成的效果如下:  </p>
+<ul>
+<li>[ ] Markdown-语法说明<ul>
+<li>[x] Markdown简介</li>
+<li>[x] Markdown常用语法说明</li>
+<li>[ ] Markdown 编辑器</li>
+</ul>
+</li>
+<li>[ ] 纯<code>Javascript</code>编写<code>1024</code>小游戏  </li>
+</ul>
+<p>对应语法如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- [ ] Markdown-语法说明</div><div class="line">	- [x] Markdown简介</div><div class="line">	- [x] Markdown常用语法说明</div><div class="line">	- [ ] Markdown 编辑器</div><div class="line">- [ ] 纯`Javascript`编写`1024`小游戏</div></pre></td></tr></table></figure></p>
+<p>说明:</p>
+<ul>
+<li>看例子应该很好理解,就不长谈了.就这样啦~</li>
+</ul>
+<h4 id="9-3-更不常用的标记"><a href="#9-3-更不常用的标记" class="headerlink" title="9.3 更不常用的标记"></a>9.3 更不常用的标记</h4><p>此外,Markdown还可以制作,流程图,序列图,甘特图等等等.<br>但是这些并不常用,在此就暂且略过啦~</p>
+<h2 id="3-学完Markdown做什么"><a href="#3-学完Markdown做什么" class="headerlink" title="3. 学完Markdown做什么"></a>3. 学完<code>Markdown</code>做什么</h2><p>学完Markdown,当然就可以愉快的在博客中畅所欲言啦.<br>当然,若要实现文章更漂亮的排版(eg:文字的<font color="pink" size="5em">颜色大小</font>啦,图片的大小位置调整啊,文本背景设置啊,等等等).<br>你就需要继续学习<a href="https://zh.wikipedia.org/wiki/HTML" title="HTML" target="_blank" rel="external">HTML</a>和<a href="http://baike.baidu.com/item/CSS/5457?fromtitle=%E7%BA%A7%E8%81%94%E6%A0%B7%E5%BC%8F%E8%A1%A8&amp;fromid=4312047" title="CSS介绍" target="_blank" rel="external">CSS</a>了.<br>此外,要实现一些诸如<strong>自动插入文章字数,写文章时间等</strong>,你还需要学一些基础的<a href="http://baike.baidu.com/item/javascript" title="javascript" target="_blank" rel="external">JavaScript</a>脚本.<br>路漫漫其修远兮,照着这个既定的路径,就会在技术求索的路上停不下来了.  </p>
+<p>喏,就这样吧~🐱‍👤</p>
+<!-- 参考文献 -->
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Xiangyu Kong
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://duruonanni.github.io/blog/Markdown语法练习/20170525/" title="Markdown语法练习">http://duruonanni.github.io/blog/Markdown语法练习/20170525/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo-markdown/" rel="tag"># hexo markdown</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/建站流程记录/20170509/" rel="next" title="Hexo建站流程">
+                <i class="fa fa-chevron-left"></i> Hexo建站流程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODU5MC81MTYx"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Xiangyu Kong" />
+          <p class="site-author-name" itemprop="name">Xiangyu Kong</p>
+           
+              <p class="site-description motion-element" itemprop="description">Life is a gift,never take it for granted.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/duruonanni" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:kate_2012@outlook.com" target="_blank" title="E-mail">
+                  
+                    <i class="fa fa-fw fa-envelope-o"></i>
+                  
+                  E-mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Outside links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://example.com/" title="Tset" target="_blank">Tset</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Markdown-语法练习"><span class="nav-number">1.</span> <span class="nav-text">Markdown 语法练习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在之前的话"><span class="nav-number">1.1.</span> <span class="nav-text">写在之前的话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Markdown简介"><span class="nav-number">1.2.</span> <span class="nav-text">1. Markdown简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Markdown编辑器推荐"><span class="nav-number">1.3.</span> <span class="nav-text">2. Markdown编辑器推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Markdown常用语法"><span class="nav-number">1.4.</span> <span class="nav-text">3. Markdown常用语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-文本标题"><span class="nav-number">1.4.1.</span> <span class="nav-text">1). 文本标题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#H1-这是1阶标题"><span class="nav-number">2.</span> <span class="nav-text">H1 这是1阶标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#H2-这是2阶标题"><span class="nav-number">2.1.</span> <span class="nav-text">H2 这是2阶标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#H6-这是6阶标题"><span class="nav-number">2.1.0.0.0.1.</span> <span class="nav-text">H6 这是6阶标题</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-文本的强调-粗体和斜体"><span class="nav-number">2.1.1.</span> <span class="nav-text">2). 文本的强调(粗体和斜体)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-文本的换行"><span class="nav-number">2.1.2.</span> <span class="nav-text">3). 文本的换行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-文本的分割线"><span class="nav-number">2.1.3.</span> <span class="nav-text">4). 文本的分割线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-区块引用"><span class="nav-number">2.1.4.</span> <span class="nav-text">5). 区块引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-列表"><span class="nav-number">2.1.5.</span> <span class="nav-text">6). 列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-代码块"><span class="nav-number">2.1.6.</span> <span class="nav-text">7). 代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-超链接"><span class="nav-number">2.1.7.</span> <span class="nav-text">8). 超链接</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#行内式超链接语法举例"><span class="nav-number">2.1.7.1.</span> <span class="nav-text">行内式超链接语法举例:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#行内式超链接语法详解"><span class="nav-number">2.1.7.2.</span> <span class="nav-text">行内式超链接语法详解:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考试超链接语法举例"><span class="nav-number">2.1.7.3.</span> <span class="nav-text">参考试超链接语法举例:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考试超链接语法详解"><span class="nav-number">2.1.7.4.</span> <span class="nav-text">参考试超链接语法详解:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-图片"><span class="nav-number">2.1.8.</span> <span class="nav-text">9). 图片</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#插入图片语法说明"><span class="nav-number">2.1.8.1.</span> <span class="nav-text">插入图片语法说明:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#以上插入图片举例的效果如下"><span class="nav-number">2.1.8.2.</span> <span class="nav-text">以上插入图片举例的效果如下:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#att"><span class="nav-number">2.1.8.3.</span> <span class="nav-text">att:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-非常用标记"><span class="nav-number">2.1.9.</span> <span class="nav-text">9). 非常用标记</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-1-表格"><span class="nav-number">2.1.9.1.</span> <span class="nav-text">9.1 表格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2-Todolist-待办事项"><span class="nav-number">2.1.9.2.</span> <span class="nav-text">9.2 Todolist(待办事项)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-3-更不常用的标记"><span class="nav-number">2.1.9.3.</span> <span class="nav-text">9.3 更不常用的标记</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-学完Markdown做什么"><span class="nav-number">2.2.</span> <span class="nav-text">3. 学完Markdown做什么</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xiangyu Kong</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      (๑•̀ω•́)و✧ Total visit
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      times
+    </span>
+  
+
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
