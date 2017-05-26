@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://duruonanni.github.io/"/>
-  <updated>2017-05-26T06:55:33.406Z</updated>
+  <updated>2017-05-26T09:03:59.043Z</updated>
   <id>http://duruonanni.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://duruonanni.github.io/blog/Markdown%E8%AF%AD%E6%B3%95%E7%BB%83%E4%B9%A0/20170525/"/>
     <id>http://duruonanni.github.io/blog/Markdown语法练习/20170525/</id>
     <published>2017-05-25T15:47:30.000Z</published>
-    <updated>2017-05-26T06:55:33.406Z</updated>
+    <updated>2017-05-26T09:03:59.043Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Markdown-语法练习"><a href="#Markdown-语法练习" class="headerlink" title="Markdown 语法练习"></a>Markdown 语法练习</h1><h2 id="写在之前的话"><a href="#写在之前的话" class="headerlink" title="写在之前的话"></a>写在之前的话</h2><p>本文主要是我在学习Markdown语法之后的总结记录.<br>本文只介绍Markdown的语法,不涉及任何HTML的知识.若觉得网上Markdown教程参杂着HTML等难以理解,相信本文能让大家高效掌握这门简单方便的’博客专用’标记语言.  </p>
 <p>喏,开始吧.🐱‍👓</p>
@@ -262,7 +262,7 @@
 <li>看例子应该很好理解,就不长谈了.就这样啦~</li>
 </ul>
 <h4 id="9-3-更不常用的标记"><a href="#9-3-更不常用的标记" class="headerlink" title="9.3 更不常用的标记"></a>9.3 更不常用的标记</h4><p>此外,Markdown还可以制作,流程图,序列图,甘特图等等等.<br>但是这些并不常用,在此就暂且略过啦~</p>
-<h2 id="3-学完Markdown做什么"><a href="#3-学完Markdown做什么" class="headerlink" title="3. 学完Markdown做什么"></a>3. 学完<code>Markdown</code>做什么</h2><p>学完Markdown,当然就可以愉快的在博客中畅所欲言啦.<br>当然,若要实现文章更漂亮的排版(eg:文字的<font color="pink" size="5em">颜色大小</font>啦,图片的大小位置调整啊,文本背景设置啊,等等等).<br>你就需要继续学习<a href="https://zh.wikipedia.org/wiki/HTML" title="HTML" target="_blank" rel="external">HTML</a>和<a href="http://baike.baidu.com/item/CSS/5457?fromtitle=%E7%BA%A7%E8%81%94%E6%A0%B7%E5%BC%8F%E8%A1%A8&amp;fromid=4312047" title="CSS介绍" target="_blank" rel="external">CSS</a>了.<br>此外,要实现一些诸如<strong>自动插入文章字数,写文章时间等</strong>,你还需要学一些基础的<a href="http://baike.baidu.com/item/javascript" title="javascript" target="_blank" rel="external">JavaScript</a>脚本.<br>路漫漫其修远兮,照着这个既定的路径,就会在技术求索的路上停不下来了.  </p>
+<h2 id="3-学完Markdown后做什么"><a href="#3-学完Markdown后做什么" class="headerlink" title="3. 学完Markdown后做什么"></a>3. 学完<strong>Markdown</strong>后做什么</h2><p>学完Markdown,当然就可以愉快的在博客中畅所欲言啦.<br>当然,若要实现文章更漂亮的排版(eg:文字的<font color="pink" size="5em">颜色大小</font>啦,图片的大小位置调整啊,文本背景设置啊,等等等).<br>你就需要继续学习<a href="https://zh.wikipedia.org/wiki/HTML" title="HTML" target="_blank" rel="external">HTML</a>和<a href="http://baike.baidu.com/item/CSS/5457?fromtitle=%E7%BA%A7%E8%81%94%E6%A0%B7%E5%BC%8F%E8%A1%A8&amp;fromid=4312047" title="CSS介绍" target="_blank" rel="external">CSS</a>了.<br>此外,要实现一些诸如<strong>自动插入文章字数,写文章时间等</strong>,你还需要学一些基础的<a href="http://baike.baidu.com/item/javascript" title="javascript" target="_blank" rel="external">JavaScript</a>脚本.<br>路漫漫其修远兮,照着这个既定的路径,就会在技术求索的路上停不下来了.  </p>
 <p>喏,就这样吧~🐱‍👤</p>
 <!-- 参考文献 -->
 ]]></content>
@@ -273,10 +273,12 @@
     
     </summary>
     
-      <category term="教程 markdown" scheme="http://duruonanni.github.io/categories/%E6%95%99%E7%A8%8B-markdown/"/>
+      <category term="教程" scheme="http://duruonanni.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="markdown" scheme="http://duruonanni.github.io/categories/%E6%95%99%E7%A8%8B/markdown/"/>
     
     
-      <category term="hexo markdown" scheme="http://duruonanni.github.io/tags/hexo-markdown/"/>
+      <category term="教程" scheme="http://duruonanni.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -285,7 +287,7 @@
     <link href="http://duruonanni.github.io/blog/%E5%BB%BA%E7%AB%99%E6%B5%81%E7%A8%8B%E8%AE%B0%E5%BD%95/20170509/"/>
     <id>http://duruonanni.github.io/blog/建站流程记录/20170509/</id>
     <published>2017-05-08T16:20:40.797Z</published>
-    <updated>2017-05-26T06:18:25.960Z</updated>
+    <updated>2017-05-26T09:03:52.618Z</updated>
     
     <content type="html"><![CDATA[<h2 id="写在之前的话"><a href="#写在之前的话" class="headerlink" title="写在之前的话"></a>写在之前的话</h2><p>本文是笔者在搭建本站时收集记录的建站过程.在搭建过程中,由于相关知识的匮缺,看不懂一些教程中省略的部分或是一些专业术语,走了一些弯路.但磕绊终究是成功建好了本站.也有了此小文.<br><strong>本文适用于对Hexo建站感兴趣但畏惧专业术语的非科班出身同学.我其中对一些网上多数教程稍省略不清楚的地方进行了解释.</strong> 希望能帮助到需要的人.<br><em>由于笔者也只是前端和建站的初学者,多有不足之处,还望批评指正.</em>  </p>
 <h3 id="本文主要参考了"><a href="#本文主要参考了" class="headerlink" title="本文主要参考了:"></a>本文主要参考了:</h3><blockquote>
@@ -491,14 +493,13 @@
 </blockquote>
 <h2 id="写在最后的话"><a href="#写在最后的话" class="headerlink" title="写在最后的话"></a>写在最后的话</h2><p>教程有对如何建站进行了讲解.建站的完成,自然意味着博客冒险之路的开始咯.诚然,建站完成之后还有很多工作需要做呢.<br>本文的站点建设,几乎不涉及任何知识点,只是依葫芦画瓢的简单操作.<br>之后,我觉得我们应该至少掌握如下技能:</p>
 <ul>
-<li>[x] [Hexo站点设置][14],更详细的掌握这个站点的各个功能,让自己的操作更得心应手;  </li>
-<li>[x] [Markdown语言的学习][15],hexo中发布文章就是使用这个语言的,掌握好就能写出漂亮排版的文章;  </li>
+<li>[x] <a href="https://duruonanni.github.io/blog/Hexo%E7%AB%99%E7%82%B9%E8%AE%BE%E7%BD%AE/20170508/" title="hexo站点设置">Hexo站点设置</a>,更详细的掌握这个站点的各个功能,让自己的操作更得心应手;  </li>
+<li>[x] <a href="https://duruonanni.github.io/blog/Markdown%E8%AF%AD%E6%B3%95%E7%BB%83%E4%B9%A0/20170525/" title="Markdown">Markdown语言的学习</a>,hexo中发布文章就是使用这个语言的,掌握好就能写出漂亮排版的文章;  </li>
 <li>[ ] 英语,具备一定的英语基础,对之后的进阶,我认为是最重要的.能做到无障碍阅读英语文献,就能更容易理解编程建站中原理性的问题.<br>最后,若在依照本教程建站时出现任何问题,请留言或邮件联系我.<br>对本站有什么建议,也欢迎<strong>留言</strong>.</li>
 </ul>
 <p>喏,就这样啦~🐱‍👤</p>
 <p><img src="http://storage.live.com/items/AEE68C12565C1619!174695:/Something_Just_Like_This.png?authkey=AJoh90nl3u6Wj4U" alt="somenoe just like this" title="Something_Just_Like_This"></p>
 <!--参考文献:(不会出现在正文里)-->
-<p>[14]:<br>[15]: </p>
 ]]></content>
     
     <summary type="html">
@@ -507,10 +508,12 @@
     
     </summary>
     
-      <category term="教程 hexo" scheme="http://duruonanni.github.io/categories/%E6%95%99%E7%A8%8B-hexo/"/>
+      <category term="教程" scheme="http://duruonanni.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="hexo" scheme="http://duruonanni.github.io/categories/%E6%95%99%E7%A8%8B/hexo/"/>
     
     
-      <category term="教程 hexo" scheme="http://duruonanni.github.io/tags/%E6%95%99%E7%A8%8B-hexo/"/>
+      <category term="教程" scheme="http://duruonanni.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -519,7 +522,7 @@
     <link href="http://duruonanni.github.io/blog/Hexo%E7%AB%99%E7%82%B9%E8%AE%BE%E7%BD%AE/20170508/"/>
     <id>http://duruonanni.github.io/blog/Hexo站点设置/20170508/</id>
     <published>2017-05-08T11:25:01.000Z</published>
-    <updated>2017-05-26T08:56:30.678Z</updated>
+    <updated>2017-05-26T09:04:42.886Z</updated>
     
     <content type="html"><![CDATA[<h2 id="写在之前的话"><a href="#写在之前的话" class="headerlink" title="写在之前的话"></a>写在之前的话</h2><p>本文主要结合我建站时的经历,对配置Hexo的<code>_config.yml</code>文件配置说明,以及hexo的常用指令的介绍.<br>本文适用于已通过各路Hexo教程完成建站后,需要了解Hexo站点设置的同学.若尚未完成建站,请先行阅读<strong><a href="https://duruonanni.github.io/blog/%E5%BB%BA%E7%AB%99%E6%B5%81%E7%A8%8B%E8%AE%B0%E5%BD%95/20170509/" title="Hexo建站流程">todo:建站流程记录</a></strong>.<br>本文内容主要参考了:  </p>
 <ul>
@@ -572,7 +575,7 @@
 <li><code>title</code>写文章名</li>
 <li>此语法默认会将新建的文章放到<code>blog--souce--_posts</code>文件夹中,你可以在新建的文章中使用Markdown语法编辑内容,最终<code>_posts</code>文件夹中的文章会默认以时间顺序发布到你的网站上面.<br>ATT: </li>
 <li>Hexo中文章的文本格式需要是Markdown(后缀名<code>.md</code>)</li>
-<li>关于Markdown的常用语法,可参见我近期的总结[Markdown语法练习][5]</li>
+<li>关于Markdown的常用语法,可参见我近期的总结<a href="https://duruonanni.github.io/blog/Markdown%E8%AF%AD%E6%B3%95%E7%BB%83%E4%B9%A0/20170525/" title="Markdown">Markdown语法练习</a></li>
 <li>这里更推荐以<code>发表草稿</code>的方式新建文章,具体方法如下:  <blockquote>
 <ul>
 <li>使用语法: <code>hexo new draft &lt;title&gt;</code> 将文章新建到<em>blog–souce–_drafts</em>文件夹中,你可以在此处对文章进行编辑.待确认发布时,使用语法:<code>hexo publish draft &lt;filename&gt;</code>,可将选定的文章传到<code>_posts</code>文件夹.  </li>
@@ -595,7 +598,6 @@
 <p>至此:完~🐱‍👤 </p>
 <p><img src="http://storage.live.com/items/AEE68C12565C1619!174679:/YuYu Hakusho.jpg?authkey=AJoh90nl3u6Wj4U" alt="YoYo hakuso"></p>
 <!--参考:(不会出现在正文里)-->
-<p>[5]: </p>
 ]]></content>
     
     <summary type="html">
@@ -604,8 +606,12 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://duruonanni.github.io/categories/hexo/"/>
+      <category term="教程" scheme="http://duruonanni.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
+      <category term="hexo" scheme="http://duruonanni.github.io/categories/%E6%95%99%E7%A8%8B/hexo/"/>
+    
+    
+      <category term="教程" scheme="http://duruonanni.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
