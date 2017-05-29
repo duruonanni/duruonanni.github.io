@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://duruonanni.github.io/"/>
-  <updated>2017-05-29T13:56:53.514Z</updated>
+  <updated>2017-05-29T13:58:48.534Z</updated>
   <id>http://duruonanni.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://duruonanni.github.io/blog/Chrome%E6%8F%92%E4%BB%B6%E7%AA%81%E7%A0%B4%E7%99%BE%E5%BA%A6%E4%BA%91%E9%99%90%E9%80%9F%E6%96%B9%E6%B3%95/20170529/"/>
     <id>http://duruonanni.github.io/blog/Chrome插件突破百度云限速方法/20170529/</id>
     <published>2017-05-29T12:27:00.000Z</published>
-    <updated>2017-05-29T13:56:53.514Z</updated>
+    <updated>2017-05-29T13:58:48.534Z</updated>
     
     <content type="html"><![CDATA[<h2 id="写在之前的话"><a href="#写在之前的话" class="headerlink" title="写在之前的话"></a>写在之前的话</h2><p>呐,今年6月1日(也就是大后天)开始,<a href="http://www.tmtpost.com/2606559.html" title="百度网盘6月1日起实行实名制，未认证将遭强退" target="_blank" rel="external">百度就全面强制实行账号实名制</a>了.嗯……<br>好吧,闲话不多说,这就奉上迟到的:迂回突破百度云限制方法.🐱‍💻  </p>
 <ul>
@@ -35,7 +35,7 @@
 <li><strong>无需科学上网</strong>进入Google WebStore(插件商店)下载User-Agent Switcher插件;<ul>
 <li>因为我已经下载并打包好插件了,免翻墙,直接安装即可下载</li>
 <li>当前User-Agent Switcher版本为1.0.43_0</li>
-<li>下载User-Agent Switcher点 <a href="http://storage.live.com/items/AEE68C12565C1619!174699" title="插件下载地址" target="_blank" rel="external">这里</a></li>
+<li>下载User-Agent Switcher点 <a href="http://storage.live.com/items/AEE68C12565C1619!174699?authkey=AJoh90nl3u6Wj4U" title="插件下载地址" target="_blank" rel="external">这里</a></li>
 </ul>
 </li>
 <li><strong>无需安装IDM下载器</strong><ul>
