@@ -380,7 +380,7 @@
 <p>Markdown一大特点就是是可以兼容HTML的语法.下面在插入一段HTML的<strong>无序列表</strong>进行验证.<br><strong>Test</strong></p>
 <ul><br>    <li> This is list 1<br>    </li><li> This is list 2<br></li></ul>
 
-<p><strong>HTML代码</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;ul&gt;</div><div class="line">	&lt;li&gt; This is list 1</div><div class="line">	&lt;li&gt; This is list 2</div><div class="line">&lt;/ul&gt;</div></pre></td></tr></table></figure></p>
+<p><strong>HTML代码</strong><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">&lt;ul&gt;</span></div><div class="line">	<span class="symbol">&lt;li&gt;</span> This <span class="keyword">is</span> <span class="keyword">list</span> <span class="number">1</span></div><div class="line">	<span class="symbol">&lt;li&gt;</span> This <span class="keyword">is</span> <span class="keyword">list</span> <span class="number">2</span></div><div class="line">&lt;/ul&gt;</div></pre></td></tr></table></figure></p>
 <h2 id="2-Markdown编辑器推荐"><a href="#2-Markdown编辑器推荐" class="headerlink" title="2. Markdown编辑器推荐"></a>2. Markdown编辑器推荐</h2><p>对Markdown的初学者,建议使用的编辑器能满足以下要求:  </p>
 <ol>
 <li>Markdown<strong>语法高亮</strong>,可以在编辑的同时使用不同颜色表明语法的标记;</li>
@@ -402,7 +402,7 @@
 <p>eg:   </p>
 <blockquote>
 <h1 id="H1-这是1阶标题"><a href="#H1-这是1阶标题" class="headerlink" title="H1 这是1阶标题"></a>H1 这是1阶标题</h1><h2 id="H2-这是2阶标题"><a href="#H2-这是2阶标题" class="headerlink" title="H2 这是2阶标题"></a>H2 这是2阶标题</h2><h6 id="H6-这是6阶标题"><a href="#H6-这是6阶标题" class="headerlink" title="H6 这是6阶标题"></a>H6 这是6阶标题</h6></blockquote>
-<p>markdown:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># H1 这是1阶标题</div><div class="line">## H2 这是2阶标题</div><div class="line">###### H6 这是6阶标题</div></pre></td></tr></table></figure></p>
+<p>markdown:<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># H1 这是<span class="number">1</span>阶标题</div><div class="line">## H2 这是<span class="number">2</span>阶标题</div><div class="line">###### H6 这是<span class="number">6</span>阶标题</div></pre></td></tr></table></figure></p>
 <p>att:</p>
 <blockquote>
 <ul>
@@ -422,7 +422,7 @@
 <blockquote>
 <p>原文: 雾失楼台，月迷津度，桃源望断无寻处<br>斜体: <em>雾失楼台，月迷津度，桃源望断无寻处</em><br>粗体: <strong>雾失楼台，月迷津度，桃源望断无寻处</strong>  </p>
 </blockquote>
-<p>markdown:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">斜体: *雾失楼台，月迷津度，桃源望断无寻处*</div><div class="line">粗体: __雾失楼台，月迷津度，桃源望断无寻处__</div></pre></td></tr></table></figure></p>
+<p>markdown:<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">斜体: <span class="emphasis">*雾失楼台，月迷津度，桃源望断无寻处*</span></div><div class="line">粗体: <span class="strong">__雾失楼台，月迷津度，桃源望断无寻处__</span></div></pre></td></tr></table></figure></p>
 <p>att:</p>
 <blockquote>
 <ul>
@@ -447,7 +447,7 @@
 <hr>
 <p>堤上游人逐画船,拍堤春水四垂天.绿杨楼外出秋千<br>白发戴花君莫笑,六么催拍盏频传.人生何处似尊前</p>
 <hr>
-<p>markdown:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">《浣溪沙》欧阳修</div><div class="line">***</div><div class="line">堤上游人逐画船,拍堤春水四垂天.绿杨楼外出秋千  </div><div class="line">白发戴花君莫笑,六么催拍盏频传.人生何处似尊前  </div><div class="line"></div><div class="line">***</div></pre></td></tr></table></figure></p>
+<p>markdown:<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">《浣溪沙》欧阳修</div><div class="line"><span class="emphasis">***</span></div><div class="line">堤上游人逐画船,拍堤春水四垂天.绿杨楼外出秋千  </div><div class="line">白发戴花君莫笑,六么催拍盏频传.人生何处似尊前  </div><div class="line"></div><div class="line"><span class="emphasis">***</span></div></pre></td></tr></table></figure></p>
 <p>att:  </p>
 <blockquote>
 <ul>
@@ -494,7 +494,7 @@
 <li>penguin  </li>
 </ol>
 </blockquote>
-<p>markdown:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">**无序列表**</div><div class="line">&gt; * red</div><div class="line">&gt;	* purple</div><div class="line">&gt;	* pink</div><div class="line">&gt; - green</div><div class="line">&gt; + blue  </div><div class="line"></div><div class="line">&gt; **有序列表**</div><div class="line">1. seal</div><div class="line">2. whale</div><div class="line">3. penguin</div></pre></td></tr></table></figure></p>
+<p>markdown:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">**无序列表**</div><div class="line"><span class="meta">&gt;</span><span class="bash"> * red</span></div><div class="line"><span class="meta">&gt;</span><span class="bash">	* purple</span></div><div class="line"><span class="meta">&gt;</span><span class="bash">	* pink</span></div><div class="line"><span class="meta">&gt;</span><span class="bash"> - green</span></div><div class="line"><span class="meta">&gt;</span><span class="bash"> + blue  </span></div><div class="line"><span class="meta"></span></div><div class="line">&gt;<span class="bash"> **有序列表**</span></div><div class="line">1. seal</div><div class="line">2. whale</div><div class="line">3. penguin</div></pre></td></tr></table></figure></p>
 <p>att:</p>
 <blockquote>
 <ul>
@@ -506,7 +506,7 @@
 <blockquote>
 <p>行内代码块演示:<br> <code>&lt;code&gt;</code>,<code>&lt;script&gt;</code>,<code>console</code>,<code>printf</code>  </p>
 <hr>
-<p>多行代码块演示,如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">	&lt;title&gt;Markdown basic learning from Duruonanni&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;p&gt;Hello Duruo&lt;/p&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>多行代码块演示,如下:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Markdown basic learning from Duruonanni<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Hello Duruo<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
 </blockquote>
 <p>att:</p>
 <blockquote>
@@ -531,7 +531,7 @@
 <li>链接说明必须用双引号或单引号或括号包围起来(就统一用双引号吧)</li>
 </ul>
 <hr>
-<h4 id="参考试超链接语法举例"><a href="#参考试超链接语法举例" class="headerlink" title="参考试超链接语法举例:"></a><strong>参考试</strong>超链接语法举例:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">I get 10 times more traffic from [Bing][1] than from</div><div class="line">[Yahoo][2] or [apple][3].</div><div class="line"></div><div class="line">	[1]: http://www.bing.com       &quot;Bing&quot;</div><div class="line">	[2]: http://search.yahoo.com/  &quot;Yahoo Search&quot;</div><div class="line">	[3]: http://apple.com 	&quot;apple&quot;</div></pre></td></tr></table></figure>
+<h4 id="参考试超链接语法举例"><a href="#参考试超链接语法举例" class="headerlink" title="参考试超链接语法举例:"></a><strong>参考试</strong>超链接语法举例:</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">I get 10 times more traffic from [<span class="string">Bing</span>][<span class="symbol">1</span>] than from</div><div class="line">[<span class="string">Yahoo</span>][<span class="symbol">2</span>] or [<span class="string">apple</span>][<span class="symbol">3</span>].</div><div class="line"></div><div class="line"><span class="code">	[1]: http://www.bing.com       "Bing"</span></div><div class="line"><span class="code">	[2]: http://search.yahoo.com/  "Yahoo Search"</span></div><div class="line"><span class="code">	[3]: http://apple.com 	"apple"</span></div></pre></td></tr></table></figure>
 <p>效果如下:<br>I get 10 times more traffic from <a href="http://www.markdown.cn/" title="Markdown语法说明" target="_blank" rel="external">Bing</a> than from<a href="https://zh.wikipedia.org/wiki/HTML" title="HTML" target="_blank" rel="external">Yahoo</a> or <a href="http://baike.baidu.com/item/%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/86397?fromtitle=%E8%BD%AC%E4%B9%89%E7%AC%A6&amp;fromid=6151115" title="转义符" target="_blank" rel="external">Apple</a>.  </p>
 <h4 id="参考试超链接语法详解"><a href="#参考试超链接语法详解" class="headerlink" title="参考试超链接语法详解:"></a><strong>参考试</strong>超链接语法详解:</h4><ul>
 <li>在正文中,前面一个[]中括号放超链接文字</li>
@@ -541,7 +541,7 @@
 <li>链接的说明内容可以集中放在文章末尾,像论文的参考文献那样</li>
 <li>建议多使用<strong>参考试</strong>超链接</li>
 </ul>
-<h3 id="9-图片"><a href="#9-图片" class="headerlink" title="9). 图片"></a>9). 图片</h3><p>Markdown支持通过超链接插入图片,具体的语法如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![douwei_shanheshui](http://storage.live.com/items/AEE68C12565C1619!174692:/douwei_shanheshui.jpg?authkey=AJoh90nl3u6Wj4U &quot;山河水.窦唯&quot;)</div></pre></td></tr></table></figure></p>
+<h3 id="9-图片"><a href="#9-图片" class="headerlink" title="9). 图片"></a>9). 图片</h3><p>Markdown支持通过超链接插入图片,具体的语法如下:<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![<span class="string">douwei_shanheshui</span>](<span class="link">http://storage.live.com/items/AEE68C12565C1619!174692:/douwei_shanheshui.jpg?authkey=AJoh90nl3u6Wj4U "山河水.窦唯"</span>)</div></pre></td></tr></table></figure></p>
 <h4 id="插入图片语法说明"><a href="#插入图片语法说明" class="headerlink" title="插入图片语法说明:"></a>插入图片语法说明:</h4><ul>
 <li>首先一个叹号!</li>
 <li>接着一个[]方括号,在其中键入图片的替代文字(就是图片失效时显示的替代文字)</li>
@@ -587,7 +587,7 @@
 </tr>
 </tbody>
 </table>
-<p>对应的语法如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">| 浓香型 | 酱香型 | 清香型 | 米香型 |</div><div class="line">| ------ | :----: | -----: | :----: |</div><div class="line">| 五粮液 | 茅 台  | 汾 酒  | 三花酒 |</div><div class="line">| 泸州老窖 | 郎 酒 | 二锅头 | 冰峪庄园 |</div></pre></td></tr></table></figure></p>
+<p>对应的语法如下:<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">|<span class="string"> 浓香型 </span>|<span class="string"> 酱香型 </span>|<span class="string"> 清香型 </span>|<span class="string"> 米香型 </span>|</div><div class="line">|<span class="string"> ------ </span>|<span class="string"> :----: </span>|<span class="string"> -----: </span>|<span class="string"> :----: </span>|</div><div class="line">|<span class="string"> 五粮液 </span>|<span class="string"> 茅 台  </span>|<span class="string"> 汾 酒  </span>|<span class="string"> 三花酒 </span>|</div><div class="line">|<span class="string"> 泸州老窖 </span>|<span class="string"> 郎 酒 </span>|<span class="string"> 二锅头 </span>|<span class="string"> 冰峪庄园 </span>|</div></pre></td></tr></table></figure></p>
 <p>说明:</p>
 <ul>
 <li>使用<code>|</code>对表格进行划分,表格与内容之间用<strong>空格</strong>隔开</li>
@@ -608,7 +608,7 @@
 </li>
 <li>[ ] 纯<code>Javascript</code>编写<code>1024</code>小游戏  </li>
 </ul>
-<p>对应语法如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- [ ] Markdown-语法说明</div><div class="line">	- [x] Markdown简介</div><div class="line">	- [x] Markdown常用语法说明</div><div class="line">	- [ ] Markdown 编辑器</div><div class="line">- [ ] 纯`Javascript`编写`1024`小游戏</div></pre></td></tr></table></figure></p>
+<p>对应语法如下:<br><figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">-<span class="ruby"> [ ] Markdown-语法说明</span></div><div class="line">	-<span class="ruby"> [x] Markdown简介</span></div><div class="line">	-<span class="ruby"> [x] Markdown常用语法说明</span></div><div class="line">	-<span class="ruby"> [ ] Markdown 编辑器</span></div><div class="line">-<span class="ruby"> [ ] 纯<span class="string">`Javascript`</span>编写<span class="string">`1024`</span>小游戏</span></div></pre></td></tr></table></figure></p>
 <p>说明:</p>
 <ul>
 <li>看例子应该很好理解,就不长谈了.就这样啦~</li>
@@ -771,7 +771,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -782,7 +782,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -837,12 +837,12 @@
           <div class="links-of-blogroll motion-element links-of-blogroll-block">
             <div class="links-of-blogroll-title">
               <i class="fa  fa-fw fa-globe"></i>
-              Outside links
+              Blogroll
             </div>
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://example.com/" title="Tset" target="_blank">Tset</a>
+                  <a href="https://bujige.net/" title="不羁阁" target="_blank">不羁阁</a>
                 </li>
               
             </ul>

@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="教程," />
+  <meta name="keywords" content="笔记," />
 
 
 
@@ -92,22 +92,17 @@
 
 
 
-<meta name="description" content="写在之前的话呐,今年6月1日(也就是大后天)开始,百度就全面强制实行账号实名制了.嗯……好吧,闲话不多说,这就奉上迟到的:迂回突破百度云限制方法.🐱‍💻    本教程仅适用于Chrome内核浏览器 查看是否为该内核,只要进入浏览器设置-关于页面,显示Chromium,就对啦 eg: centbrowser      本教程参考了:卡饭论坛:2017 突破百度云限速最新方法   本教程相对原教程">
-<meta name="keywords" content="教程">
+<meta name="description" content="写在前面的话呐~这套Java笔记是博主在学习Java基础期间所做的笔记,现整理后分享给需要的同学.对,这会是本博客的第一个系列小文哦.本笔记主要涉及Java基础学习中的知识点梳理和实际操作中的一点心得分享.本笔记适合想要复习Java基础知识的同学快速查漏补缺,当然,也适合Java初学者的查阅.对啦: 本文以JDK1.7为基准,但后期会加上一些JDK1.8新特性的讲解.因为博主的技浅才疏,本文中的知">
+<meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Chrome插件突破百度云限速方法">
-<meta property="og:url" content="http://duruonanni.github.io/blog/Chrome插件突破百度云限速方法/20170529/index.html">
+<meta property="og:title" content="Java笔记_05数组(Array)">
+<meta property="og:url" content="http://duruonanni.github.io/blog/JavaNotes-Day05/20170622/index.html">
 <meta property="og:site_name" content="杜若喃呢">
-<meta property="og:description" content="写在之前的话呐,今年6月1日(也就是大后天)开始,百度就全面强制实行账号实名制了.嗯……好吧,闲话不多说,这就奉上迟到的:迂回突破百度云限制方法.🐱‍💻    本教程仅适用于Chrome内核浏览器 查看是否为该内核,只要进入浏览器设置-关于页面,显示Chromium,就对啦 eg: centbrowser      本教程参考了:卡饭论坛:2017 突破百度云限速最新方法   本教程相对原教程">
-<meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!174701?authkey=AJoh90nl3u6Wj4U">
-<meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!174707:/baiduyun_2.png?authkey=AJoh90nl3u6Wj4U">
-<meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!174708:/baiduyun_3.png?authkey=AJoh90nl3u6Wj4U">
-<meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!174709:/baiduyun_4.png?authkey=AJoh90nl3u6Wj4U">
-<meta property="og:updated_time" content="2017-05-29T13:58:48.534Z">
+<meta property="og:description" content="写在前面的话呐~这套Java笔记是博主在学习Java基础期间所做的笔记,现整理后分享给需要的同学.对,这会是本博客的第一个系列小文哦.本笔记主要涉及Java基础学习中的知识点梳理和实际操作中的一点心得分享.本笔记适合想要复习Java基础知识的同学快速查漏补缺,当然,也适合Java初学者的查阅.对啦: 本文以JDK1.7为基准,但后期会加上一些JDK1.8新特性的讲解.因为博主的技浅才疏,本文中的知">
+<meta property="og:updated_time" content="2017-06-22T04:26:20.169Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chrome插件突破百度云限速方法">
-<meta name="twitter:description" content="写在之前的话呐,今年6月1日(也就是大后天)开始,百度就全面强制实行账号实名制了.嗯……好吧,闲话不多说,这就奉上迟到的:迂回突破百度云限制方法.🐱‍💻    本教程仅适用于Chrome内核浏览器 查看是否为该内核,只要进入浏览器设置-关于页面,显示Chromium,就对啦 eg: centbrowser      本教程参考了:卡饭论坛:2017 突破百度云限速最新方法   本教程相对原教程">
-<meta name="twitter:image" content="http://storage.live.com/items/AEE68C12565C1619!174701?authkey=AJoh90nl3u6Wj4U">
+<meta name="twitter:title" content="Java笔记_05数组(Array)">
+<meta name="twitter:description" content="写在前面的话呐~这套Java笔记是博主在学习Java基础期间所做的笔记,现整理后分享给需要的同学.对,这会是本博客的第一个系列小文哦.本笔记主要涉及Java基础学习中的知识点梳理和实际操作中的一点心得分享.本笔记适合想要复习Java基础知识的同学快速查漏补缺,当然,也适合Java初学者的查阅.对啦: 本文以JDK1.7为基准,但后期会加上一些JDK1.8新特性的讲解.因为博主的技浅才疏,本文中的知">
 
 
 
@@ -135,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://duruonanni.github.io/blog/Chrome插件突破百度云限速方法/20170529/"/>
+  <link rel="canonical" href="http://duruonanni.github.io/blog/JavaNotes-Day05/20170622/"/>
 
 
 
 
 
-  <title>Chrome插件突破百度云限速方法 | 杜若喃呢</title>
+  <title>Java笔记_05数组(Array) | 杜若喃呢</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -280,7 +275,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://duruonanni.github.io/blog/Chrome插件突破百度云限速方法/20170529/">
+    <link itemprop="mainEntityOfPage" href="http://duruonanni.github.io/blog/JavaNotes-Day05/20170622/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiangyu Kong">
@@ -297,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Chrome插件突破百度云限速方法</h1>
+          <h1 class="post-title" itemprop="name headline">Java笔记_05数组(Array)</h1>
         
 
         <div class="post-meta">
@@ -309,8 +304,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-29T20:27:00+08:00">
-                2017-05-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-22T12:28:30+08:00">
+                2017-06-22
               </time>
             
 
@@ -332,8 +327,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
                   </a>
                 </span>
 
@@ -343,8 +338,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/百度云/" itemprop="url" rel="index">
-                    <span itemprop="name">百度云</span>
+                  <a href="/categories/笔记/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -377,62 +372,56 @@
       
 
       
-        <h2 id="写在之前的话"><a href="#写在之前的话" class="headerlink" title="写在之前的话"></a>写在之前的话</h2><p>呐,今年6月1日(也就是大后天)开始,<a href="http://www.tmtpost.com/2606559.html" title="百度网盘6月1日起实行实名制，未认证将遭强退" target="_blank" rel="external">百度就全面强制实行账号实名制</a>了.嗯……<br>好吧,闲话不多说,这就奉上迟到的:迂回突破百度云限制方法.🐱‍💻  </p>
-<ul>
-<li>本教程仅适用于<strong>Chrome内核浏览器</strong><ul>
-<li>查看是否为该内核,只要进入<code>浏览器设置</code>-<code>关于页面</code>,显示<code>Chromium</code>,就对啦</li>
-<li>eg: <a href="https://www.centbrowser.com/" title="centbrowser" target="_blank" rel="external">centbrowser</a><br><img src="http://storage.live.com/items/AEE68C12565C1619!174701?authkey=AJoh90nl3u6Wj4U" alt="centbrowser">  </li>
+        <h1 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h1><p>呐~这套<code>Java笔记</code>是博主在学习<strong>Java基础</strong>期间所做的笔记,现整理后分享给需要的同学.对,这会是本博客的第一个系列小文哦.<br>本笔记主要涉及Java基础学习中的知识点梳理和实际操作中的一点心得分享.<br>本笔记适合想要复习Java基础知识的同学快速查漏补缺,当然,也适合Java初学者的查阅.<br>对啦: 本文以JDK1.7为基准,但后期会加上一些JDK1.8新特性的讲解.<br>因为博主的技浅才疏,本文中的知识点也不够全面.如有错误,还望指正;如有好的建议,还望不吝赐教.<br>🐱‍👤正文开始啦~  </p>
+<h1 id="Day05-数组-Array"><a href="#Day05-数组-Array" class="headerlink" title="Day05 数组(Array)"></a>Day05 数组(Array)</h1><h2 id="数组的定义"><a href="#数组的定义" class="headerlink" title="数组的定义"></a>数组的定义</h2><p>数组是一种数据结构,用来存储数量确定的同一类型值的集合.</p>
+<h3 id="数组的语法"><a href="#数组的语法" class="headerlink" title="数组的语法"></a>数组的语法</h3><p>语法1:(未赋初值,赋予其默认值)<br><code>数据类型[] 数组名 = new 数据类型[元素个数或者数组长度];</code><br>语法2:(赋初值,数组长度等于初值个数)<br><code>数据类型[] 数组名 = new {元素0值,元素1值,...,元素n值};</code></p>
+<h3 id="数组的调用"><a href="#数组的调用" class="headerlink" title="数组的调用"></a>数组的调用</h3><ul>
+<li>数组中的每个元素都有一个<strong>索引</strong>.</li>
+<li>数组中最小的索引是0,最大的索引是”数组长度-1”</li>
+<li>数组中的值通过索引调用访问</li>
+<li>数组是引用元素,在方法中调用时,其传入参数改变,本身值也会变的</li>
+<li>数组未初始化时,系统会默认给他赋予一个初值,不同类型的数据,其初始默认值如下:<ul>
+<li>整数类型:byte,short,int,long –&gt; <code>0</code>;</li>
+<li>浮点数类型:float,double –&gt; ‘0.0’;</li>
+<li>字符类型:char –&gt; ‘\u0000<code>即一个空字符(空格)</code>;</li>
+<li>布尔类型:boolean –&gt; <code>false</code>;</li>
+<li>引用数据类型:String,类,数组… –&gt; <code>null</code>表示不引用任何元素<h3 id="数组的遍历"><a href="#数组的遍历" class="headerlink" title="数组的遍历"></a>数组的遍历</h3>操作数组时,依次访问数组中的每个元素,叫做数组的遍历.常通过<code>for</code>循环语句执行数组的遍历;  </li>
 </ul>
 </li>
 </ul>
-<p>本教程参考了:<a href="http://bbs.kafan.cn/thread-2088255-1-1.html" title="突破百度云限速最新方法" target="_blank" rel="external">卡饭论坛:2017 突破百度云限速最新方法</a>  </p>
-<h3 id="本教程相对原教程的区别"><a href="#本教程相对原教程的区别" class="headerlink" title="本教程相对原教程的区别:"></a>本教程相对原教程的区别:</h3><ul>
-<li><strong>无需科学上网</strong>进入Google WebStore(插件商店)下载User-Agent Switcher插件;<ul>
-<li>因为我已经下载并打包好插件了,免翻墙,直接安装即可下载</li>
-<li>当前User-Agent Switcher版本为1.0.43_0</li>
-<li>下载User-Agent Switcher点 <a href="http://storage.live.com/items/AEE68C12565C1619!174699?authkey=AJoh90nl3u6Wj4U" title="插件下载地址" target="_blank" rel="external">这里</a></li>
+<h2 id="数组中的常见问题"><a href="#数组中的常见问题" class="headerlink" title="数组中的常见问题"></a>数组中的常见问题</h2><ul>
+<li>数组中处理最值问题(引入一个第三方临时变量,赋予其索引0的值,再通过遍历比对大小进行值转换,最终比较出最大的值)</li>
+<li>数组中的异常<ul>
+<li>数组越界异常 <code>ArrayIndexOutOfBoundsException</code><ul>
+<li>数组调用时,索引超出范围</li>
 </ul>
 </li>
-<li><strong>无需安装IDM下载器</strong><ul>
-<li>要知道IDM的确很强大,但它并不是一款免费软件哦,建议有需要的同学支持正版;<ul>
-<li>还是不用吧,正版相当贵(对我来说是)…</li>
-</ul>
-</li>
-<li>所以,这里将使用浏览器自带的下载器;</li>
-<li>需要更强大下载功能(断点续传…)的同学,建议安装<a href="http://www.eagleget.com/" target="_blank" rel="external">eagleget</a>软件;  </li>
+<li>空指针异常 <code>NullPointerException</code><ul>
+<li>指数组变量在调用时,其值为<code>null</code>即未指向任何数据</li>
+<li>常出现在引用类型的数组当中,要注意对数组中值的正确赋值</li>
 </ul>
 </li>
 </ul>
-<h3 id="本教程原理推测"><a href="#本教程原理推测" class="headerlink" title="本教程原理推测:"></a>本教程原理推测:</h3><p>私以为,百度云对Windows下的浏览器在下载文件超过一定大小和数量会触发强制使用百度云客户端下载,再对客户端的下载限速.而百度云网页版对Mac Safari浏览器更友好,限制更低.<br>本教程原理推测是,通过使用插件模拟Safari浏览器获得百度云网页版的更高权限.  </p>
-<h2 id="开始教程"><a href="#开始教程" class="headerlink" title="开始教程"></a>开始教程</h2><h3 id="1-下载并解压出User-Agent-Switcher插件"><a href="#1-下载并解压出User-Agent-Switcher插件" class="headerlink" title="1.下载并解压出User-Agent Switcher插件"></a>1.下载并解压出<code>User-Agent Switcher</code>插件</h3><p>插件下载地址: <a href="http://storage.live.com/items/AEE68C12565C1619!174699?authkey=AJoh90nl3u6Wj4U" target="_blank" rel="external">http://storage.live.com/items/AEE68C12565C1619!174699?authkey=AJoh90nl3u6Wj4U</a> </p>
-<h3 id="2-打开浏览器扩展管理窗口"><a href="#2-打开浏览器扩展管理窗口" class="headerlink" title="2.打开浏览器扩展管理窗口"></a>2.打开浏览器<strong>扩展管理</strong>窗口</h3><p><img src="http://storage.live.com/items/AEE68C12565C1619!174707:/baiduyun_2.png?authkey=AJoh90nl3u6Wj4U" alt="baiduyunjiasu_2"></p>
-<h3 id="3-将解压出的1-0-43-0-crx插件拖拽至浏览器扩展管理窗口中"><a href="#3-将解压出的1-0-43-0-crx插件拖拽至浏览器扩展管理窗口中" class="headerlink" title="3.将解压出的1.0.43_0.crx插件拖拽至浏览器扩展管理窗口中"></a>3.将解压出的<code>1.0.43_0.crx</code>插件拖拽至浏览器<strong>扩展管理</strong>窗口中</h3><p>拖拽后效果如图:<br><img src="http://storage.live.com/items/AEE68C12565C1619!174708:/baiduyun_3.png?authkey=AJoh90nl3u6Wj4U" alt="baiduyunjiasu_3"></p>
-<h3 id="4-点选插件-将其设置为safari"><a href="#4-点选插件-将其设置为safari" class="headerlink" title="4.点选插件,将其设置为safari"></a>4.点选插件,将其设置为<strong>safari</strong></h3><p><img src="http://storage.live.com/items/AEE68C12565C1619!174709:/baiduyun_4.png?authkey=AJoh90nl3u6Wj4U" alt="baiduyunjiasu_4"></p>
-<h3 id="5-打开网页版百度云-开始下载吧"><a href="#5-打开网页版百度云-开始下载吧" class="headerlink" title="5.打开网页版百度云,开始下载吧"></a>5.打开网页版百度云,开始下载吧</h3><h2 id="该方法优缺点总结"><a href="#该方法优缺点总结" class="headerlink" title="该方法优缺点总结"></a>该方法优缺点总结</h2><ul>
-<li>优点<ol>
-<li>安全: 不用安装什么绿色版破解版之流软件;</li>
-<li>方便: 全程使用浏览器,甚至百度云网盘的客户端都不用安装哦;</li>
-<li>高速: 默认情况下,客户端网速<code>10-30Kpbs</code>,此方法’1-3Mpbs’</li>
+</li>
+</ul>
+<h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2><p>定义:在数组中嵌套的数组(数组中值的类型是数组)<br>语法:  </p>
+<ol>
+<li>元素长度确定的数组<br><code>int[][] arr = new int[3][4];</code></li>
+<li>元素长度不确定的数组<br><code>int[][] arr = new int[3][];</code></li>
+<li>边定义边赋值的数组<br><code>int[][] arr = {{1,2} , {3,4,5,6} , {7,8,9}}</code>;<br>二维数组的访问语法:<br><code>arr[0][1]</code></li>
 </ol>
-</li>
-<li>缺点<ul>
-<li>无法批量下载10个以上文件(应该是百度对浏览器下载做出的限制)<ul>
-<li>解决方法: 多次少量下载</li>
+<h2 id="数组在Java中的内存分配"><a href="#数组在Java中的内存分配" class="headerlink" title="数组在Java中的内存分配"></a>数组在Java中的内存分配</h2><ul>
+<li>栈内存:       用于执行方法,每次方法调用的时候,都会在栈内存的最上面开辟一段空间,用于该方法的执行<ul>
+<li>栈内存特点: 先进后出,空间较小,运行较快</li>
 </ul>
 </li>
-<li>使用<code>User-Agent Switcher</code>插件后,无法正常打开一些网站,eg:<a href="http://www.bilibili.com/" target="_blank" rel="external">bilibili</a>  <ul>
-<li>解决办法: 不进行下载时关闭该插件  </li>
+<li>堆内存:<br>用于存放数据量较大的数据,例如数组,对象:只要是new关键字创建出来的数据体,都在堆内存中<ul>
+<li>堆内存特点: 空间较大,运行较慢,具备垃圾回收机制  </li>
 </ul>
 </li>
-<li>并没有使用IDM的多断点下载速度快<ul>
-<li>IDM真的好贵,能有效加速那么多够用啦,就这样啦</li>
+<li>方法区: 用于存放类的字节码对象,还有一些静态变量,和常量  </li>
+<li>本地方法区: 存放和系统相关的运行方法,还有其他语言相关的方法</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>喏,就这样~🐱‍👤<br>如有疑问或指正,欢迎评论或给我发邮件哦.</p>
-<!-- 参考链接 -->
 
       
     </div>
@@ -461,7 +450,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://duruonanni.github.io/blog/Chrome插件突破百度云限速方法/20170529/" title="Chrome插件突破百度云限速方法">http://duruonanni.github.io/blog/Chrome插件突破百度云限速方法/20170529/</a>
+      <a href="http://duruonanni.github.io/blog/JavaNotes-Day05/20170622/" title="Java笔记_05数组(Array)">http://duruonanni.github.io/blog/JavaNotes-Day05/20170622/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -477,7 +466,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/教程/" rel="tag"># 教程</a>
+            <a href="/tags/笔记/" rel="tag"># 笔记</a>
           
         </div>
       
@@ -490,8 +479,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/Markdown语法练习/20170525/" rel="next" title="Markdown语法练习">
-                <i class="fa fa-chevron-left"></i> Markdown语法练习
+              <a href="/blog/JavaNotes-Day04/20170622/" rel="next" title="Java笔记_04方法(Method)">
+                <i class="fa fa-chevron-left"></i> Java笔记_04方法(Method)
               </a>
             
           </div>
@@ -499,10 +488,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/JavaNotes-Day01/20170622/" rel="prev" title="Java笔记_01Java基础介绍">
-                Java笔记_01Java基础介绍 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -680,7 +665,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在之前的话"><span class="nav-number">1.</span> <span class="nav-text">写在之前的话</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本教程相对原教程的区别"><span class="nav-number">1.1.</span> <span class="nav-text">本教程相对原教程的区别:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本教程原理推测"><span class="nav-number">1.2.</span> <span class="nav-text">本教程原理推测:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始教程"><span class="nav-number">2.</span> <span class="nav-text">开始教程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-下载并解压出User-Agent-Switcher插件"><span class="nav-number">2.1.</span> <span class="nav-text">1.下载并解压出User-Agent Switcher插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-打开浏览器扩展管理窗口"><span class="nav-number">2.2.</span> <span class="nav-text">2.打开浏览器扩展管理窗口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-将解压出的1-0-43-0-crx插件拖拽至浏览器扩展管理窗口中"><span class="nav-number">2.3.</span> <span class="nav-text">3.将解压出的1.0.43_0.crx插件拖拽至浏览器扩展管理窗口中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-点选插件-将其设置为safari"><span class="nav-number">2.4.</span> <span class="nav-text">4.点选插件,将其设置为safari</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-打开网页版百度云-开始下载吧"><span class="nav-number">2.5.</span> <span class="nav-text">5.打开网页版百度云,开始下载吧</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#该方法优缺点总结"><span class="nav-number">3.</span> <span class="nav-text">该方法优缺点总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面的话"><span class="nav-number">1.</span> <span class="nav-text">写在前面的话</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Day05-数组-Array"><span class="nav-number">2.</span> <span class="nav-text">Day05 数组(Array)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的定义"><span class="nav-number">2.1.</span> <span class="nav-text">数组的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组的语法"><span class="nav-number">2.1.1.</span> <span class="nav-text">数组的语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组的调用"><span class="nav-number">2.1.2.</span> <span class="nav-text">数组的调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组的遍历"><span class="nav-number">2.1.3.</span> <span class="nav-text">数组的遍历</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组中的常见问题"><span class="nav-number">2.2.</span> <span class="nav-text">数组中的常见问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二维数组"><span class="nav-number">2.3.</span> <span class="nav-text">二维数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组在Java中的内存分配"><span class="nav-number">2.4.</span> <span class="nav-text">数组在Java中的内存分配</span></a></li></ol></li></ol></div>
             
 
           </div>
