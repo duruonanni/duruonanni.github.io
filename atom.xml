@@ -4,9 +4,9 @@
   <subtitle>山中人兮芳杜若</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://duruonanni.github.io/"/>
+  <link href="http://duruonanni.com/"/>
   <updated>2017-06-22T04:26:20.169Z</updated>
-  <id>http://duruonanni.github.io/</id>
+  <id>http://duruonanni.com/</id>
   
   <author>
     <name>Xiangyu Kong</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Java笔记_05数组(Array)</title>
-    <link href="http://duruonanni.github.io/blog/JavaNotes-Day05/20170622/"/>
-    <id>http://duruonanni.github.io/blog/JavaNotes-Day05/20170622/</id>
+    <link href="http://duruonanni.com/blog/JavaNotes-Day05/20170622/"/>
+    <id>http://duruonanni.com/blog/JavaNotes-Day05/20170622/</id>
     <published>2017-06-22T04:28:30.314Z</published>
     <updated>2017-06-22T04:26:20.169Z</updated>
     
@@ -80,19 +80,19 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://duruonanni.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://duruonanni.com/categories/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="Java" scheme="http://duruonanni.github.io/categories/%E7%AC%94%E8%AE%B0/Java/"/>
+      <category term="Java" scheme="http://duruonanni.com/categories/%E7%AC%94%E8%AE%B0/Java/"/>
     
     
-      <category term="笔记" scheme="http://duruonanni.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://duruonanni.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>Java笔记_04方法(Method)</title>
-    <link href="http://duruonanni.github.io/blog/JavaNotes-Day04/20170622/"/>
-    <id>http://duruonanni.github.io/blog/JavaNotes-Day04/20170622/</id>
+    <link href="http://duruonanni.com/blog/JavaNotes-Day04/20170622/"/>
+    <id>http://duruonanni.com/blog/JavaNotes-Day04/20170622/</id>
     <published>2017-06-22T04:20:40.890Z</published>
     <updated>2017-06-22T04:24:03.886Z</updated>
     
@@ -143,19 +143,19 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://duruonanni.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://duruonanni.com/categories/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="Java" scheme="http://duruonanni.github.io/categories/%E7%AC%94%E8%AE%B0/Java/"/>
+      <category term="Java" scheme="http://duruonanni.com/categories/%E7%AC%94%E8%AE%B0/Java/"/>
     
     
-      <category term="笔记" scheme="http://duruonanni.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://duruonanni.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>Java笔记_03Scanner接收键盘录入&amp;程序结构</title>
-    <link href="http://duruonanni.github.io/blog/JavaNotes-Day03/20170622/"/>
-    <id>http://duruonanni.github.io/blog/JavaNotes-Day03/20170622/</id>
+    <link href="http://duruonanni.com/blog/JavaNotes-Day03/20170622/"/>
+    <id>http://duruonanni.com/blog/JavaNotes-Day03/20170622/</id>
     <published>2017-06-22T04:13:22.157Z</published>
     <updated>2017-06-22T04:17:09.260Z</updated>
     
@@ -203,19 +203,19 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://duruonanni.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://duruonanni.com/categories/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="Java" scheme="http://duruonanni.github.io/categories/%E7%AC%94%E8%AE%B0/Java/"/>
+      <category term="Java" scheme="http://duruonanni.com/categories/%E7%AC%94%E8%AE%B0/Java/"/>
     
     
-      <category term="笔记" scheme="http://duruonanni.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://duruonanni.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>Java笔记_02数据类型&amp;运算符</title>
-    <link href="http://duruonanni.github.io/blog/JavaNotes-Day02/20170622/"/>
-    <id>http://duruonanni.github.io/blog/JavaNotes-Day02/20170622/</id>
+    <link href="http://duruonanni.com/blog/JavaNotes-Day02/20170622/"/>
+    <id>http://duruonanni.com/blog/JavaNotes-Day02/20170622/</id>
     <published>2017-06-22T03:55:59.269Z</published>
     <updated>2017-06-22T03:59:59.243Z</updated>
     
@@ -390,19 +390,19 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://duruonanni.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://duruonanni.com/categories/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="Java" scheme="http://duruonanni.github.io/categories/%E7%AC%94%E8%AE%B0/Java/"/>
+      <category term="Java" scheme="http://duruonanni.com/categories/%E7%AC%94%E8%AE%B0/Java/"/>
     
     
-      <category term="笔记" scheme="http://duruonanni.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://duruonanni.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>Java笔记_01Java基础介绍</title>
-    <link href="http://duruonanni.github.io/blog/JavaNotes-Day01/20170622/"/>
-    <id>http://duruonanni.github.io/blog/JavaNotes-Day01/20170622/</id>
+    <link href="http://duruonanni.com/blog/JavaNotes-Day01/20170622/"/>
+    <id>http://duruonanni.com/blog/JavaNotes-Day01/20170622/</id>
     <published>2017-06-22T03:33:55.409Z</published>
     <updated>2017-06-22T03:46:46.787Z</updated>
     
@@ -513,19 +513,19 @@
     
     </summary>
     
-      <category term="笔记" scheme="http://duruonanni.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://duruonanni.com/categories/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="Java" scheme="http://duruonanni.github.io/categories/%E7%AC%94%E8%AE%B0/Java/"/>
+      <category term="Java" scheme="http://duruonanni.com/categories/%E7%AC%94%E8%AE%B0/Java/"/>
     
     
-      <category term="笔记" scheme="http://duruonanni.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://duruonanni.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>Chrome插件突破百度云限速方法</title>
-    <link href="http://duruonanni.github.io/blog/Chrome%E6%8F%92%E4%BB%B6%E7%AA%81%E7%A0%B4%E7%99%BE%E5%BA%A6%E4%BA%91%E9%99%90%E9%80%9F%E6%96%B9%E6%B3%95/20170529/"/>
-    <id>http://duruonanni.github.io/blog/Chrome插件突破百度云限速方法/20170529/</id>
+    <link href="http://duruonanni.com/blog/Chrome%E6%8F%92%E4%BB%B6%E7%AA%81%E7%A0%B4%E7%99%BE%E5%BA%A6%E4%BA%91%E9%99%90%E9%80%9F%E6%96%B9%E6%B3%95/20170529/"/>
+    <id>http://duruonanni.com/blog/Chrome插件突破百度云限速方法/20170529/</id>
     <published>2017-05-29T12:27:00.000Z</published>
     <updated>2017-05-29T13:58:48.534Z</updated>
     
@@ -593,19 +593,19 @@
     
     </summary>
     
-      <category term="教程" scheme="http://duruonanni.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://duruonanni.com/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="百度云" scheme="http://duruonanni.github.io/categories/%E6%95%99%E7%A8%8B/%E7%99%BE%E5%BA%A6%E4%BA%91/"/>
+      <category term="百度云" scheme="http://duruonanni.com/categories/%E6%95%99%E7%A8%8B/%E7%99%BE%E5%BA%A6%E4%BA%91/"/>
     
     
-      <category term="教程" scheme="http://duruonanni.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://duruonanni.com/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>Markdown语法练习</title>
-    <link href="http://duruonanni.github.io/blog/Markdown%E8%AF%AD%E6%B3%95%E7%BB%83%E4%B9%A0/20170525/"/>
-    <id>http://duruonanni.github.io/blog/Markdown语法练习/20170525/</id>
+    <link href="http://duruonanni.com/blog/Markdown%E8%AF%AD%E6%B3%95%E7%BB%83%E4%B9%A0/20170525/"/>
+    <id>http://duruonanni.com/blog/Markdown语法练习/20170525/</id>
     <published>2017-05-25T15:47:30.000Z</published>
     <updated>2017-05-26T09:03:59.043Z</updated>
     
@@ -758,7 +758,7 @@
 </ul>
 </blockquote>
 <h3 id="8-超链接"><a href="#8-超链接" class="headerlink" title="8). 超链接"></a>8). 超链接</h3><p>Markdown 中输入的网址能<strong>自动转换成可点击的形式</strong>.此外,Markdown 还 支持两种形式的链接语法： <strong>行内式</strong>和<strong>参考式</strong>两种形式.<br>两种方法中,链接文字都使用<strong>[方括号]</strong>来标记.  </p>
-<h4 id="行内式超链接语法举例"><a href="#行内式超链接语法举例" class="headerlink" title="行内式超链接语法举例:"></a><strong>行内式</strong>超链接语法举例:</h4><p><code>This is [an example](http://example.com/ &quot;Title&quot;) inline link.</code><br>效果如下:<br>This is <a href="http://duruonanni.github.io" title="Title">an example</a> inline link.</p>
+<h4 id="行内式超链接语法举例"><a href="#行内式超链接语法举例" class="headerlink" title="行内式超链接语法举例:"></a><strong>行内式</strong>超链接语法举例:</h4><p><code>This is [an example](http://example.com/ &quot;Title&quot;) inline link.</code><br>效果如下:<br>This is <a href="http://duruonanni.github.io" title="Title" target="_blank" rel="external">an example</a> inline link.</p>
 <h4 id="行内式超链接语法详解"><a href="#行内式超链接语法详解" class="headerlink" title="行内式超链接语法详解:"></a><strong>行内式</strong>超链接语法详解:</h4><ul>
 <li>[]中括号中的内容为超链接文字</li>
 <li>()小括号前部分为超链接地址</li>
@@ -860,19 +860,19 @@
     
     </summary>
     
-      <category term="教程" scheme="http://duruonanni.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://duruonanni.com/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="markdown" scheme="http://duruonanni.github.io/categories/%E6%95%99%E7%A8%8B/markdown/"/>
+      <category term="markdown" scheme="http://duruonanni.com/categories/%E6%95%99%E7%A8%8B/markdown/"/>
     
     
-      <category term="教程" scheme="http://duruonanni.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://duruonanni.com/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>Hexo建站流程</title>
-    <link href="http://duruonanni.github.io/blog/%E5%BB%BA%E7%AB%99%E6%B5%81%E7%A8%8B%E8%AE%B0%E5%BD%95/20170509/"/>
-    <id>http://duruonanni.github.io/blog/建站流程记录/20170509/</id>
+    <link href="http://duruonanni.com/blog/%E5%BB%BA%E7%AB%99%E6%B5%81%E7%A8%8B%E8%AE%B0%E5%BD%95/20170509/"/>
+    <id>http://duruonanni.com/blog/建站流程记录/20170509/</id>
     <published>2017-05-08T16:20:40.797Z</published>
     <updated>2017-05-26T09:03:52.618Z</updated>
     
@@ -979,7 +979,7 @@
 <blockquote>
 <ul>
 <li>在Blog根目录下,找到<code>_config.yml</code>文件.使用文本编辑器打开(推荐使用<a href="https://notepad-plus-plus.org" title="notepad++" target="_blank" rel="external">notepad++</a>或者<a href="http://www.sublimetext.com/" title="sublime" target="_blank" rel="external">sublime Text 3</a>软件)进行设置</li>
-<li>配置的具体方法见本站:<a href="https://duruonanni.github.io/blog/Hexo站点设置/20170508/" title="Hexo站点设置">Hexo站点设置</a></li>
+<li>配置的具体方法见本站:<a href="https://duruonanni.github.io/blog/Hexo站点设置/20170508/" title="Hexo站点设置" target="_blank" rel="external">Hexo站点设置</a></li>
 </ul>
 </blockquote>
 <h2 id="四-Hexo主题设置"><a href="#四-Hexo主题设置" class="headerlink" title="四.    Hexo主题设置"></a>四.    Hexo主题设置</h2><p>Hexo的特点就是拥有许多或清新或绚丽的主题(自带的主题名称叫<code>landscape</code>),选择一款中意的主题,进行一些简单的设置,就能让博客更加赏心悦目.以下是主题设置的方法,本文以<code>NexT</code>主题为例设置:  </p>
@@ -1080,8 +1080,8 @@
 </blockquote>
 <h2 id="写在最后的话"><a href="#写在最后的话" class="headerlink" title="写在最后的话"></a>写在最后的话</h2><p>教程有对如何建站进行了讲解.建站的完成,自然意味着博客冒险之路的开始咯.诚然,建站完成之后还有很多工作需要做呢.<br>本文的站点建设,几乎不涉及任何知识点,只是依葫芦画瓢的简单操作.<br>之后,我觉得我们应该至少掌握如下技能:</p>
 <ul>
-<li>[x] <a href="https://duruonanni.github.io/blog/Hexo%E7%AB%99%E7%82%B9%E8%AE%BE%E7%BD%AE/20170508/" title="hexo站点设置">Hexo站点设置</a>,更详细的掌握这个站点的各个功能,让自己的操作更得心应手;  </li>
-<li>[x] <a href="https://duruonanni.github.io/blog/Markdown%E8%AF%AD%E6%B3%95%E7%BB%83%E4%B9%A0/20170525/" title="Markdown">Markdown语言的学习</a>,hexo中发布文章就是使用这个语言的,掌握好就能写出漂亮排版的文章;  </li>
+<li>[x] <a href="https://duruonanni.github.io/blog/Hexo%E7%AB%99%E7%82%B9%E8%AE%BE%E7%BD%AE/20170508/" title="hexo站点设置" target="_blank" rel="external">Hexo站点设置</a>,更详细的掌握这个站点的各个功能,让自己的操作更得心应手;  </li>
+<li>[x] <a href="https://duruonanni.github.io/blog/Markdown%E8%AF%AD%E6%B3%95%E7%BB%83%E4%B9%A0/20170525/" title="Markdown" target="_blank" rel="external">Markdown语言的学习</a>,hexo中发布文章就是使用这个语言的,掌握好就能写出漂亮排版的文章;  </li>
 <li>[ ] 英语,具备一定的英语基础,对之后的进阶,我认为是最重要的.能做到无障碍阅读英语文献,就能更容易理解编程建站中原理性的问题.<br>最后,若在依照本教程建站时出现任何问题,请留言或邮件联系我.<br>对本站有什么建议,也欢迎<strong>留言</strong>.</li>
 </ul>
 <p>喏,就这样啦~🐱‍👤</p>
@@ -1095,23 +1095,23 @@
     
     </summary>
     
-      <category term="教程" scheme="http://duruonanni.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://duruonanni.com/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="hexo" scheme="http://duruonanni.github.io/categories/%E6%95%99%E7%A8%8B/hexo/"/>
+      <category term="hexo" scheme="http://duruonanni.com/categories/%E6%95%99%E7%A8%8B/hexo/"/>
     
     
-      <category term="教程" scheme="http://duruonanni.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://duruonanni.com/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>Hexo站点设置</title>
-    <link href="http://duruonanni.github.io/blog/Hexo%E7%AB%99%E7%82%B9%E8%AE%BE%E7%BD%AE/20170508/"/>
-    <id>http://duruonanni.github.io/blog/Hexo站点设置/20170508/</id>
+    <link href="http://duruonanni.com/blog/Hexo%E7%AB%99%E7%82%B9%E8%AE%BE%E7%BD%AE/20170508/"/>
+    <id>http://duruonanni.com/blog/Hexo站点设置/20170508/</id>
     <published>2017-05-08T11:25:01.000Z</published>
     <updated>2017-05-26T09:04:42.886Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="写在之前的话"><a href="#写在之前的话" class="headerlink" title="写在之前的话"></a>写在之前的话</h2><p>本文主要结合我建站时的经历,对配置Hexo的<code>_config.yml</code>文件配置说明,以及hexo的常用指令的介绍.<br>本文适用于已通过各路Hexo教程完成建站后,需要了解Hexo站点设置的同学.若尚未完成建站,请先行阅读<strong><a href="https://duruonanni.github.io/blog/%E5%BB%BA%E7%AB%99%E6%B5%81%E7%A8%8B%E8%AE%B0%E5%BD%95/20170509/" title="Hexo建站流程">todo:建站流程记录</a></strong>.<br>本文内容主要参考了:  </p>
+    <content type="html"><![CDATA[<h2 id="写在之前的话"><a href="#写在之前的话" class="headerlink" title="写在之前的话"></a>写在之前的话</h2><p>本文主要结合我建站时的经历,对配置Hexo的<code>_config.yml</code>文件配置说明,以及hexo的常用指令的介绍.<br>本文适用于已通过各路Hexo教程完成建站后,需要了解Hexo站点设置的同学.若尚未完成建站,请先行阅读<strong><a href="https://duruonanni.github.io/blog/%E5%BB%BA%E7%AB%99%E6%B5%81%E7%A8%8B%E8%AE%B0%E5%BD%95/20170509/" title="Hexo建站流程" target="_blank" rel="external">todo:建站流程记录</a></strong>.<br>本文内容主要参考了:  </p>
 <ul>
 <li>Setsuna’s Blog:<a href="http://www.isetsuna.com/hexo/install-config/" title="Hexo博客系列" target="_blank" rel="external">Hexo博客系列</a>  </li>
 <li>张学志の博客:<a href="http://blog.csdn.net/xuezhisdc/article/details/53130383" title="hexo配置教程" target="_blank" rel="external">hexo配置教程</a>  </li>
@@ -1162,7 +1162,7 @@
 <li><code>title</code>写文章名</li>
 <li>此语法默认会将新建的文章放到<code>blog--souce--_posts</code>文件夹中,你可以在新建的文章中使用Markdown语法编辑内容,最终<code>_posts</code>文件夹中的文章会默认以时间顺序发布到你的网站上面.<br>ATT: </li>
 <li>Hexo中文章的文本格式需要是Markdown(后缀名<code>.md</code>)</li>
-<li>关于Markdown的常用语法,可参见我近期的总结<a href="https://duruonanni.github.io/blog/Markdown%E8%AF%AD%E6%B3%95%E7%BB%83%E4%B9%A0/20170525/" title="Markdown">Markdown语法练习</a></li>
+<li>关于Markdown的常用语法,可参见我近期的总结<a href="https://duruonanni.github.io/blog/Markdown%E8%AF%AD%E6%B3%95%E7%BB%83%E4%B9%A0/20170525/" title="Markdown" target="_blank" rel="external">Markdown语法练习</a></li>
 <li>这里更推荐以<code>发表草稿</code>的方式新建文章,具体方法如下:  <blockquote>
 <ul>
 <li>使用语法: <code>hexo new draft &lt;title&gt;</code> 将文章新建到<em>blog–souce–_drafts</em>文件夹中,你可以在此处对文章进行编辑.待确认发布时,使用语法:<code>hexo publish draft &lt;filename&gt;</code>,可将选定的文章传到<code>_posts</code>文件夹.  </li>
@@ -1193,19 +1193,19 @@
     
     </summary>
     
-      <category term="教程" scheme="http://duruonanni.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://duruonanni.com/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="hexo" scheme="http://duruonanni.github.io/categories/%E6%95%99%E7%A8%8B/hexo/"/>
+      <category term="hexo" scheme="http://duruonanni.com/categories/%E6%95%99%E7%A8%8B/hexo/"/>
     
     
-      <category term="教程" scheme="http://duruonanni.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://duruonanni.com/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://duruonanni.github.io/blog/hello-world/20170504/"/>
-    <id>http://duruonanni.github.io/blog/hello-world/20170504/</id>
+    <link href="http://duruonanni.com/blog/hello-world/20170504/"/>
+    <id>http://duruonanni.com/blog/hello-world/20170504/</id>
     <published>2017-05-04T14:50:41.679Z</published>
     <updated>2017-05-08T11:13:08.181Z</updated>
     
