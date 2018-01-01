@@ -74,13 +74,13 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="duruonanni,java,blog" />
+  <meta name="keywords" content="笔记," />
 
 
 
 
 
-  <link rel="alternate" href="/atom.xml" title="杜若喃呢" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="杜若喃呢's blog" type="application/atom+xml" />
 
 
 
@@ -92,16 +92,17 @@
 
 
 
-<meta name="description" content="In C# we say:12345static void Main(string[] args)&amp;#123;	Console.Writeline(&quot;Hello world&quot;);	Console.Readkey();&amp;#125; In HTML we say:1234567&amp;lt;!DOCTYPE HTML&amp;gt;&amp;lt;html&amp;gt;	&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;	&amp;lt">
+<meta name="description" content="写在前面的话呐~这套Java笔记是博主在学习Java基础期间所做的笔记,现整理后分享给需要的同学.对,这会是本博客的第一个系列小文哦.本笔记主要涉及Java基础学习中的知识点梳理和实际操作中的一点心得分享.本笔记适合想要复习Java基础知识的同学快速查漏补缺,当然,也适合Java初学者的查阅.对啦: 本文以JDK1.7为基准,但后期会加上一些JDK1.8新特性的讲解.因为博主的技浅才疏,本文中的知">
+<meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://duruonanni.com/blog/hello-world/20170504/index.html">
-<meta property="og:site_name" content="杜若喃呢">
-<meta property="og:description" content="In C# we say:12345static void Main(string[] args)&amp;#123;	Console.Writeline(&quot;Hello world&quot;);	Console.Readkey();&amp;#125; In HTML we say:1234567&amp;lt;!DOCTYPE HTML&amp;gt;&amp;lt;html&amp;gt;	&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;	&amp;lt">
-<meta property="og:updated_time" content="2017-05-08T11:13:08.181Z">
+<meta property="og:title" content="Java笔记_03Scanner接收键盘录入&amp;程序结构">
+<meta property="og:url" content="http://duruonanni.com/JavaNotes-Day03/20170622.html">
+<meta property="og:site_name" content="杜若喃呢&#39;s blog">
+<meta property="og:description" content="写在前面的话呐~这套Java笔记是博主在学习Java基础期间所做的笔记,现整理后分享给需要的同学.对,这会是本博客的第一个系列小文哦.本笔记主要涉及Java基础学习中的知识点梳理和实际操作中的一点心得分享.本笔记适合想要复习Java基础知识的同学快速查漏补缺,当然,也适合Java初学者的查阅.对啦: 本文以JDK1.7为基准,但后期会加上一些JDK1.8新特性的讲解.因为博主的技浅才疏,本文中的知">
+<meta property="og:updated_time" content="2017-06-22T04:17:09.260Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="In C# we say:12345static void Main(string[] args)&amp;#123;	Console.Writeline(&quot;Hello world&quot;);	Console.Readkey();&amp;#125; In HTML we say:1234567&amp;lt;!DOCTYPE HTML&amp;gt;&amp;lt;html&amp;gt;	&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;	&amp;lt">
+<meta name="twitter:title" content="Java笔记_03Scanner接收键盘录入&amp;程序结构">
+<meta name="twitter:description" content="写在前面的话呐~这套Java笔记是博主在学习Java基础期间所做的笔记,现整理后分享给需要的同学.对,这会是本博客的第一个系列小文哦.本笔记主要涉及Java基础学习中的知识点梳理和实际操作中的一点心得分享.本笔记适合想要复习Java基础知识的同学快速查漏补缺,当然,也适合Java初学者的查阅.对啦: 本文以JDK1.7为基准,但后期会加上一些JDK1.8新特性的讲解.因为博主的技浅才疏,本文中的知">
 
 
 
@@ -129,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://duruonanni.com/blog/hello-world/20170504/"/>
+  <link rel="canonical" href="http://duruonanni.com/JavaNotes-Day03/20170622.html"/>
 
 
 
 
 
-  <title>Hello World | 杜若喃呢</title>
+  <title>Java笔记_03Scanner接收键盘录入&程序结构 | 杜若喃呢's blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -171,7 +172,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">杜若喃呢</span>
+        <span class="site-title">杜若喃呢's blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -274,7 +275,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://duruonanni.com/blog/hello-world/20170504/">
+    <link itemprop="mainEntityOfPage" href="http://duruonanni.com/JavaNotes-Day03/20170622.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiangyu Kong">
@@ -283,7 +284,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="杜若喃呢">
+      <meta itemprop="name" content="杜若喃呢's blog">
     </span>
 
     
@@ -291,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">Java笔记_03Scanner接收键盘录入&程序结构</h1>
         
 
         <div class="post-meta">
@@ -303,8 +304,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-04T22:50:41+08:00">
-                2017-05-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-22T12:13:22+08:00">
+                2017-06-22
               </time>
             
 
@@ -313,6 +314,39 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -338,8 +372,42 @@
       
 
       
-        <p>In C# we say:<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">static</span> <span class="keyword">void</span> Main(<span class="keyword">string</span>[] args)</div><div class="line">&#123;</div><div class="line">	<span class="built_in">Console</span>.Writeline(<span class="string">"Hello world"</span>);</div><div class="line">	<span class="built_in">Console</span>.Readkey();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>In HTML we say:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE HTML&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	Hello world</div><div class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">htme</span>&gt;</span></div></pre></td></tr></table></figure></p>
+        <h1 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h1><p>呐~这套<code>Java笔记</code>是博主在学习<strong>Java基础</strong>期间所做的笔记,现整理后分享给需要的同学.对,这会是本博客的第一个系列小文哦.<br>本笔记主要涉及Java基础学习中的知识点梳理和实际操作中的一点心得分享.<br>本笔记适合想要复习Java基础知识的同学快速查漏补缺,当然,也适合Java初学者的查阅.<br>对啦: 本文以JDK1.7为基准,但后期会加上一些JDK1.8新特性的讲解.<br>因为博主的技浅才疏,本文中的知识点也不够全面.如有错误,还望指正;如有好的建议,还望不吝赐教.<br>🐱‍👤正文开始啦~  </p>
+<h1 id="Day03-Scanner接收键盘录入-amp-程序结构"><a href="#Day03-Scanner接收键盘录入-amp-程序结构" class="headerlink" title="Day03 Scanner接收键盘录入&amp;程序结构"></a>Day03 Scanner接收键盘录入&amp;程序结构</h1><h2 id="Scanner类"><a href="#Scanner类" class="headerlink" title="Scanner类"></a>Scanner类</h2><p>Scanner类的作用: 接收键盘录入</p>
+<h3 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤:"></a>使用步骤:</h3><ol>
+<li>导包<br> 在主类声明之外,写导包语句(通常写在代码最开头):<br> <code>import java.util.Scanner;</code>  </li>
+<li>创建键盘录入对象<br><code>Scanner s = new Scanner(System.in);</code><br>注意: 引用类型变量的定义格式:<br><code>数据类型 变量名 = new 数据类型();</code></li>
+<li>使用<code>Scanner</code>对象<code>sc</code>的<code>nextInt()</code>方法,获取键盘录入的数字<br> <code>int x = s.nextInt();</code>  </li>
+<li>使用<code>Scanner</code>对象<code>sc</code>的<code>next()</code>方法,获取键盘录入的值<br> <code>String str = s.next();</code></li>
+</ol>
+<h2 id="程序的结构"><a href="#程序的结构" class="headerlink" title="程序的结构"></a>程序的结构</h2><h3 id="程序的机构分类"><a href="#程序的机构分类" class="headerlink" title="程序的机构分类:"></a>程序的机构分类:</h3><ol>
+<li>顺序结构</li>
+<li>分支结构</li>
+<li>循环结构</li>
+</ol>
+<h3 id="分支结构介绍"><a href="#分支结构介绍" class="headerlink" title="分支结构介绍:"></a>分支结构介绍:</h3><ul>
+<li><code>if-else-if</code>语句  </li>
+<li><code>switch-case</code>语句  <ul>
+<li>注意: <code>break</code>不能省略;将<code>default</code>放到最后  </li>
+</ul>
+</li>
+</ul>
+<h3 id="循环结构介绍"><a href="#循环结构介绍" class="headerlink" title="循环结构介绍"></a>循环结构介绍</h3><p>Java中使用的循环种类:</p>
+<ul>
+<li><code>for</code>循环</li>
+<li><code>while</code>循环</li>
+<li><code>do-while;</code>循环</li>
+</ul>
+<h4 id="控制循环的语句"><a href="#控制循环的语句" class="headerlink" title="控制循环的语句"></a>控制循环的语句</h4><ul>
+<li><code>continue</code>:立即结束本次循环,重新从头开始下一次循环;</li>
+<li><code>break</code>: 立即结束当前循环,跳出循环进入下面的代码;</li>
+<li><code>return</code>: 结束当前方法(相当于break只能跳出一个循环,如果循环外是另一个循环,则执行外部循环的内容;而return是结束所有的循环,跳出循环外);</li>
+<li><code>System.exit()</code>:直接结束虚拟机,结束所有程序</li>
+</ul>
+<h4 id="循环结构的注意事项"><a href="#循环结构的注意事项" class="headerlink" title="循环结构的注意事项:"></a>循环结构的注意事项:</h4><ul>
+<li>循环和循环之间可以嵌套;</li>
+<li>循环语句中新建的变量不能被外部调用到,所以尽量将需要调用的变量声明在循环之外;</li>
+</ul>
 
       
     </div>
@@ -368,7 +436,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://duruonanni.com/blog/hello-world/20170504/" title="Hello World">http://duruonanni.com/blog/hello-world/20170504/</a>
+      <a href="http://duruonanni.com/JavaNotes-Day03/20170622.html" title="Java笔记_03Scanner接收键盘录入&程序结构">http://duruonanni.com/JavaNotes-Day03/20170622.html</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -382,6 +450,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag"># 笔记</a>
+          
+        </div>
+      
 
       
         
@@ -391,14 +465,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/JavaNotes-Day02/20170622.html" rel="next" title="Java笔记_02数据类型&运算符">
+                <i class="fa fa-chevron-left"></i> Java笔记_02数据类型&运算符
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/Hexo站点设置/20170508/" rel="prev" title="Hexo站点设置">
-                Hexo站点设置 <i class="fa fa-chevron-right"></i>
+              <a href="/JavaNotes-Day04/20170622.html" rel="prev" title="Java笔记_04方法(Method)">
+                Java笔记_04方法(Method) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -448,8 +526,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -559,6 +646,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面的话"><span class="nav-number">1.</span> <span class="nav-text">写在前面的话</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Day03-Scanner接收键盘录入-amp-程序结构"><span class="nav-number">2.</span> <span class="nav-text">Day03 Scanner接收键盘录入&程序结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Scanner类"><span class="nav-number">2.1.</span> <span class="nav-text">Scanner类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用步骤"><span class="nav-number">2.1.1.</span> <span class="nav-text">使用步骤:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程序的结构"><span class="nav-number">2.2.</span> <span class="nav-text">程序的结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#程序的机构分类"><span class="nav-number">2.2.1.</span> <span class="nav-text">程序的机构分类:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支结构介绍"><span class="nav-number">2.2.2.</span> <span class="nav-text">分支结构介绍:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环结构介绍"><span class="nav-number">2.2.3.</span> <span class="nav-text">循环结构介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#控制循环的语句"><span class="nav-number">2.2.3.1.</span> <span class="nav-text">控制循环的语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#循环结构的注意事项"><span class="nav-number">2.2.3.2.</span> <span class="nav-text">循环结构的注意事项:</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -574,8 +677,8 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heartbeat"></i>
   </span>

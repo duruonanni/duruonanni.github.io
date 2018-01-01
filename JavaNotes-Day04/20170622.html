@@ -80,7 +80,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="杜若喃呢" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="杜若喃呢's blog" type="application/atom+xml" />
 
 
 
@@ -95,13 +95,13 @@
 <meta name="description" content="写在前面的话呐~这套Java笔记是博主在学习Java基础期间所做的笔记,现整理后分享给需要的同学.对,这会是本博客的第一个系列小文哦.本笔记主要涉及Java基础学习中的知识点梳理和实际操作中的一点心得分享.本笔记适合想要复习Java基础知识的同学快速查漏补缺,当然,也适合Java初学者的查阅.对啦: 本文以JDK1.7为基准,但后期会加上一些JDK1.8新特性的讲解.因为博主的技浅才疏,本文中的知">
 <meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java笔记_05数组(Array)">
-<meta property="og:url" content="http://duruonanni.com/blog/JavaNotes-Day05/20170622/index.html">
-<meta property="og:site_name" content="杜若喃呢">
+<meta property="og:title" content="Java笔记_04方法(Method)">
+<meta property="og:url" content="http://duruonanni.com/JavaNotes-Day04/20170622.html">
+<meta property="og:site_name" content="杜若喃呢&#39;s blog">
 <meta property="og:description" content="写在前面的话呐~这套Java笔记是博主在学习Java基础期间所做的笔记,现整理后分享给需要的同学.对,这会是本博客的第一个系列小文哦.本笔记主要涉及Java基础学习中的知识点梳理和实际操作中的一点心得分享.本笔记适合想要复习Java基础知识的同学快速查漏补缺,当然,也适合Java初学者的查阅.对啦: 本文以JDK1.7为基准,但后期会加上一些JDK1.8新特性的讲解.因为博主的技浅才疏,本文中的知">
-<meta property="og:updated_time" content="2017-06-22T04:26:20.169Z">
+<meta property="og:updated_time" content="2017-06-22T04:24:03.886Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java笔记_05数组(Array)">
+<meta name="twitter:title" content="Java笔记_04方法(Method)">
 <meta name="twitter:description" content="写在前面的话呐~这套Java笔记是博主在学习Java基础期间所做的笔记,现整理后分享给需要的同学.对,这会是本博客的第一个系列小文哦.本笔记主要涉及Java基础学习中的知识点梳理和实际操作中的一点心得分享.本笔记适合想要复习Java基础知识的同学快速查漏补缺,当然,也适合Java初学者的查阅.对啦: 本文以JDK1.7为基准,但后期会加上一些JDK1.8新特性的讲解.因为博主的技浅才疏,本文中的知">
 
 
@@ -130,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://duruonanni.com/blog/JavaNotes-Day05/20170622/"/>
+  <link rel="canonical" href="http://duruonanni.com/JavaNotes-Day04/20170622.html"/>
 
 
 
 
 
-  <title>Java笔记_05数组(Array) | 杜若喃呢</title>
+  <title>Java笔记_04方法(Method) | 杜若喃呢's blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -172,7 +172,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">杜若喃呢</span>
+        <span class="site-title">杜若喃呢's blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -275,7 +275,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://duruonanni.com/blog/JavaNotes-Day05/20170622/">
+    <link itemprop="mainEntityOfPage" href="http://duruonanni.com/JavaNotes-Day04/20170622.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiangyu Kong">
@@ -284,7 +284,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="杜若喃呢">
+      <meta itemprop="name" content="杜若喃呢's blog">
     </span>
 
     
@@ -292,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java笔记_05数组(Array)</h1>
+          <h1 class="post-title" itemprop="name headline">Java笔记_04方法(Method)</h1>
         
 
         <div class="post-meta">
@@ -304,7 +304,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-22T12:28:30+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-22T12:20:40+08:00">
                 2017-06-22
               </time>
             
@@ -373,54 +373,43 @@
 
       
         <h1 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h1><p>呐~这套<code>Java笔记</code>是博主在学习<strong>Java基础</strong>期间所做的笔记,现整理后分享给需要的同学.对,这会是本博客的第一个系列小文哦.<br>本笔记主要涉及Java基础学习中的知识点梳理和实际操作中的一点心得分享.<br>本笔记适合想要复习Java基础知识的同学快速查漏补缺,当然,也适合Java初学者的查阅.<br>对啦: 本文以JDK1.7为基准,但后期会加上一些JDK1.8新特性的讲解.<br>因为博主的技浅才疏,本文中的知识点也不够全面.如有错误,还望指正;如有好的建议,还望不吝赐教.<br>🐱‍👤正文开始啦~  </p>
-<h1 id="Day05-数组-Array"><a href="#Day05-数组-Array" class="headerlink" title="Day05 数组(Array)"></a>Day05 数组(Array)</h1><h2 id="数组的定义"><a href="#数组的定义" class="headerlink" title="数组的定义"></a>数组的定义</h2><p>数组是一种数据结构,用来存储数量确定的同一类型值的集合.</p>
-<h3 id="数组的语法"><a href="#数组的语法" class="headerlink" title="数组的语法"></a>数组的语法</h3><p>语法1:(未赋初值,赋予其默认值)<br><code>数据类型[] 数组名 = new 数据类型[元素个数或者数组长度];</code><br>语法2:(赋初值,数组长度等于初值个数)<br><code>数据类型[] 数组名 = new {元素0值,元素1值,...,元素n值};</code></p>
-<h3 id="数组的调用"><a href="#数组的调用" class="headerlink" title="数组的调用"></a>数组的调用</h3><ul>
-<li>数组中的每个元素都有一个<strong>索引</strong>.</li>
-<li>数组中最小的索引是0,最大的索引是”数组长度-1”</li>
-<li>数组中的值通过索引调用访问</li>
-<li>数组是引用元素,在方法中调用时,其传入参数改变,本身值也会变的</li>
-<li>数组未初始化时,系统会默认给他赋予一个初值,不同类型的数据,其初始默认值如下:<ul>
-<li>整数类型:byte,short,int,long –&gt; <code>0</code>;</li>
-<li>浮点数类型:float,double –&gt; ‘0.0’;</li>
-<li>字符类型:char –&gt; ‘\u0000<code>即一个空字符(空格)</code>;</li>
-<li>布尔类型:boolean –&gt; <code>false</code>;</li>
-<li>引用数据类型:String,类,数组… –&gt; <code>null</code>表示不引用任何元素<h3 id="数组的遍历"><a href="#数组的遍历" class="headerlink" title="数组的遍历"></a>数组的遍历</h3>操作数组时,依次访问数组中的每个元素,叫做数组的遍历.常通过<code>for</code>循环语句执行数组的遍历;  </li>
+<h1 id="Day04-方法-Method"><a href="#Day04-方法-Method" class="headerlink" title="Day04 方法(Method)"></a>Day04 方法(Method)</h1><h2 id="方法概述"><a href="#方法概述" class="headerlink" title="方法概述"></a>方法概述</h2><p>方法是包含多种语句来完成某件事情或者实现某个功能的代码块.  </p>
+<h2 id="方法的语法"><a href="#方法的语法" class="headerlink" title="方法的语法"></a>方法的语法</h2><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">修饰符 返回值类型 方法名(参数类型 参数名<span class="number">1</span>,参数类型 参数名<span class="number">2</span>,......) &#123;</div><div class="line">	执行语句</div><div class="line">	......</div><div class="line">	return 返回值;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>说明: </p>
+<ul>
+<li>修饰符,访问权限修饰符,限定该方法的调用范围,后面会详细讲</li>
+<li>返回值类型: 限定方法返回值的类型,方法的返回值只有一个,可通过其他方法实现多个返回值,后面讲</li>
+<li>参数类型,参数名:没什么好说的,注意形参和实际参数的区别和联系;</li>
+<li><code>return</code>关键字: 用于结束方法及返回方法指定类型的值;</li>
+<li>    返回值：被return语句返回的值，该值会返回给调用者;</li>
+</ul>
+<h2 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h2><p>定义:<br>方法名相同,其中传入的参数类别或者传出的数据类型不同.在调用时,系统通过调用时不同的参数类别或数据类型判定出需要的方法进行运算.<br>条件:<br>方法名相同,参数个数或者参数类型不同.<br>注意:<br>如果重载和返回值类型无关  </p>
+<h2 id="参数传递详解"><a href="#参数传递详解" class="headerlink" title="参数传递详解"></a>参数传递详解</h2><p>定义:  </p>
+<ul>
+<li>调用方法时,将指定的数值,传递给方法中的参数,叫做参数传递;</li>
+<li><strong>定义方法</strong>时,参数列表中的变量,称为:<strong>形式参数</strong></li>
+<li><strong>调用方法</strong>时,传入给方法的数值,称为:<strong>实际参数</strong></li>
+</ul>
+<h2 id="方法使用中的注意事项"><a href="#方法使用中的注意事项" class="headerlink" title="方法使用中的注意事项"></a>方法使用中的注意事项</h2><ul>
+<li>方法只有被调用才会执行,不调用不执行</li>
+<li>方法和方法是平级关系,不能嵌套定义<ul>
+<li>一个方法中不能定义另一个方法</li>
 </ul>
 </li>
-</ul>
-<h2 id="数组中的常见问题"><a href="#数组中的常见问题" class="headerlink" title="数组中的常见问题"></a>数组中的常见问题</h2><ul>
-<li>数组中处理最值问题(引入一个第三方临时变量,赋予其索引0的值,再通过遍历比对大小进行值转换,最终比较出最大的值)</li>
-<li>数组中的异常<ul>
-<li>数组越界异常 <code>ArrayIndexOutOfBoundsException</code><ul>
-<li>数组调用时,索引超出范围</li>
+<li>只要访问权限允许,方法中就能调用其它方法,也能调用自己本身的方法<ul>
+<li>自己调用自己叫做<strong>递归</strong></li>
 </ul>
 </li>
-<li>空指针异常 <code>NullPointerException</code><ul>
-<li>指数组变量在调用时,其值为<code>null</code>即未指向任何数据</li>
-<li>常出现在引用类型的数组当中,要注意对数组中值的正确赋值</li>
+<li>定义方法时,参数列表中的形式参数之间用<code>,</code>逗号隔开</li>
+<li>方法在声明时,形式参数需要写数据类型,为了开辟特定的内存空间</li>
+<li>方法在调用时,实参不用写数据类型</li>
+<li>如果方法声明时有返回值,在声明的代码中一定要正确返回该类型的值<ul>
+<li>如果方法声明是<code>void</code>,可以不用<code>return</code>;<br>方法调用的注意事项:  </li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-<h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2><p>定义:在数组中嵌套的数组(数组中值的类型是数组)<br>语法:  </p>
-<ol>
-<li>元素长度确定的数组<br><code>int[][] arr = new int[3][4];</code></li>
-<li>元素长度不确定的数组<br><code>int[][] arr = new int[3][];</code></li>
-<li>边定义边赋值的数组<br><code>int[][] arr = {{1,2} , {3,4,5,6} , {7,8,9}}</code>;<br>二维数组的访问语法:<br><code>arr[0][1]</code></li>
-</ol>
-<h2 id="数组在Java中的内存分配"><a href="#数组在Java中的内存分配" class="headerlink" title="数组在Java中的内存分配"></a>数组在Java中的内存分配</h2><ul>
-<li>栈内存:       用于执行方法,每次方法调用的时候,都会在栈内存的最上面开辟一段空间,用于该方法的执行<ul>
-<li>栈内存特点: 先进后出,空间较小,运行较快</li>
-</ul>
-</li>
-<li>堆内存:<br>用于存放数据量较大的数据,例如数组,对象:只要是new关键字创建出来的数据体,都在堆内存中<ul>
-<li>堆内存特点: 空间较大,运行较慢,具备垃圾回收机制  </li>
-</ul>
-</li>
-<li>方法区: 用于存放类的字节码对象,还有一些静态变量,和常量  </li>
-<li>本地方法区: 存放和系统相关的运行方法,还有其他语言相关的方法</li>
+<li>调用方法时,若传入的值为基本数据类型,形式参数中值的改变不会影响到实际参数;</li>
+<li>调用方法时,若传入的值为引用数据类型(如:数组),形式参数中值的改变会影响到实际参数的值;</li>
+<li><strong>String</strong>参数具有特殊的<code>只读性</code>,故在传入后,其形参变化不会影响实参的值;</li>
 </ul>
 
       
@@ -450,7 +439,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://duruonanni.com/blog/JavaNotes-Day05/20170622/" title="Java笔记_05数组(Array)">http://duruonanni.com/blog/JavaNotes-Day05/20170622/</a>
+      <a href="http://duruonanni.com/JavaNotes-Day04/20170622.html" title="Java笔记_04方法(Method)">http://duruonanni.com/JavaNotes-Day04/20170622.html</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -479,8 +468,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/JavaNotes-Day04/20170622/" rel="next" title="Java笔记_04方法(Method)">
-                <i class="fa fa-chevron-left"></i> Java笔记_04方法(Method)
+              <a href="/JavaNotes-Day03/20170622.html" rel="next" title="Java笔记_03Scanner接收键盘录入&程序结构">
+                <i class="fa fa-chevron-left"></i> Java笔记_03Scanner接收键盘录入&程序结构
               </a>
             
           </div>
@@ -488,6 +477,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/JavaNotes-Day05/20170622.html" rel="prev" title="Java笔记_05数组(Array)">
+                Java笔记_05数组(Array) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -665,7 +658,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面的话"><span class="nav-number">1.</span> <span class="nav-text">写在前面的话</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Day05-数组-Array"><span class="nav-number">2.</span> <span class="nav-text">Day05 数组(Array)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的定义"><span class="nav-number">2.1.</span> <span class="nav-text">数组的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组的语法"><span class="nav-number">2.1.1.</span> <span class="nav-text">数组的语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组的调用"><span class="nav-number">2.1.2.</span> <span class="nav-text">数组的调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组的遍历"><span class="nav-number">2.1.3.</span> <span class="nav-text">数组的遍历</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组中的常见问题"><span class="nav-number">2.2.</span> <span class="nav-text">数组中的常见问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二维数组"><span class="nav-number">2.3.</span> <span class="nav-text">二维数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组在Java中的内存分配"><span class="nav-number">2.4.</span> <span class="nav-text">数组在Java中的内存分配</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面的话"><span class="nav-number">1.</span> <span class="nav-text">写在前面的话</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Day04-方法-Method"><span class="nav-number">2.</span> <span class="nav-text">Day04 方法(Method)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法概述"><span class="nav-number">2.1.</span> <span class="nav-text">方法概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法的语法"><span class="nav-number">2.2.</span> <span class="nav-text">方法的语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法的重载"><span class="nav-number">2.3.</span> <span class="nav-text">方法的重载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参数传递详解"><span class="nav-number">2.4.</span> <span class="nav-text">参数传递详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法使用中的注意事项"><span class="nav-number">2.5.</span> <span class="nav-text">方法使用中的注意事项</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -687,8 +680,8 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heartbeat"></i>
   </span>

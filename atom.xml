@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>杜若喃呢</title>
+  <title>杜若喃呢&#39;s blog</title>
   <subtitle>山中人兮芳杜若</subtitle>
   <link href="/atom.xml" rel="self"/>
   
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Java笔记_05数组(Array)</title>
-    <link href="http://duruonanni.com/blog/JavaNotes-Day05/20170622/"/>
-    <id>http://duruonanni.com/blog/JavaNotes-Day05/20170622/</id>
+    <link href="http://duruonanni.com/JavaNotes-Day05/20170622.html"/>
+    <id>http://duruonanni.com/JavaNotes-Day05/20170622.html</id>
     <published>2017-06-22T04:28:30.314Z</published>
     <updated>2017-06-22T04:26:20.169Z</updated>
     
@@ -91,8 +91,8 @@
   
   <entry>
     <title>Java笔记_04方法(Method)</title>
-    <link href="http://duruonanni.com/blog/JavaNotes-Day04/20170622/"/>
-    <id>http://duruonanni.com/blog/JavaNotes-Day04/20170622/</id>
+    <link href="http://duruonanni.com/JavaNotes-Day04/20170622.html"/>
+    <id>http://duruonanni.com/JavaNotes-Day04/20170622.html</id>
     <published>2017-06-22T04:20:40.890Z</published>
     <updated>2017-06-22T04:24:03.886Z</updated>
     
@@ -154,8 +154,8 @@
   
   <entry>
     <title>Java笔记_03Scanner接收键盘录入&amp;程序结构</title>
-    <link href="http://duruonanni.com/blog/JavaNotes-Day03/20170622/"/>
-    <id>http://duruonanni.com/blog/JavaNotes-Day03/20170622/</id>
+    <link href="http://duruonanni.com/JavaNotes-Day03/20170622.html"/>
+    <id>http://duruonanni.com/JavaNotes-Day03/20170622.html</id>
     <published>2017-06-22T04:13:22.157Z</published>
     <updated>2017-06-22T04:17:09.260Z</updated>
     
@@ -214,8 +214,8 @@
   
   <entry>
     <title>Java笔记_02数据类型&amp;运算符</title>
-    <link href="http://duruonanni.com/blog/JavaNotes-Day02/20170622/"/>
-    <id>http://duruonanni.com/blog/JavaNotes-Day02/20170622/</id>
+    <link href="http://duruonanni.com/JavaNotes-Day02/20170622.html"/>
+    <id>http://duruonanni.com/JavaNotes-Day02/20170622.html</id>
     <published>2017-06-22T03:55:59.269Z</published>
     <updated>2017-06-22T03:59:59.243Z</updated>
     
@@ -401,8 +401,8 @@
   
   <entry>
     <title>Java笔记_01Java基础介绍</title>
-    <link href="http://duruonanni.com/blog/JavaNotes-Day01/20170622/"/>
-    <id>http://duruonanni.com/blog/JavaNotes-Day01/20170622/</id>
+    <link href="http://duruonanni.com/JavaNotes-Day01/20170622.html"/>
+    <id>http://duruonanni.com/JavaNotes-Day01/20170622.html</id>
     <published>2017-06-22T03:33:55.409Z</published>
     <updated>2017-06-22T03:46:46.787Z</updated>
     
@@ -524,8 +524,8 @@
   
   <entry>
     <title>Chrome插件突破百度云限速方法</title>
-    <link href="http://duruonanni.com/blog/Chrome%E6%8F%92%E4%BB%B6%E7%AA%81%E7%A0%B4%E7%99%BE%E5%BA%A6%E4%BA%91%E9%99%90%E9%80%9F%E6%96%B9%E6%B3%95/20170529/"/>
-    <id>http://duruonanni.com/blog/Chrome插件突破百度云限速方法/20170529/</id>
+    <link href="http://duruonanni.com/Chrome%E6%8F%92%E4%BB%B6%E7%AA%81%E7%A0%B4%E7%99%BE%E5%BA%A6%E4%BA%91%E9%99%90%E9%80%9F%E6%96%B9%E6%B3%95/20170529.html"/>
+    <id>http://duruonanni.com/Chrome插件突破百度云限速方法/20170529.html</id>
     <published>2017-05-29T12:27:00.000Z</published>
     <updated>2017-05-29T13:58:48.534Z</updated>
     
@@ -604,8 +604,8 @@
   
   <entry>
     <title>Markdown语法练习</title>
-    <link href="http://duruonanni.com/blog/Markdown%E8%AF%AD%E6%B3%95%E7%BB%83%E4%B9%A0/20170525/"/>
-    <id>http://duruonanni.com/blog/Markdown语法练习/20170525/</id>
+    <link href="http://duruonanni.com/Markdown%E8%AF%AD%E6%B3%95%E7%BB%83%E4%B9%A0/20170525.html"/>
+    <id>http://duruonanni.com/Markdown语法练习/20170525.html</id>
     <published>2017-05-25T15:47:30.000Z</published>
     <updated>2017-05-26T09:03:59.043Z</updated>
     
@@ -871,8 +871,8 @@
   
   <entry>
     <title>Hexo建站流程</title>
-    <link href="http://duruonanni.com/blog/%E5%BB%BA%E7%AB%99%E6%B5%81%E7%A8%8B%E8%AE%B0%E5%BD%95/20170509/"/>
-    <id>http://duruonanni.com/blog/建站流程记录/20170509/</id>
+    <link href="http://duruonanni.com/%E5%BB%BA%E7%AB%99%E6%B5%81%E7%A8%8B%E8%AE%B0%E5%BD%95/20170509.html"/>
+    <id>http://duruonanni.com/建站流程记录/20170509.html</id>
     <published>2017-05-08T16:20:40.797Z</published>
     <updated>2017-05-26T09:03:52.618Z</updated>
     
@@ -1106,8 +1106,8 @@
   
   <entry>
     <title>Hexo站点设置</title>
-    <link href="http://duruonanni.com/blog/Hexo%E7%AB%99%E7%82%B9%E8%AE%BE%E7%BD%AE/20170508/"/>
-    <id>http://duruonanni.com/blog/Hexo站点设置/20170508/</id>
+    <link href="http://duruonanni.com/Hexo%E7%AB%99%E7%82%B9%E8%AE%BE%E7%BD%AE/20170508.html"/>
+    <id>http://duruonanni.com/Hexo站点设置/20170508.html</id>
     <published>2017-05-08T11:25:01.000Z</published>
     <updated>2017-05-26T09:04:42.886Z</updated>
     
@@ -1204,8 +1204,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://duruonanni.com/blog/hello-world/20170504/"/>
-    <id>http://duruonanni.com/blog/hello-world/20170504/</id>
+    <link href="http://duruonanni.com/hello-world/20170504.html"/>
+    <id>http://duruonanni.com/hello-world/20170504.html</id>
     <published>2017-05-04T14:50:41.679Z</published>
     <updated>2017-05-08T11:13:08.181Z</updated>
     
