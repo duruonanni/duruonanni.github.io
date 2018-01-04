@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://duruonanni.com/"/>
-  <updated>2018-01-04T14:33:02.621Z</updated>
+  <updated>2018-01-04T14:37:32.406Z</updated>
   <id>http://duruonanni.com/</id>
   
   <author>
@@ -20,9 +20,17 @@
     <link href="http://duruonanni.com/Renovate-Java-Basic-03grep/20180104.html"/>
     <id>http://duruonanni.com/Renovate-Java-Basic-03grep/20180104.html</id>
     <published>2018-01-04T14:28:42.000Z</published>
-    <updated>2018-01-04T14:33:02.621Z</updated>
+    <updated>2018-01-04T14:37:32.406Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="正则表达式概述"><a href="#正则表达式概述" class="headerlink" title="正则表达式概述:"></a>正则表达式概述:</h2><ul>
+    <content type="html"><![CDATA[<h2 id="写在之前的话"><a href="#写在之前的话" class="headerlink" title="写在之前的话"></a>写在之前的话</h2><ul>
+<li>本系列主要记录一些Java基础的难点,参杂一些Java8的新特性<ul>
+<li>主要是杜若汇集<a href="http://storage.live.com/items/AEE68C12565C1619!199138:/Nujabes_samurai_champloo.jpg?authkey=AJoh90nl3u6Wj4U" target="_blank" rel="external"><java 核心技术="" 卷一=""></java></a>中遇到的难点和问题</li>
+<li>适合掌握了Java基础知识的同学进行重点和难点的复习 </li>
+</ul>
+</li>
+</ul>
+<p>呐~正文开始啦~🐱‍👤</p>
+<h2 id="正则表达式概述"><a href="#正则表达式概述" class="headerlink" title="正则表达式概述:"></a>正则表达式概述:</h2><ul>
 <li>正则表达式(<code>regular expressions</code>): 用于描述字符串”模式”的一种工具,可以用它来完成字符串查找,替换,匹配等功能;  <ul>
 <li>利用正则表达式,可以从多个数据中,筛选出需要的数据;</li>
 </ul>
@@ -222,8 +230,9 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;正则表达式概述&quot;&gt;&lt;a href=&quot;#正则表达式概述&quot; class=&quot;headerlink&quot; title=&quot;正则表达式概述:&quot;&gt;&lt;/a&gt;正则表达式概述:&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;正则表达式(&lt;code&gt;regular expressions&lt;/code&gt;): 用
+      &lt;h2 id=&quot;写在之前的话&quot;&gt;&lt;a href=&quot;#写在之前的话&quot; class=&quot;headerlink&quot; title=&quot;写在之前的话&quot;&gt;&lt;/a&gt;写在之前的话&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;本系列主要记录一些Java基础的难点,参杂一些Java8的新特性&lt;ul&gt;
+&lt;li&gt;主要是杜若汇集
     
     </summary>
     
