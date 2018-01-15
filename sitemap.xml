@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://duruonanni.github.io/Renovate-Java-Basic-04generics/20180115.html</loc>
+    
+    <lastmod>2018-01-15T13:54:41.199Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://duruonanni.github.io/Renovate-Java-Basic-02initial-values-priority/20180104.html</loc>
+    
+    <lastmod>2018-01-05T02:54:38.336Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://duruonanni.github.io/Renovate-Java-Basic-01keyworld-this/20180103.html</loc>
+    
+    <lastmod>2018-01-05T02:54:21.382Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://duruonanni.github.io/Renovate-Java-Basic-03grep/20180104.html</loc>
     
     <lastmod>2018-01-04T15:02:13.075Z</lastmod>
@@ -16,23 +37,9 @@
   </url>
   
   <url>
-    <loc>http://duruonanni.github.io/Renovate-Java-Basic-02initial-values-priority/20180104.html</loc>
-    
-    <lastmod>2018-01-04T08:25:14.422Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://duruonanni.github.io/about/index.html</loc>
     
     <lastmod>2018-01-04T04:28:53.454Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://duruonanni.github.io/Renovate-Java-Basic-01keyworld-this/20180103.html</loc>
-    
-    <lastmod>2018-01-04T04:23:50.323Z</lastmod>
     
   </url>
   

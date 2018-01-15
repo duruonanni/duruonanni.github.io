@@ -1,0 +1,1199 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="笔记,Java,基础知识,泛型," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="杜若喃呢" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="泛型概述初学泛型时,只知道它广泛应用在集合中,可以对集合中存入的数据类型进行限定.对于带通配符的泛型类,泛型方法,泛型接口,也常会遇到,但并不太明白具体概念和使用.正好,&amp;lt;Java 核心技术&amp;gt;使用了一章的内容来专门介绍泛型.就利用此书重学下泛型,并将学习记录整理于此文.主要是填之前,this&amp;amp;super关键字一文的坑呐~正文开始啦~🐱‍👤 泛型简介 泛型(Genericit">
+<meta name="keywords" content="笔记,Java,基础知识,泛型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java中的泛型">
+<meta property="og:url" content="http://duruonanni.com/Renovate-Java-Basic-04generics/20180115.html">
+<meta property="og:site_name" content="杜若喃呢">
+<meta property="og:description" content="泛型概述初学泛型时,只知道它广泛应用在集合中,可以对集合中存入的数据类型进行限定.对于带通配符的泛型类,泛型方法,泛型接口,也常会遇到,但并不太明白具体概念和使用.正好,&amp;lt;Java 核心技术&amp;gt;使用了一章的内容来专门介绍泛型.就利用此书重学下泛型,并将学习记录整理于此文.主要是填之前,this&amp;amp;super关键字一文的坑呐~正文开始啦~🐱‍👤 泛型简介 泛型(Genericit">
+<meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!201551?authkey=AJoh90nl3u6Wj4U">
+<meta property="og:updated_time" content="2018-01-15T13:54:41.199Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java中的泛型">
+<meta name="twitter:description" content="泛型概述初学泛型时,只知道它广泛应用在集合中,可以对集合中存入的数据类型进行限定.对于带通配符的泛型类,泛型方法,泛型接口,也常会遇到,但并不太明白具体概念和使用.正好,&amp;lt;Java 核心技术&amp;gt;使用了一章的内容来专门介绍泛型.就利用此书重学下泛型,并将学习记录整理于此文.主要是填之前,this&amp;amp;super关键字一文的坑呐~正文开始啦~🐱‍👤 泛型简介 泛型(Genericit">
+<meta name="twitter:image" content="http://storage.live.com/items/AEE68C12565C1619!201551?authkey=AJoh90nl3u6Wj4U">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://duruonanni.com/Renovate-Java-Basic-04generics/20180115.html"/>
+
+
+
+
+
+  <title>Java中的泛型 | 杜若喃呢</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">杜若喃呢</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">山中人兮芳杜若</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-anchor"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tag"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-zone">
+          <a href="/zone" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-pencil-square"></i> <br />
+            
+            碎碎念
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user-circle-o"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://duruonanni.com/Renovate-Java-Basic-04generics/20180115.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xiangyu Kong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杜若喃呢">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java中的泛型</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-15T21:45:39+08:00">
+                2018-01-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/Renovate-Java-Basic-04generics/20180115.html" class="leancloud_visitors" data-flag-title="Java中的泛型">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">访客总数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  3,833
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="泛型概述"><a href="#泛型概述" class="headerlink" title="泛型概述"></a>泛型概述</h2><p>初学泛型时,只知道它广泛应用在集合中,可以对集合中存入的数据类型进行限定.<br>对于带通配符的泛型类,泛型方法,泛型接口,也常会遇到,但并不太明白具体概念和使用.<br>正好,<code>&lt;Java 核心技术&gt;</code>使用了一章的内容来专门介绍泛型.<br>就利用此书重学下泛型,并将学习记录整理于此文.<br><del>主要是填之前,<a href="http://duruonanni.com/Renovate-Java-Basic-01keyworld-this/20180103.html" title="Renovate-Java-Basic-01keyworld-this">this&amp;super关键字</a>一文的坑</del><br>呐~正文开始啦~🐱‍👤</p>
+<h3 id="泛型简介"><a href="#泛型简介" class="headerlink" title="泛型简介"></a>泛型简介</h3><ul>
+<li>泛型(Genericity),是一种编程语言特性,它提供了<code>类型参数化</code>的能力</li>
+<li>下面通过一段简单的代码来解释泛型的作用: </li>
+</ul>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> class ListGenericity &#123;</div><div class="line"></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) <span class="keyword">throws</span> Exception&#123;</div><div class="line">		ListWithoutGenericity();</div><div class="line">		ListWithGenericity();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> ListWithoutGenericity() &#123;</div><div class="line">		List strList = <span class="keyword">new</span> ArrayList();</div><div class="line">		strList.<span class="built_in">add</span>(<span class="string">"One"</span>);</div><div class="line">		strList.<span class="built_in">add</span>(<span class="string">"Two"</span>);</div><div class="line">		strList.<span class="built_in">add</span>(<span class="number">3</span>);</div><div class="line">		<span class="comment">// 执行以下时抛出类型转换异常</span></div><div class="line">		<span class="keyword">String</span> str2 = (<span class="keyword">String</span>) strList.<span class="built_in">get</span>(<span class="number">2</span>);</div><div class="line">		System.out.<span class="built_in">println</span>(strList);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> ListWithGenericity() <span class="keyword">throws</span> Exception&#123;</div><div class="line">		List&lt;<span class="keyword">String</span>&gt; strList = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">		strList.<span class="built_in">add</span>(<span class="string">"One"</span>);</div><div class="line">		strList.<span class="built_in">add</span>(<span class="string">"Two"</span>);</div><div class="line">		<span class="comment">// strList.add(3); // 由于泛型的限定,无法通过编译</span></div><div class="line">		<span class="comment">// 因为Java的泛型在运行时执行类型擦除,所以可以通过反射添加不符合泛型的数据</span></div><div class="line">		strList.getClass().getMethod(<span class="string">"add"</span>, <span class="keyword">Object</span>.class).invoke(strList, <span class="number">3</span>);</div><div class="line">		System.out.<span class="built_in">println</span>(strList);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="以上代码说明"><a href="#以上代码说明" class="headerlink" title="以上代码说明:"></a>以上代码说明:</h4><ol>
+<li>在Java中<code>ArrayList</code>可以存放任意引用类型数据,因为其内部元素是Objcet,在运行时再向下转型,这样的缺点是,容易造成类型不安全<ul>
+<li>比如: 存入了错误的数据类型,在取用时由于类型错误导致异常</li>
+</ul>
+</li>
+<li>泛型在此处对<code>ArrayList</code>中的数据进行了详细的限定,通过<code>List&lt;String&gt;</code>,声明存入的数据类型必须是<code>String</code>及其子类,从而避免类型不安全出现的错误<ul>
+<li>这里的String类型是详细指明了的,此处不是<code>类型参数</code>用法</li>
+<li><del>关于<code>类型参数</code>后面会再讲</del><ul>
+<li>(坑了,后面也没有讲泛型擦除,不知道需要说什么…残念)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>在Java中,泛型是一个编译时的检查过程,此处实际代码运行时仍然是Object类型,因此可以通过动态反射越过泛型实现其他类型数据的添加 </li>
+</ol>
+<h4 id="泛型的好处"><a href="#泛型的好处" class="headerlink" title="泛型的好处"></a>泛型的好处</h4><ol>
+<li>减少类的创建数目,促进代码复用性</li>
+<li>避免类型转换造成的运行时错误</li>
+<li>泛型的出现,为创建容器类提供了方便</li>
+</ol>
+<h2 id="类型参数的泛型用法"><a href="#类型参数的泛型用法" class="headerlink" title="类型参数的泛型用法"></a>类型参数的泛型用法</h2><p>使用<code>类型参数</code>的泛型,就是将泛型中的具体类型,用一个虚拟参数代替.<br>在对应的泛型数据实例化时,再具体指定泛型的类型.<br>示例如下:</p>
+<ul>
+<li><code>ArrayList&lt;Integer&gt;</code> : 这是一个<code>参数化</code>的泛型,<code>Integer</code>称为实际类型参数</li>
+<li><code>ArrayList&lt;E&gt;</code> : 这是一个带<code>类型参数</code>的泛型,其中<code>E</code>称为<code>类型参数</code> </li>
+<li><code>ArrayList</code> : 是泛型类的原始类型 </li>
+</ul>
+<h3 id="常用类型参数标记符"><a href="#常用类型参数标记符" class="headerlink" title="常用类型参数标记符"></a>常用类型参数标记符</h3><ol>
+<li>T - Type : 常用于Java类<br> 1.1 多种参数类型时常用T后面的字母表示如: U , V 等</li>
+<li>E - Element : 常用于集合</li>
+<li>K,V - Key,Value : 常用于Map中的键值对</li>
+<li>? - 表示不确定的类型</li>
+</ol>
+<h3 id="简单泛型类"><a href="#简单泛型类" class="headerlink" title="简单泛型类"></a>简单泛型类</h3><p>以下是一个简单的泛型类:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Pair</span>&lt;T, U&gt; &#123;</span></div><div class="line">	</div><div class="line">	<span class="keyword">private</span> T first;</div><div class="line">	<span class="keyword">private</span> U second;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Pair</span><span class="params">()</span> </span>&#123;	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Pair</span><span class="params">(T first, U second)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.first = first;</div><div class="line">		<span class="keyword">this</span>.second = second;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> T <span class="title">getFirst</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> first;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setFirst</span><span class="params">(T first)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.first = first;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> U <span class="title">getSecond</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> second;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSecond</span><span class="params">(U second)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.second = second;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>以上泛型类的”实例化”以及测试方法:<br><figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> class PairTest &#123;</div><div class="line"></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) &#123;</div><div class="line">		<span class="keyword">String</span>[] strs = &#123;<span class="string">"abc"</span>,<span class="string">"123"</span>,<span class="string">"qwert"</span>,<span class="string">"aaa"</span>&#125;;</div><div class="line">		Pair&lt;<span class="keyword">String</span>,<span class="keyword">String</span>&gt; test = minmax(strs);</div><div class="line">		System.out.<span class="built_in">println</span>(test.getFirst()+ <span class="string">"..."</span> + test.getSecond());</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> Pair&lt;<span class="keyword">String</span>,<span class="keyword">String</span>&gt; minmax(<span class="keyword">String</span>[] strs) &#123;</div><div class="line">		<span class="keyword">if</span> (strs == <span class="keyword">null</span> || strs.length == <span class="number">0</span>) </div><div class="line">			<span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">		<span class="keyword">String</span> <span class="built_in">min</span> = strs[<span class="number">0</span>];</div><div class="line">		<span class="keyword">String</span> <span class="built_in">max</span> = strs[<span class="number">0</span>];</div><div class="line">		<span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">1</span>; i &lt; strs.length; i++) &#123;</div><div class="line">			<span class="built_in">min</span> = strs[i].compareTo(<span class="built_in">min</span>)&gt;<span class="number">0</span> ? <span class="built_in">min</span> : strs[i];</div><div class="line">			<span class="built_in">max</span> = strs[i].compareTo(<span class="built_in">max</span>)&lt;<span class="number">0</span> ? <span class="built_in">max</span> : strs[i];</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Pair&lt;<span class="keyword">String</span>,<span class="keyword">String</span>&gt;(<span class="built_in">min</span>,<span class="built_in">max</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="简单泛型类的说明"><a href="#简单泛型类的说明" class="headerlink" title="简单泛型类的说明"></a>简单泛型类的说明</h4><ol>
+<li>泛型类在声明时,使用单个大写字母指代类型<ul>
+<li>这里指代的类型,是给类中变量和方法使用的</li>
+</ul>
+</li>
+<li>在创建类的实例时,需要将<code>类型参数</code>具体化<ul>
+<li>eg: <code>pair&lt;Integer,String&gt;</code></li>
+<li>参数类型必须是引用类型,不能使用基本数据类型</li>
+</ul>
+</li>
+<li>向泛型对象存入基本数据类型值,会发生自动拆装箱<ul>
+<li>应该尽量避免这样操作,因为自动拆装箱会消耗性能</li>
+</ul>
+</li>
+<li>Java不支持泛型化数组</li>
+<li>泛型类中无法定义静态泛型成员<ul>
+<li>因为静态成员实例化时先执行,必须明确其类型</li>
+</ul>
+</li>
+<li><span id="anchor1">泛型类型不能直接或间接的继承自<code>Throwable</code></span><ul>
+<li>因为类型不确定</li>
+<li>这意味着不能抛出或捕获泛型类的异常对象</li>
+</ul>
+</li>
+<li>泛型类派生子类:<ul>
+<li>子类需要指明数据类型,或者使用默认的object类型 </li>
+</ul>
+</li>
+<li>泛型类型的继承关系:<ul>
+<li>泛型类是其原始类型的子类,和泛型实例化后其内部子父类关系无关</li>
+<li>可以联想<code>ArrayList&lt;Manager&gt;</code>和<code>ArrayList&lt;Employee&gt;</code>并无子父类关系</li>
+</ul>
+</li>
+</ol>
+<h3 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h3><h4 id="泛型方法概述及说明"><a href="#泛型方法概述及说明" class="headerlink" title="泛型方法概述及说明"></a>泛型方法概述及说明</h4><ol>
+<li>泛型方法是使用了<code>类型参数</code>泛型的方法<ul>
+<li>泛型参数可以是方法的返回值,或者形参</li>
+</ul>
+</li>
+<li>泛型方法可以再泛型类或者普通类中定义</li>
+<li>在调用该方法时,编译器能自动通过传入实际参数或者用于接收的返回值推断<code>类型参数</code>的具体化值<ul>
+<li>所以可以像普通方法那样不在调用时说明参数类型 </li>
+</ul>
+</li>
+</ol>
+<h4 id="泛型方法代码示例"><a href="#泛型方法代码示例" class="headerlink" title="泛型方法代码示例:"></a>泛型方法代码示例:</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Lists</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="comment">// 泛型方法中,使用"..."可变参数很方便</span></div><div class="line">	<span class="keyword">static</span> &lt;T&gt; <span class="keyword">List</span>&lt;T&gt; toList(T... arr) &#123;</div><div class="line">		<span class="keyword">List</span>&lt;T&gt; <span class="keyword">list</span> = <span class="keyword">new</span> ArrayList&lt;T&gt;();</div><div class="line">		<span class="keyword">for</span>(T a: arr) </div><div class="line">			<span class="keyword">list</span>.add(a);</div><div class="line">		<span class="keyword">return</span> <span class="keyword">list</span>;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> void main(String[] args) &#123;</div><div class="line">		<span class="comment">// 注意实例化时,并未注明泛型方法的具体类型,编译器可以"自动推断"</span></div><div class="line">		<span class="keyword">List</span>&lt;Integer&gt; ints = Lists.toList(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</div><div class="line">		<span class="keyword">List</span>&lt;String&gt; strs = Lists.toList(<span class="string">"hello"</span>,<span class="string">"genericity"</span>);</div><div class="line">		System.out.println(<span class="string">"ints:"</span> + ints.toString() + <span class="string">" ; strs:"</span> + strs.toString());</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="泛型接口"><a href="#泛型接口" class="headerlink" title="泛型接口"></a>泛型接口</h3><h4 id="泛型接口概述及说明"><a href="#泛型接口概述及说明" class="headerlink" title="泛型接口概述及说明"></a>泛型接口概述及说明</h4><ol>
+<li>Java中的接口也可以定义泛型</li>
+<li>泛型接口的最广泛示例是<code>生成器</code><br> 2.1 使用工厂模式时,其内部通常需要提供一个方法生产对象<br> 2.2 生成器方法的返回值通常是该类的实例<br> 2.3 使用泛型接口做生成器的好处 : 被实现时才确定类型,适用性更广<pre><code>2.3.1 不使用泛型,就只用Object类型,那样实现时强转不安全 
+</code></pre></li>
+</ol>
+<h4 id="泛型接口示例"><a href="#泛型接口示例" class="headerlink" title="泛型接口示例"></a>泛型接口示例</h4><ul>
+<li>示例说明:<ul>
+<li>采用两个类的对比说明泛型接口的优势</li>
+<li>在示例中,顺便实现了<a href="#anchor1">泛型类型不能直接或间接的继承自<code>Throwable</code></a>的示例</li>
+<li>注意观察示例中的注释,便于理解代码 </li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>示例容器类(Juice和Monkey) </li>
+</ol>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">public <span class="class"><span class="keyword">class</span> <span class="title">Juice</span></span>&#123;</div><div class="line">	</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	public <span class="type">String</span> toString() &#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.getClass().getSimpleName();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Apple</span> <span class="keyword">extends</span> <span class="title">Juice</span></span>&#123;&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Orange</span> <span class="keyword">extends</span> <span class="title">Juice</span></span>&#123;&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Peach</span> <span class="keyword">extends</span> <span class="title">Juice</span></span>&#123;&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Banana</span> <span class="keyword">extends</span> <span class="title">Juice</span></span>&#123;&#125;</div><div class="line"></div><div class="line"><span class="comment">// 非果汁类</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Monkey</span></span>&#123;</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	public <span class="type">String</span> toString() &#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.getClass().getSimpleName();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>示例1 : 带泛型接口的方法 </li>
+</ol>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 带泛型接口</span></div><div class="line"><span class="keyword">interface</span> GenericGenerator&lt;T&gt; &#123;</div><div class="line">	T <span class="keyword">next</span>();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> JuiceGenerator <span class="keyword">implements</span> GenericGenerator&lt;Juice&gt; &#123;</div><div class="line"></div><div class="line">	<span class="keyword">private</span> <span class="keyword">Class</span>[] types = &#123;Apple.<span class="keyword">class</span>,Orange.<span class="keyword">class</span>,Peach.<span class="keyword">class</span>,Banana.<span class="keyword">class</span>&#125;;</div><div class="line">	<span class="keyword">private</span> Random random = <span class="keyword">new</span> Random();</div><div class="line"></div><div class="line">	@Override</div><div class="line">	<span class="keyword">public</span> Juice <span class="keyword">next</span>() &#123; <span class="comment">// 实现方法时,必须实例化返回值类型</span></div><div class="line">	<span class="comment">// 说明: 此处为什么使用try-catch</span></div><div class="line">		<span class="comment">// 因为方法继承自泛型接口,而泛型接口不能继承Throwable接口,所以只能在方法内处理异常</span></div><div class="line">		<span class="keyword">try</span> &#123;</div><div class="line">			<span class="comment">// return Monkey.class.newInstance(); // 因为Monkey不是Juice的子类,无法通过编译,避免错误</span></div><div class="line">			<span class="keyword">return</span> (Juice) types[random.nextInt(types.length)].newInstance();</div><div class="line">		&#125; <span class="keyword">catch</span> (InstantiationException | IllegalAccessException e) &#123;</div><div class="line">			<span class="comment">// 说明: 在catch中 throw RuntimeException的原因</span></div><div class="line">				<span class="comment">// 因为要保证方法绝对有返回值</span></div><div class="line">				<span class="comment">// try语句中有return,但如果抛异常来到catch语句中,就必须通过抛出运行时异常使程序运行停止,来避免缺少此处的返回情况</span></div><div class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(e);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) &#123;</div><div class="line">		JuiceGenerator gen = <span class="keyword">new</span> JuiceGenerator();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</div><div class="line">            System.out.<span class="keyword">println</span>(gen.<span class="keyword">next</span>());</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>示例3: 不带泛型接口的方法 </li>
+</ol>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 不带泛型的接口,返回值使用Object</span></div><div class="line"><span class="keyword">interface</span> UnGenericGeneritor &#123;</div><div class="line">	Object <span class="keyword">next</span>() <span class="keyword">throws</span> Exception;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> JuiceGenerator2 <span class="keyword">implements</span> UnGenericGeneritor&#123;</div><div class="line"></div><div class="line">	<span class="keyword">private</span> <span class="keyword">Class</span>[] types = &#123;Apple.<span class="keyword">class</span>,Orange.<span class="keyword">class</span>,Peach.<span class="keyword">class</span>,Banana.<span class="keyword">class</span>&#125;;</div><div class="line">	<span class="keyword">private</span> Random random = <span class="keyword">new</span> Random();</div><div class="line">	</div><div class="line">	@Override</div><div class="line">	<span class="keyword">public</span> Object <span class="keyword">next</span>() <span class="keyword">throws</span> Exception &#123; <span class="comment">// 由于接口不带泛型,所以方法可以抛异常</span></div><div class="line">		</div><div class="line">		<span class="comment">// return types[random.nextInt(types.length)].newInstance();</span></div><div class="line">		<span class="keyword">return</span> Monkey.<span class="keyword">class</span>.newInstance(); <span class="comment">// 由于返回值类型是Object,所以Monkey可以被返回,这就造成了不安全</span></div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) <span class="keyword">throws</span> Exception &#123;</div><div class="line">		JuiceGenerator2 gen = <span class="keyword">new</span> JuiceGenerator2();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</div><div class="line">            System.out.<span class="keyword">println</span>(gen.<span class="keyword">next</span>());</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="泛型约束"><a href="#泛型约束" class="headerlink" title="泛型约束"></a>泛型约束</h3><h4 id="泛型约束概述及说明"><a href="#泛型约束概述及说明" class="headerlink" title="泛型约束概述及说明"></a>泛型约束概述及说明</h4><ol>
+<li>使用泛型约束可以在泛型类<code>声明时</code>对泛型参数进行限制<ul>
+<li>即要求满足某接口或子类等条件才能实例化</li>
+<li>约束关键词是<code>extends</code></li>
+</ul>
+</li>
+<li>约束示例: <ul>
+<li><code>ClassName(T extends BoundingType)</code></li>
+<li>其中T和BoundingType可以是类也可以是接口</li>
+<li>T必须满足是BoundingType的子类或子接口</li>
+</ul>
+</li>
+<li>注意: <ul>
+<li>可以添加多个约束,使用<code>&amp;</code>为分隔符号;</li>
+<li>多个约束条件时最多只能有一个是类,而且类必须写在约束的最前面</li>
+<li>泛型约束中没有<code>super</code>关键字,要和通配符类型的泛型进行区分 </li>
+</ul>
+</li>
+</ol>
+<h4 id="泛型约束代码示例"><a href="#泛型约束代码示例" class="headerlink" title="泛型约束代码示例:"></a>泛型约束代码示例:</h4><figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GenericityConstriantTest</span> </span>&#123;</div><div class="line"></div><div class="line">	TestClass&lt;Integer&gt; num1 = <span class="keyword">new</span> <span class="type">TestClass</span>&lt;&gt;();</div><div class="line">	TestClass&lt;Double&gt; num2 = <span class="keyword">new</span> <span class="type">TestClass</span>&lt;&gt;();</div><div class="line">	TestClass&lt;<span class="keyword">Float</span>&gt; num3 = <span class="keyword">new</span> <span class="type">TestClass</span>&lt;&gt;();</div><div class="line">	<span class="comment">// String不是数字类型,所以下面的实例化会在编译时报错</span></div><div class="line">	TestClass&lt;<span class="keyword">String</span>&gt; str = <span class="keyword">new</span> <span class="type">TestClass</span>&lt;&gt;();</div><div class="line">	</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Number 是Integer和Double的抽象超类</span></div><div class="line">	<span class="comment">// 此约束说明实例化该类时,类型必须是Number的子类,也就是数字类型</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestClass</span>&lt;<span class="title">T</span> <span class="keyword"><span class="keyword">extends</span> <span class="type">Number</span></span>&gt; </span>&#123;</div><div class="line">	T num;</div><div class="line"></div><div class="line">	<span class="keyword">public</span> T getNum() &#123;</div><div class="line">		<span class="keyword">return</span> num;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">public</span> void setNum(T num) &#123;</div><div class="line">		<span class="built_in">this</span>.num = num;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="类型通配符"><a href="#类型通配符" class="headerlink" title="类型通配符 : ?"></a>类型通配符 : ?</h3><h4 id="类型通配符概述"><a href="#类型通配符概述" class="headerlink" title="类型通配符概述:"></a>类型通配符概述:</h4><p>这是泛型的最后一个难点了,也是最难的.这里来慢慢整理一下.<br>之前的学习中,我们的泛型类实例化时,都需要将参数类型具体化,这样的缺点是在参数具备子父类关系时,易受限制.<br>示例如下:<br><figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> printBuddies(Pair&lt;Employee&gt; p) &#123;</div><div class="line">	Employee first = p.getFirst();</div><div class="line">	Employee <span class="built_in">second</span> = p.getSecond();</div><div class="line">	System.out.<span class="built_in">println</span>(first.getName() + <span class="string">" and "</span> + <span class="built_in">second</span>.getName() + <span class="string">" are buddies"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>示例中的方法是,打印两个员工的姓名.<br>因为<code>Pair&lt;Employee&gt; p</code>的限制,所以调用该方法时,就无法传递<code>Employee</code>的子类<code>Manager</code>的实例来调用此方法.<br>所以,引入了通配符类型的概念:<br><code>Pair&lt;? extends Employee&gt;</code><br>他是<code>Pair&lt;Emloyee&gt;</code>和<code>Pair&lt;Manager&gt;</code>的子类.<br>这就表示,传递的参数只要符合是<code>Employee</code>的子类,就能顺利调用方法.</p>
+<h4 id="类型通配符注意事项"><a href="#类型通配符注意事项" class="headerlink" title="类型通配符注意事项:"></a>类型通配符注意事项:</h4><ol>
+<li>通配符不是变量,不能在代码中使用<code>?</code>作为一种类型<ul>
+<li>这意味着,不能出现下面的代码:</li>
+<li><code>? a = getFirst();</code></li>
+<li>由于类型不确定,也无法使用<code>set</code>方法执行赋值</li>
+<li>但是,可以使用get方法判断返回值是否为<code>null</code>:</li>
+<li><code>p.getFirst() = null</code></li>
+</ul>
+</li>
+</ol>
+<h4 id="类型通配符说明"><a href="#类型通配符说明" class="headerlink" title="类型通配符说明:"></a>类型通配符说明:</h4><h5 id="类型通配符分类"><a href="#类型通配符分类" class="headerlink" title="类型通配符分类:"></a>类型通配符分类:</h5><ol>
+<li>子类限定<ul>
+<li><code>ClassName&lt;? extends BoundingType&gt;</code></li>
+<li>关键词: <code>extends</code></li>
+<li>即,要求传入的实参必须是BoundingType及其子类</li>
+</ul>
+</li>
+<li>超类限定<ul>
+<li><code>ClassName&lt;? super BoundingType&gt;</code></li>
+<li>关键词: <code>super</code></li>
+<li>即,要求传入的实参必须是BoundingType及其子类</li>
+</ul>
+</li>
+<li>无限定通配符<ul>
+<li><code>ClassName&lt;?&gt;</code></li>
+<li>对传入的实参类型不做要求</li>
+<li>这个需要和参数为Object的非泛型类进行区别</li>
+<li>即,无限定通配符类是所有该容器类的子类<ul>
+<li>eg1: <code>Collection&lt;Object&gt;</code>和<code>Collection&lt;Integer&gt;</code>无子父类关系,不使用泛型,则无法利用多态相互转换</li>
+<li>eg2: <code>Collection&lt;?&gt;</code>是 <code>Collection&lt;Object&gt;</code>和<code>Collection&lt;Integer&gt;</code>的父类,所以使用此泛型,容器类中存入任意类型都能顺利使用多态 </li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h5 id="通配符捕获"><a href="#通配符捕获" class="headerlink" title="通配符捕获"></a>通配符捕获</h5><ul>
+<li>概念描述:<ul>
+<li>之前有提到通配符类型泛型类,由于<code>?</code>不属于一种类型,所以无法对方法中的数据进行进一步操作(不知道类型就无法操作参数)</li>
+<li>对于这样的情况,应该避免使用带通配符的泛型</li>
+<li>如果无法避免使用,则可以通过构造一个带泛型的辅助方法来执行操作</li>
+<li>具体示例见: <a href="#anchor2">PairAlg类</a> </li>
+</ul>
+</li>
+</ul>
+<h4 id="类型泛型示例解析"><a href="#类型泛型示例解析" class="headerlink" title="类型泛型示例解析"></a><java 核心技术="">类型泛型示例解析</java></h4><ul>
+<li>下面是书中的类型泛型示例代码</li>
+<li>我删减了代码中的一些多余部分,并添加注释</li>
+<li>建议复制代码尝试运行与观察</li>
+<li>具体代码如下: </li>
+</ul>
+<h5 id="Employee类"><a href="#Employee类" class="headerlink" title="Employee类"></a>Employee类</h5><ul>
+<li>Manager类的父类</li>
+<li>提供name和salary两个参数,和参数的getter,setter方法 </li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> &#123;</span></div><div class="line"></div><div class="line">	<span class="keyword">private</span> String name;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span> salary;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String name, <span class="keyword">double</span> salary)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">		<span class="keyword">this</span>.salary = salary;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">()</span> </span>&#123;&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> name;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> salary;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSalary</span><span class="params">(<span class="keyword">double</span> salary)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.salary = salary;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="Manager类"><a href="#Manager类" class="headerlink" title="Manager类"></a>Manager类</h5><ul>
+<li>Manager类继承自Employee类<ul>
+<li>继承了name和salary两个参数</li>
+</ul>
+</li>
+<li>自有一个bonus参数</li>
+<li>重写了getSalary()方法,目的是将salary基本工资和bonus红利相加 </li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Manager</span> <span class="keyword">extends</span> <span class="title">Employee</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span> bonus;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Manager</span><span class="params">(String name, <span class="keyword">double</span> salary)</span> </span>&#123;</div><div class="line">		<span class="keyword">super</span>(name, salary);</div><div class="line">		bonus = <span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getBonus</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> bonus;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setBonus</span><span class="params">(<span class="keyword">double</span> bonus)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.bonus = bonus;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">double</span> baseSalry = <span class="keyword">super</span>.getSalary();</div><div class="line">		<span class="keyword">return</span> baseSalry + bonus;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="泛型类Pair"><a href="#泛型类Pair" class="headerlink" title="泛型类Pair"></a>泛型类Pair<t></t></h5><ul>
+<li>可以存入两个值</li>
+<li>并为两个值提供了getter和setter方法 </li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Pair</span>&lt;T&gt; &#123;</span></div><div class="line"></div><div class="line">	<span class="keyword">private</span> T first;</div><div class="line">	<span class="keyword">private</span> T second;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Pair</span><span class="params">()</span> </span>&#123;&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Pair</span><span class="params">(T first, T second)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.first = first;</div><div class="line">		<span class="keyword">this</span>.second = second;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> T <span class="title">getFirst</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> first;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setFirst</span><span class="params">(T first)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.first = first;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> T <span class="title">getSecond</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> second;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSecond</span><span class="params">(T second)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.second = second;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="PairAlg类"><a href="#PairAlg类" class="headerlink" title="PairAlg类"></a>PairAlg类</h5><ul>
+<li>用于判定Pair类中存入的两个值是否为空的工具类</li>
+<li>Pair类的实现使用了通配符类型泛型</li>
+<li>此处主要为了展现<span id="anchor2">通配符捕获</span>的用法 </li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 作用是交换Pair&lt;?&gt; 类中两个参数的值</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">PairAlg</span> </span>&#123;</div><div class="line">	<span class="comment">// 使用无限定通配符参数判定空值</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">hasNulls</span><span class="params">(Pair&lt;?&gt; p)</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> p.getFirst() == <span class="keyword">null</span> || p.getSecond() == <span class="keyword">null</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 调用下面的辅助方法,间接达到操作通配符泛型方法的目的</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(Pair&lt;?&gt; p)</span> </span>&#123;</div><div class="line">		swapHelper(p);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 引入swapHelper泛型方法实现了: 通配符捕获</span></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">swapHelper</span><span class="params">(Pair&lt;T&gt; p)</span> </span>&#123;</div><div class="line">		T t = p.getFirst();</div><div class="line">		p.setFirst(p.getSecond());</div><div class="line">		p.setSecond(t);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="PairTest类"><a href="#PairTest类" class="headerlink" title="PairTest类"></a>PairTest类</h5><ul>
+<li>综合介绍通配符类型泛型用法的类</li>
+<li>添加了注释帮助理解代码 </li>
+</ul>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> class PairTest &#123;</div><div class="line"></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) &#123;</div><div class="line">		Manager ceo = <span class="keyword">new</span> Manager(<span class="string">"Ging"</span>, <span class="number">800000</span>);</div><div class="line">		Manager cfo = <span class="keyword">new</span> Manager(<span class="string">"Killua"</span>, <span class="number">600000</span>);</div><div class="line">		Manager cao = <span class="keyword">new</span> Manager(<span class="string">"Gon"</span>, <span class="number">500000</span>);</div><div class="line"></div><div class="line">		Pair&lt;Manager&gt; buddies = <span class="keyword">new</span> Pair&lt;&gt;(cfo, cao);</div><div class="line">		printBuddies(buddies);</div><div class="line"></div><div class="line">		ceo.setBonus(<span class="number">200000</span>);</div><div class="line">		cfo.setBonus(<span class="number">500000</span>);</div><div class="line">		cao.setBonus(<span class="number">600000</span>);</div><div class="line">		Manager[] managers = &#123; ceo, cfo, cao &#125;;</div><div class="line">		Pair&lt;Employee&gt; result = <span class="keyword">new</span> Pair&lt;&gt;();</div><div class="line">		minmaxBonus(managers, result);</div><div class="line">		System.out.<span class="built_in">println</span>(<span class="string">"first: "</span> + result.getFirst().getName() + <span class="string">", second: "</span> + result.getSecond().getName());</div><div class="line">		maxminBonus(managers, result);</div><div class="line">		System.out.<span class="built_in">println</span>(<span class="string">"first: "</span> + result.getFirst().getName() + <span class="string">", second: "</span> + result.getSecond().getName());</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 方法作用是: 打印传入的两位经理name信息</span></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> printBuddies(Pair&lt;? extends Employee&gt; p) &#123; <span class="comment">// 使用通配符泛型子类限定</span></div><div class="line">		<span class="comment">// Pair&lt;? extends Employee&gt; 是 Pair&lt;Manager&gt;的父类,所以可以正确执行</span></div><div class="line">		Employee first = p.getFirst();</div><div class="line">		Employee <span class="built_in">second</span> = p.getSecond();</div><div class="line">		System.out.<span class="built_in">println</span>(first.getName() + <span class="string">" and "</span> + <span class="built_in">second</span>.getName() + <span class="string">" are buddies"</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 方法作用是: 找出数组中经理红利Bonus最多和最少的人</span></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> minmaxBonus(Manager[] a, Pair&lt;? <span class="keyword">super</span> Manager&gt; result) &#123;</div><div class="line">		<span class="comment">// Pair&lt;? super Manager&gt; 使用通配符泛型超类限定</span></div><div class="line">		<span class="keyword">if</span> (a.length == <span class="number">0</span>)</div><div class="line">			<span class="keyword">return</span>;</div><div class="line">		Manager <span class="built_in">min</span> = a[<span class="number">0</span>];</div><div class="line">		Manager <span class="built_in">max</span> = a[<span class="number">0</span>];</div><div class="line">		<span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; a.length; i++) &#123;</div><div class="line">			<span class="keyword">if</span> (<span class="built_in">min</span>.getBonus() &gt; a[i].getBonus())</div><div class="line">				<span class="built_in">min</span> = a[i];</div><div class="line">			<span class="keyword">if</span> (<span class="built_in">max</span>.getBonus() &lt; a[i].getBonus())</div><div class="line">				<span class="built_in">max</span> = a[i];</div><div class="line">		&#125;</div><div class="line">		result.setFirst(<span class="built_in">min</span>);</div><div class="line">		result.setSecond(<span class="built_in">max</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 方法作用是,对minmaxBonus方法的值进行交换</span></div><div class="line">	<span class="comment">// 调用了工具类PairAlg的方法</span></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> maxminBonus(Manager[] a, Pair&lt;? <span class="keyword">super</span> Manager&gt; result) &#123;</div><div class="line">		minmaxBonus(a, result);</div><div class="line">		PairAlg.swapHelper(result);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>至此,完……</p>
+<div align="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201551?authkey=AJoh90nl3u6Wj4U" alt="Album_Cover_异国迷路のクロワーゼ" title="Album_Cover_异国迷路のクロワーゼ"></div>
+
+
+<!-- 参考文献 --> 
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Xiangyu Kong
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://duruonanni.com/Renovate-Java-Basic-04generics/20180115.html" title="Java中的泛型">http://duruonanni.com/Renovate-Java-Basic-04generics/20180115.html</a>
+    </li>
+    <!-- 添加文章更新历史 -->
+    <li>
+      <strong>发布时间：</strong>
+      <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-15T21:45:39+08:00">
+        2018年01月15日 - 21时45分
+      </time>
+    </li>
+    <li>
+      <strong>最后更新：</strong>
+      <time title="更新于" itemprop="dateModified" datetime="2018-01-15T21:54:41+08:00">
+        2018年01月15日 - 21时54分
+      </time>
+    </li>
+    <li>
+      <strong>更新历史：</strong>
+      <i class="fa fa-github" aria-hidden="true"></i>
+      <a href="https://github.com/duruonanni/blog_backup/blame/master/Renovate-Java-Basic-04generics.md" title="顺序查看文章各部分修改记录" target = "_blank">Blame</a>,
+      <a href="https://github.com/duruonanni/blog_backup/commits/master/Renovate-Java-Basic-04generics.md" title="查看文章有关更新记录" target = "_blank">History</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      <i class="fa fa-copyright" aria-hidden="true"></i>
+      <i class="copyright" /> <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">署名-非商业性使用-相同方式共享 3.0</a> 转载需保留原文链接及原作者
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag"># 笔记</a>
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/基础知识/" rel="tag"># 基础知识</a>
+          
+            <a href="/tags/泛型/" rel="tag"># 泛型</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Renovate-Java-Basic-03grep/20180104.html" rel="next" title="正则表达式">
+                <i class="fa fa-chevron-left"></i> 正则表达式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODU5MC81MTYx"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Xiangyu Kong" />
+          <p class="site-author-name" itemprop="name">Xiangyu Kong</p>
+           
+              <p class="site-description motion-element" itemprop="description">Life is a gift,never take it for granted.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/duruonanni" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:kate_2012@outlook.com" target="_blank" title="E-mail">
+                  
+                    <i class="fa fa-fw fa-envelope-o"></i>
+                  
+                  E-mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Blogroll
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://bujige.net/" title="不羁阁" target="_blank">不羁阁</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#泛型概述"><span class="nav-number">1.</span> <span class="nav-text">泛型概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型简介"><span class="nav-number">1.1.</span> <span class="nav-text">泛型简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#以上代码说明"><span class="nav-number">1.1.1.</span> <span class="nav-text">以上代码说明:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型的好处"><span class="nav-number">1.1.2.</span> <span class="nav-text">泛型的好处</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型参数的泛型用法"><span class="nav-number">2.</span> <span class="nav-text">类型参数的泛型用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用类型参数标记符"><span class="nav-number">2.1.</span> <span class="nav-text">常用类型参数标记符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单泛型类"><span class="nav-number">2.2.</span> <span class="nav-text">简单泛型类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简单泛型类的说明"><span class="nav-number">2.2.1.</span> <span class="nav-text">简单泛型类的说明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型方法"><span class="nav-number">2.3.</span> <span class="nav-text">泛型方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型方法概述及说明"><span class="nav-number">2.3.1.</span> <span class="nav-text">泛型方法概述及说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型方法代码示例"><span class="nav-number">2.3.2.</span> <span class="nav-text">泛型方法代码示例:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型接口"><span class="nav-number">2.4.</span> <span class="nav-text">泛型接口</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型接口概述及说明"><span class="nav-number">2.4.1.</span> <span class="nav-text">泛型接口概述及说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型接口示例"><span class="nav-number">2.4.2.</span> <span class="nav-text">泛型接口示例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型约束"><span class="nav-number">2.5.</span> <span class="nav-text">泛型约束</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型约束概述及说明"><span class="nav-number">2.5.1.</span> <span class="nav-text">泛型约束概述及说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型约束代码示例"><span class="nav-number">2.5.2.</span> <span class="nav-text">泛型约束代码示例:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型通配符"><span class="nav-number">2.6.</span> <span class="nav-text">类型通配符 : ?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#类型通配符概述"><span class="nav-number">2.6.1.</span> <span class="nav-text">类型通配符概述:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型通配符注意事项"><span class="nav-number">2.6.2.</span> <span class="nav-text">类型通配符注意事项:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型通配符说明"><span class="nav-number">2.6.3.</span> <span class="nav-text">类型通配符说明:</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#类型通配符分类"><span class="nav-number">2.6.3.1.</span> <span class="nav-text">类型通配符分类:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#通配符捕获"><span class="nav-number">2.6.3.2.</span> <span class="nav-text">通配符捕获</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型泛型示例解析"><span class="nav-number">2.6.4.</span> <span class="nav-text">类型泛型示例解析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Employee类"><span class="nav-number">2.6.4.1.</span> <span class="nav-text">Employee类</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Manager类"><span class="nav-number">2.6.4.2.</span> <span class="nav-text">Manager类</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#泛型类Pair"><span class="nav-number">2.6.4.3.</span> <span class="nav-text">泛型类Pair</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#PairAlg类"><span class="nav-number">2.6.4.4.</span> <span class="nav-text">PairAlg类</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#PairTest类"><span class="nav-number">2.6.4.5.</span> <span class="nav-text">PairTest类</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xiangyu Kong</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("sp4GxIsquuzrVglpq6qBhnNE-gzGzoHsz", "tf96rsytceW1gRFWbIFyfudn");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
