@@ -1,0 +1,1315 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="笔记,Java,基础知识,Lambda," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="杜若喃呢" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="写在之前的话第一次知道Lambda表达式,是看&amp;lt;黑客与画家&amp;gt;中,Paul极力推崇的Lisp语言具备的重要特性.当时我还没学编程,只是当科普书籍在看.记得Paul曾在书中预言,Java将会在未来提供函数式编程的方法.在我开始学习Java时,知道Java8的新特性中提供了Lambda表达式的概念,就知道Paul的预言应验了.可之前一直没有学习这项新特性.最近,重读&amp;lt;Java 核心技术">
+<meta name="keywords" content="笔记,Java,基础知识,Lambda">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础重修_05Lambda表达式">
+<meta property="og:url" content="http://duruonanni.com/Renovate-Java-Basic-05Lambda/20180117.html">
+<meta property="og:site_name" content="杜若喃呢">
+<meta property="og:description" content="写在之前的话第一次知道Lambda表达式,是看&amp;lt;黑客与画家&amp;gt;中,Paul极力推崇的Lisp语言具备的重要特性.当时我还没学编程,只是当科普书籍在看.记得Paul曾在书中预言,Java将会在未来提供函数式编程的方法.在我开始学习Java时,知道Java8的新特性中提供了Lambda表达式的概念,就知道Paul的预言应验了.可之前一直没有学习这项新特性.最近,重读&amp;lt;Java 核心技术">
+<meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!203841:/java_basic05_Lambda01.png?authkey=AJoh90nl3u6Wj4U">
+<meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!203843?authkey=AJoh90nl3u6Wj4U">
+<meta property="og:updated_time" content="2018-01-17T11:50:20.778Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java基础重修_05Lambda表达式">
+<meta name="twitter:description" content="写在之前的话第一次知道Lambda表达式,是看&amp;lt;黑客与画家&amp;gt;中,Paul极力推崇的Lisp语言具备的重要特性.当时我还没学编程,只是当科普书籍在看.记得Paul曾在书中预言,Java将会在未来提供函数式编程的方法.在我开始学习Java时,知道Java8的新特性中提供了Lambda表达式的概念,就知道Paul的预言应验了.可之前一直没有学习这项新特性.最近,重读&amp;lt;Java 核心技术">
+<meta name="twitter:image" content="http://storage.live.com/items/AEE68C12565C1619!203841:/java_basic05_Lambda01.png?authkey=AJoh90nl3u6Wj4U">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://duruonanni.com/Renovate-Java-Basic-05Lambda/20180117.html"/>
+
+
+
+
+
+  <title>Java基础重修_05Lambda表达式 | 杜若喃呢</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">杜若喃呢</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">山中人兮芳杜若</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-anchor"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tag"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-zone">
+          <a href="/zone" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-pencil-square"></i> <br />
+            
+            碎碎念
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user-circle-o"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://duruonanni.com/Renovate-Java-Basic-05Lambda/20180117.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xiangyu Kong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杜若喃呢">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java基础重修_05Lambda表达式</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-17T17:21:25+08:00">
+                2018-01-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/Renovate-Java-Basic-05Lambda/20180117.html" class="leancloud_visitors" data-flag-title="Java基础重修_05Lambda表达式">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">访客总数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  3,769
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="写在之前的话"><a href="#写在之前的话" class="headerlink" title="写在之前的话"></a>写在之前的话</h2><p>第一次知道Lambda表达式,是看&lt;黑客与画家&gt;中,Paul极力推崇的Lisp语言具备的重要特性.<br>当时我还没学编程,只是当科普书籍在看.<br>记得Paul曾在书中预言,Java将会在未来提供函数式编程的方法.<br>在我开始学习Java时,知道Java8的新特性中提供了Lambda表达式的概念,就知道Paul的预言应验了.<br>可之前一直没有学习这项新特性.<br>最近,重读<code>&lt;Java 核心技术&gt;</code>,利用此机会重学下Lambda表达式,并将学习记录整理至此文.<br>呐~正文开始啦~🐱‍👤</p>
+<h2 id="Lambda表达式概述"><a href="#Lambda表达式概述" class="headerlink" title="Lambda表达式概述"></a>Lambda表达式概述</h2><ul>
+<li>Lambda表达式是Java8引入的一个重要新特性</li>
+<li>通过Lambda表达式,可以直接传递代码块<ul>
+<li>这引入了函数式编程的概念</li>
+<li>之前的Java版本中,都需要给代码块封装成类再创建对象调用</li>
+</ul>
+</li>
+<li>Lambda表达式的引用使用接口接收,称为<code>函数式接口</code></li>
+<li>Lambda表达式的出现,能让代码更简洁易懂,也提升了代码的可维护性<ul>
+<li>可以使用Lambda表达式,替代单一方法的匿名内部类</li>
+<li>可以使用<code>方法引用</code>的表达式,让代码更简洁</li>
+</ul>
+</li>
+<li>此外,Lambda表达式还具备延迟执行的特点<ul>
+<li>就是创建时不执行,调用时才执行</li>
+</ul>
+</li>
+<li>由于是全新的概念,所以其语法会稍有特殊,表达方式也多样灵活,使用时需要注意</li>
+</ul>
+<h3 id="简单Lambda表达式示例"><a href="#简单Lambda表达式示例" class="headerlink" title="简单Lambda表达式示例"></a>简单Lambda表达式示例</h3><ul>
+<li>首先,看一个不使用Lambda表达式的例子</li>
+<li>这个例子中,我们想要在main方法中,调用某个接口的方法实现<ul>
+<li>首先,创建接口SayHello</li>
+<li>其次,创建接口的实现类Student</li>
+<li>再创建一个用于实现该方法的静态方法doWithSayHello<ul>
+<li>实际可以省略此步骤,直接在mian中创建类的实例调用接口方法</li>
+<li>但是,对应的Lambda表达式中使用了这种中间方式</li>
+<li>为了方便对比,在此处也用上了</li>
+</ul>
+</li>
+<li>最后在main方法中,创建类的实例,调用该方法student </li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WithoutLambda</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		<span class="comment">// 步骤四:创建类的实例,传递到静态方法中,调用接口的方法</span></div><div class="line">		Student student = <span class="keyword">new</span> Student();</div><div class="line">		doWithSayHello(student);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">// 步骤三: 创建静态方法调用接口中的方法</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">doWithSayHello</span><span class="params">(SayHello sh)</span> </span>&#123;</div><div class="line">		sh.sayHello(<span class="string">"Killua"</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 步骤一:创建接口</span></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">SayHello</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">sayHello</span><span class="params">(String name)</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 步骤二:创建接口的实现类,并在类中重写接口方法</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">implements</span> <span class="title">SayHello</span> </span>&#123;</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sayHello</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">		System.out.println(name + <span class="string">" say Hello World"</span>);</div><div class="line">	&#125;	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>现在,想想看,上面的代码,是不是显得有点步骤过多,我们只是想要实现一个接口的方法而已呀</li>
+<li>现在直接看使用Lambda表达式后,这个问题如何解决</li>
+<li>注意<ul>
+<li>使用Lambda表达式,我们省略了创建接口实现类的步骤</li>
+<li>示例中,Lambda表达式2是lambda表达式1的简写(匿名)形式</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">WithLambda</span> &#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(<span class="params">String[] args</span>) </span>&#123;</div><div class="line">		<span class="comment">// Lambda表达式1</span></div><div class="line">			<span class="comment">// 定义了一个Lambda表达式对象sayHello2</span></div><div class="line">			<span class="comment">// =后面是接口方法的实现</span></div><div class="line">			<span class="comment">// 具体语法后面会讲</span></div><div class="line">		SayHello sayHello2 = (name)-&gt;&#123;</div><div class="line">			System.<span class="keyword">out</span>.println(name + <span class="string">"say Hello"</span>);</div><div class="line">		&#125;;</div><div class="line">			<span class="comment">// 直接传递Lambda表达式对象sayHello2,到方法中</span></div><div class="line">			<span class="comment">// 省去了定义类再实现接口的工作</span></div><div class="line">		doWithSayHello(sayHello2);</div><div class="line">		</div><div class="line">		<span class="comment">// Lambda表达式2</span></div><div class="line">			<span class="comment">// Lambda表达式1的匿名简写方法</span></div><div class="line">			<span class="comment">// 注意各种括号和分号</span></div><div class="line">		doWithSayHello((name)-&gt;&#123;</div><div class="line">			System.<span class="keyword">out</span>.println(name + <span class="string">"sayHello"</span>);</div><div class="line">		&#125;);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">doWithSayHello</span>(<span class="params">SayHello sh</span>) </span>&#123;</div><div class="line">		sh.sayHello(<span class="string">"Killua"</span>);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div><div class="line"></div><div class="line">@FunctionalInterface</div><div class="line"><span class="keyword">interface</span> <span class="title">SayHello</span> &#123;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">sayHello</span>(<span class="params">String name</span>)</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="lambuda表达式语法"><a href="#lambuda表达式语法" class="headerlink" title="lambuda表达式语法"></a>lambuda表达式语法</h2><ul>
+<li>由以上示例可知,Lambda表达式,就是直接传递一段代码</li>
+<li>可以调用方法执行该代码,也可以传入某个对象中去<ul>
+<li>Lambda表达式对象用接口去接收</li>
+<li>这就叫函数式接口 </li>
+</ul>
+</li>
+</ul>
+<h3 id="函数式接口的定义"><a href="#函数式接口的定义" class="headerlink" title="函数式接口的定义"></a>函数式接口的定义</h3><ul>
+<li>好了,这里要引入一个新概念: 函数式接口</li>
+<li>函数式接口作用:<ul>
+<li>可以用于接收Lambda表达式的对象</li>
+<li>方便随时调用Lambda表达式中的方法</li>
+</ul>
+</li>
+<li>函数式接口要求:<ul>
+<li>内部只有一个抽象方法</li>
+</ul>
+</li>
+<li>注意事项:<ul>
+<li>函数式接口,可以有: <a href="#anchor1">默认方法(Default methods)</a></li>
+<li>函数式接口,可以有: <a href="#anchor1">静态方法`(Static methods)</a></li>
+<li>函数式接口,可以有:Object类的公有方法<ul>
+<li><code>toString</code></li>
+<li><code>hashCode</code>…</li>
+</ul>
+</li>
+<li>函数式接口,请使用注解标识清楚:<ul>
+<li><code>@FunctionalInterface</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>函数式接口示例: </li>
+</ul>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">@FunctionalInterface</div><div class="line"><span class="keyword">interface</span> <span class="title">MyFunctionalInterface</span>&#123;</div><div class="line">    <span class="comment">// 函数式接口</span></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">func</span>(<span class="params"></span>)</span>;</div><div class="line">    </div><div class="line">    <span class="comment">// Object类的公有方法</span></div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">hashCode</span>(<span class="params"></span>)</span>;</div><div class="line">    <span class="function">String <span class="title">toString</span>(<span class="params"></span>)</span>;</div><div class="line">    <span class="function">boolean <span class="title">equals</span>(<span class="params">Object obj</span>)</span>;</div><div class="line">    </div><div class="line">    <span class="comment">// 接口中的默认方法</span></div><div class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">defaultMethod</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        System.<span class="keyword">out</span>.println(<span class="string">"Java8 新特性,默认方法是也"</span>);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">// 接口中的静态方法</span></div><div class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">staticMethod</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        System.<span class="keyword">out</span>.println(<span class="string">"Java8 新特性,静态方法是也"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="补充知识点-接口中的默认方法和静态方法"><a href="#补充知识点-接口中的默认方法和静态方法" class="headerlink" title="补充知识点: 接口中的默认方法和静态方法"></a>补充知识点: <span id="anchor1">接口中的默认方法和静态方法</span></h3><ul>
+<li><code>默认方法</code>(Default methods)和<code>静态方法</code>(Static methods)都是Java8的新特性</li>
+<li>默认方法,特点:<ul>
+<li>使用<code>default</code>关键字声明方法</li>
+<li>具备方法体</li>
+<li>只能通过其实现类调用,实现类默认拥有此方法,这意味着:<ul>
+<li>实现类可以不实现这个方法,调用类时直接调用接口中的默认方法</li>
+<li>如果实现类重写了这个方法,原默认方法失效(“类优先”规则)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>静态方法,特点:<ul>
+<li>使用<code>static</code>关键字定义方法</li>
+<li>具备静态方法的接口可以不通过实现类,而直接用接口名调用</li>
+<li>静态方法可以<strong>通过接口名直接调用</strong>,也可以在接口被类实现后,由类名调用</li>
+<li>静态方法初衷是简化某些工具类(工具类里面多是静态方法)对接口的实现,直接使用带静态方法的接口充当工具类</li>
+<li>静态方法的出现模糊了接口和类的界限,个人不太建议使用</li>
+</ul>
+</li>
+<li><code>默认方法</code>和<code>静态方法</code>相对较简单,就不单独写例子了 </li>
+</ul>
+<h3 id="函数式接口的实现"><a href="#函数式接口的实现" class="headerlink" title="函数式接口的实现"></a>函数式接口的实现</h3><h4 id="Lambda表达式1的详解"><a href="#Lambda表达式1的详解" class="headerlink" title="Lambda表达式1的详解"></a>Lambda表达式1的详解</h4><figure class="highlight xl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">S<span class="function"><span class="title">ayHello</span> sayHello2 = (<span class="keyword">name</span>)-&gt;</span>&#123;</div><div class="line">    System.out.println(<span class="keyword">name</span> + <span class="string">"say Hello"</span>);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>SayHello sayHello2</code> <ul>
+<li>创建一个Lambda表达式对象</li>
+<li>也就是使用函数式接口的对象,接收Lambda表达式的值</li>
+</ul>
+</li>
+<li><code>=</code><ul>
+<li>将等号右边的执行结果赋值给左边</li>
+</ul>
+</li>
+<li><code>(...)-&gt;{ ... };</code><ul>
+<li>这个就是函数式接口实现的完全体</li>
+</ul>
+<ol>
+<li><code>(...)</code> : 方法签名<ul>
+<li>用于传递接口中的形式参数</li>
+<li>参数不写类型,具备类型推断的功能<ul>
+<li>不使用泛型,就在定义接口方法时确定类型</li>
+<li>使用泛型的话,就在实现时确定类型咯</li>
+</ul>
+</li>
+<li>没有参数,就写个空<code>()</code>,不可省略</li>
+<li>有参数,可以省略<code>()</code></li>
+</ul>
+</li>
+<li><code>-&gt;</code> : 箭头</li>
+<li><code>{ ... };</code> : 方法的实现(方法体)<ul>
+<li>就是要执行的函数</li>
+<li>如果执行语句是一句话,可以直接写在<code>-&gt;</code>后面,不用加<code>{}</code></li>
+<li>注意结尾分号不可少<code>;</code> </li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="Lambda表达式2的详解"><a href="#Lambda表达式2的详解" class="headerlink" title="Lambda表达式2的详解"></a>Lambda表达式2的详解</h4><figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">doWithSayHello((<span class="name">name</span>)-&gt;&#123;</div><div class="line">    System.out.println(<span class="name">name</span> + <span class="string">"sayHello"</span>)<span class="comment">;</span></div><div class="line">&#125;)<span class="comment">;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>这个就相当于一个匿名的Lambda表达式</li>
+<li>不创建Lambda表达式对象,直接执行doWithSayHello方法的实现</li>
+<li>语法类似匿名内部类</li>
+<li>注意执行完成后的分号<code>;</code> </li>
+</ul>
+<h3 id="Lambda表达式注意事项"><a href="#Lambda表达式注意事项" class="headerlink" title="Lambda表达式注意事项:"></a>Lambda表达式注意事项:</h3><h4 id="Lambda表达式访问外部变量"><a href="#Lambda表达式访问外部变量" class="headerlink" title="Lambda表达式访问外部变量"></a>Lambda表达式访问外部变量</h4><ul>
+<li>Lambda表达式方法体中,也能访问外部的变量<ul>
+<li>包括其所在方法内的局部变量</li>
+<li>也包括类中<code>final</code>修饰的成员变量</li>
+<li>就和内部类访问外部信息一样</li>
+</ul>
+</li>
+<li>因为可以访问外部变量,就要注意方法签名中的变量名和外部变量的重名问题了<ul>
+<li>形参名字不能和外部变量名一样,编译会无法通过 </li>
+</ul>
+</li>
+<li>变量要定义在Lambda表达式实现之前,因为代码顺序执行,放在后面调用不到 </li>
+</ul>
+<h4 id="Lambda表达式中使用this和super关键字"><a href="#Lambda表达式中使用this和super关键字" class="headerlink" title="Lambda表达式中使用this和super关键字"></a>Lambda表达式中使用this和super关键字</h4><ul>
+<li>Lambda表达式中,使用this关键字,是指本类的引用(这个方法所在类的引用)<ul>
+<li><code>super</code>关键字,就是本类的超类的引用咯</li>
+</ul>
+</li>
+<li>注意: <ul>
+<li>静态方法中无法使用<code>this</code>关键字</li>
+</ul>
+</li>
+</ul>
+<h3 id="补充知识点-effectively-final变量"><a href="#补充知识点-effectively-final变量" class="headerlink" title="补充知识点: effectively final变量"></a>补充知识点: effectively final变量</h3><ul>
+<li>在Java8中,新添加了一个<code>effective final 变量</code>的概念,具体是说:<ul>
+<li>定义变量时,不需要人为添加<code>final</code>变量,系统会默认识别<ul>
+<li>所以,有些lambda表达式中调用的外部变量,没有定义为<code>fianl</code>的,也不报错</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>个人认为这个不适合新手<ul>
+<li>不显示的定义出来,程序员有时候意识不到,在表达式内部对变量重新赋值,就会报错</li>
+<li>反正使用时需要牢记,不能改变外部变量的值</li>
+</ul>
+</li>
+</ul>
+<h2 id="Lambda表达式和匿名内部类"><a href="#Lambda表达式和匿名内部类" class="headerlink" title="Lambda表达式和匿名内部类"></a>Lambda表达式和匿名内部类</h2><ul>
+<li>除了自定义Lambda表达式外,Java8之后的很多接口也实现了函数式接口<ul>
+<li>如,用于排序对比的<code>Comparator</code>接口<ul>
+<li>它只有一个<code>compare</code>方法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>以下示例用于对比Lambda表达式和匿名内部类 </li>
+</ul>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> class LambdaTest1 &#123;</div><div class="line"></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) &#123;</div><div class="line">		List&lt;<span class="keyword">String</span>&gt; list = getList();</div><div class="line">		</div><div class="line">		System.out.<span class="built_in">println</span>(<span class="string">"使用Lambda表达式进行排序: "</span>);</div><div class="line">		<span class="comment">// 使用Lambda表达式进行排序</span></div><div class="line">		lambdaSort(list);</div><div class="line">		<span class="comment">// 注意: 不能在main方法中直接如下使用,因为编译器无法获取方法参数的类型</span></div><div class="line">			<span class="comment">// 如果是非泛型方法,可以直接使用,不必传入方法中</span></div><div class="line">		<span class="comment">//	Collections.sort(list, (str1,str2)-&gt;str1.compareToIgnoreCase(str2););</span></div><div class="line">		<span class="keyword">for</span> (<span class="keyword">String</span> <span class="built_in">str</span> : list) &#123;</div><div class="line">			System.out.<span class="built_in">print</span>(<span class="built_in">str</span> + <span class="string">" "</span>);</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		System.out.<span class="built_in">println</span>();</div><div class="line">		System.out.<span class="built_in">println</span>(<span class="string">"使用匿名内部类进行排序: "</span>);</div><div class="line">		Collections.<span class="built_in">sort</span>(list, <span class="keyword">new</span> Comparator&lt;<span class="keyword">String</span>&gt;() &#123;</div><div class="line">			@Override</div><div class="line">			<span class="keyword">public</span> <span class="built_in">int</span> compare(<span class="keyword">String</span> o1, <span class="keyword">String</span> o2) &#123;</div><div class="line">				<span class="keyword">return</span> o2.compareToIgnoreCase(o1);</div><div class="line">			&#125;</div><div class="line">		&#125;);</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">String</span> <span class="built_in">str</span> : list) &#123;</div><div class="line">			System.out.<span class="built_in">print</span>(<span class="built_in">str</span> + <span class="string">" "</span>);</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">// 创建一个传递方法,用于实现Lambda表达式</span></div><div class="line">	<span class="keyword">static</span> <span class="keyword">void</span> lambdaSort(List&lt;<span class="keyword">String</span>&gt; strs) &#123;</div><div class="line">		Collections.<span class="built_in">sort</span>(strs, (str1,str2)-&gt;str1.compareToIgnoreCase(str2));</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">// 初始化List方法</span></div><div class="line">	<span class="keyword">static</span> ArrayList&lt;<span class="keyword">String</span>&gt; getList() &#123;</div><div class="line">		<span class="keyword">String</span> <span class="built_in">str</span> = <span class="string">"when suddenly a White Rabbit with pink eyes ran close by her"</span>;</div><div class="line">		<span class="keyword">String</span>[] strArray = <span class="built_in">str</span>.<span class="built_in">split</span>(<span class="string">" "</span>);</div><div class="line">		ArrayList&lt;<span class="keyword">String</span>&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">String</span> s : strArray) &#123;</div><div class="line">			list.<span class="built_in">add</span>(s);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> list;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Lambda表达式和匿名内部类对比说明"><a href="#Lambda表达式和匿名内部类对比说明" class="headerlink" title="Lambda表达式和匿名内部类对比说明"></a>Lambda表达式和匿名内部类对比说明</h3><ol>
+<li>匿名内部类需要写类名和方法名,显得更复杂<ul>
+<li>如果用上后面会讲的方法引用,Lambda表达式还可以更简洁</li>
+</ul>
+</li>
+<li>Lambda表达式实现的方法如果带泛型,必须将方法的实现传递给一个中间方法<ul>
+<li>示例中中间方法为: lambdaSort</li>
+<li>作用是说明泛型参数的实际类型</li>
+<li>方法不带泛型可以不使用中间方法</li>
+</ul>
+</li>
+<li>匿名内部类相比Lambda表达式的优势是,可以实现多个方法</li>
+</ol>
+<h2 id="方法引用"><a href="#方法引用" class="headerlink" title="方法引用"></a>方法引用</h2><h3 id="方法引用概述"><a href="#方法引用概述" class="headerlink" title="方法引用概述"></a>方法引用概述</h3><ul>
+<li>方法引用,实际上是把方法名字直接传给一个函数型接口变量<ul>
+<li>就是省略了参数,因为都知道参数传在哪个地方用</li>
+</ul>
+</li>
+<li>可以看作是Lambda表达式的简写<ul>
+<li>方法引用简洁,格式优雅又方便理解</li>
+<li>有一种说法是,好的Lambda表达式,方法体都只用一句话</li>
+<li>所以,能使用方法引用时,请尽量使用方法引用</li>
+</ul>
+</li>
+<li>语法:<ul>
+<li><code>对象名或类名::方法名</code></li>
+</ul>
+</li>
+<li>方法引用可以在以下三种情况使用:<ol>
+<li><code>object::instanceMethod</code></li>
+<li><code>Class::instanceMethod</code></li>
+<li><code>Class::staticMethod</code></li>
+</ol>
+</li>
+<li>方法引用示例1: <ul>
+<li>示例取之前代码做比较 </li>
+</ul>
+</li>
+</ul>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">static <span class="literal">void</span> lambdaSort(List&lt;String&gt; strs) &#123;</div><div class="line">    Collections.sort<span class="function"><span class="params">(strs, (str1,str2)-&gt;str1.compareToIgnoreCase(str2))</span>;</span></div><div class="line">    // 下面的是方法引用的写法</div><div class="line">    //<span class="title">Collections</span>.<span class="title">sort</span><span class="params">(strs, String::compareToIgnoreCase)</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>方法引用示例2:<ul>
+<li>lambda表达式方法: <code>x -&gt; System.out.println(x)</code></li>
+<li>方法引用: <code>System.out::println</code></li>
+</ul>
+</li>
+<li>方法引用示例3:<ul>
+<li>lambda表达式方法: <code>x,y -&gt; Math.pow(x,y)</code></li>
+<li>方法引用: <code>Math::pow</code></li>
+</ul>
+</li>
+<li>注意:<ul>
+<li>使用方法引用,传入的值为两个以上时</li>
+<li>实现该方法时,传入值的顺序,对应方法中形参的顺序 </li>
+</ul>
+</li>
+</ul>
+<h2 id="常用函数式接口"><a href="#常用函数式接口" class="headerlink" title="常用函数式接口"></a>常用函数式接口</h2><h3 id="常用函数式接口概述"><a href="#常用函数式接口概述" class="headerlink" title="常用函数式接口概述:"></a>常用函数式接口概述:</h3><ul>
+<li>Java8中,在<code>Java.util.function</code>中,帮我们定义了很多函数式接口;<ul>
+<li>具体信息,参见<a href="https://docs.oracle.com/javase/8/docs/api/" title="Java8 API" target="_blank" rel="external">Java8 API</a></li>
+</ul>
+</li>
+<li>以下列出几个较常用的函数式接口,并举例说明其用法 <ul>
+<li>这些函数式接口,自己也可以写,但是API提供了,而且有些集成在了一些方法里面,用起来就很方便</li>
+</ul>
+</li>
+</ul>
+<h3 id="Consumer接口"><a href="#Consumer接口" class="headerlink" title="Consumer接口"></a>Consumer<t>接口</t></h3><h4 id="Consumer接口概述"><a href="#Consumer接口概述" class="headerlink" title="Consumer接口概述:"></a>Consumer<t>接口概述:</t></h4><ul>
+<li>接口名 : Consumer<t></t></li>
+<li>参数类型 : T</li>
+<li>返回值类型 : void</li>
+<li>抽象方法名 : accept</li>
+<li>方法描述 : 处理一个T类型的值</li>
+<li>其他方法 : andThen</li>
+<li>补充知识点 : <ul>
+<li>提供了一个对应的非泛型接口: <code>IntConsumer</code>,参数为int类型时建议使用,减少执行时的拆装箱</li>
+<li>提供了处理两种类型参数的接口: <code>BiConsumer&lt;T,U&gt;</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="Consumer接口示例"><a href="#Consumer接口示例" class="headerlink" title="Consumer接口示例:"></a>Consumer<t>接口示例:</t></h4><ul>
+<li><p>Java8中的iterable<t>接口,它提供了一个forEach()方法,可以接收一个Consumer<t>接口对象</t></t></p>
+<ul>
+<li><p>所以,我们可以在这个forEach()中,直接传入一个Lambda表达式,用一句话完成循环打印的要求</p>
+<div align="center"><img src="http://storage.live.com/items/AEE68C12565C1619!203841:/java_basic05_Lambda01.png?authkey=AJoh90nl3u6Wj4U" alt="java_basic05_Lambda01"></div></li>
+</ul>
+</li>
+<li>下面示例对比两种传统forEach和重载后的forEach<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">List&lt;<span class="keyword">String</span>&gt; strs = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">strs.<span class="built_in">add</span>(<span class="string">"AAA"</span>);</div><div class="line">strs.<span class="built_in">add</span>(<span class="string">"bbb"</span>);</div><div class="line">strs.<span class="built_in">add</span>(<span class="string">"ccc"</span>);</div><div class="line"></div><div class="line"><span class="comment">// 传统foreach循环打印写法</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">String</span> <span class="built_in">str</span> : strs) &#123;</div><div class="line">    System.out.<span class="built_in">println</span>(<span class="built_in">str</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 使用继承自iterable接口的forEach方法,传递一个Consumer&lt;T&gt;函数式接口的Lambda表达式,更简单</span></div><div class="line">strs.forEach(<span class="built_in">str</span>-&gt; System.out.<span class="built_in">println</span>(<span class="built_in">str</span>));</div><div class="line"><span class="comment">// 使用方法引用写法,更简单</span></div><div class="line"><span class="comment">// strs.forEach(System.out::println);</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Predicate接口"><a href="#Predicate接口" class="headerlink" title="Predicate接口"></a>Predicate<t>接口</t></h3><h4 id="Predicate接口概述"><a href="#Predicate接口概述" class="headerlink" title="Predicate接口概述:"></a>Predicate<t>接口概述:</t></h4><ul>
+<li>接口名 : Predicate<t></t></li>
+<li>参数类型 : T</li>
+<li>返回值类型 : boolean</li>
+<li>抽象方法名 : test</li>
+<li>方法描述 : 处理T类型参数,返回boolean值</li>
+<li>其他方法 : and,or,negate,isEquals</li>
+<li>补充知识点 : <ul>
+<li>提供了一个对应的非泛型接口: <code>IntPredicate</code>,参数为int类型时建议使用,减少执行时的拆装箱 </li>
+<li>提供了处理两种类型参数的接口: <code>BiPredicate&lt;T,U&gt;</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="Predicate接口示例"><a href="#Predicate接口示例" class="headerlink" title="Predicate接口示例:"></a>Predicate<t>接口示例:</t></h4><ul>
+<li>Predicate接口常用于为集合对象执行筛选条件<ul>
+<li>这次示例,使用<code>BiPredicate&lt;T,U&gt;</code>接口</li>
+<li>示例作用是,根据年龄筛选出列表中的人 </li>
+</ul>
+</li>
+</ul>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(<span class="params">String[] args</span>) </span>&#123;</div><div class="line">    List&lt;Person&gt; people = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    people.<span class="keyword">add</span>(<span class="keyword">new</span> Person(<span class="string">"Killua"</span>,<span class="number">11</span>));</div><div class="line">    people.<span class="keyword">add</span>(<span class="keyword">new</span> Person(<span class="string">"Netero"</span>,<span class="number">110</span>));</div><div class="line">    people.<span class="keyword">add</span>(<span class="keyword">new</span> Person(<span class="string">"alluka"</span>,<span class="number">10</span>));</div><div class="line">    people.<span class="keyword">add</span>(<span class="keyword">new</span> Person(<span class="string">"Zeno"</span>,<span class="number">67</span>));</div><div class="line"></div><div class="line">    usingLambda(people);</div><div class="line"></div><div class="line">    NotUsingLambda(people);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 使用了Lambda表达式的方法</span></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">usingLambda</span>(<span class="params">List&lt;Person&gt; people</span>) </span>&#123;</div><div class="line">    BiPredicate&lt;Person, Integer&gt; judgeByAge = (p, i)-&gt;p.getAge()&gt;i;</div><div class="line"></div><div class="line">    people.forEach(person -&gt; &#123;</div><div class="line">        <span class="keyword">if</span>(judgeByAge.test(person,<span class="number">60</span>))</div><div class="line">            System.<span class="keyword">out</span>.println(person.getName() + <span class="string">": is a old man"</span>);</div><div class="line">        <span class="keyword">else</span></div><div class="line">            System.<span class="keyword">out</span>.println(person.getName() + <span class="string">": is a young man"</span>);</div><div class="line">    &#125;);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 未使用lambda表达式的方法</span></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">NotUsingLambda</span>(<span class="params">List&lt;Person&gt; people</span>) </span>&#123;</div><div class="line">    BiPredicate&lt;Person, Integer&gt; judgeByAge = <span class="keyword">new</span> BiPredicate&lt;Person, Integer&gt;() &#123;</div><div class="line">    @<span class="function">Override</span></div><div class="line">    <span class="keyword">public</span> boolean <span class="title">test</span>(<span class="params">Person person, Integer i</span>) &#123;</div><div class="line">        <span class="keyword">if</span> (person.getAge()&gt;i)</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">        <span class="keyword">else</span></div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (Person person : people) &#123;</div><div class="line">        <span class="keyword">if</span>(judgeByAge.test(person,<span class="number">60</span>))</div><div class="line">            System.<span class="keyword">out</span>.println(person.getName() + <span class="string">": is a old man"</span>);</div><div class="line">        <span class="keyword">else</span></div><div class="line">            System.<span class="keyword">out</span>.println(person.getName() + <span class="string">": is a young man"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Function接口"><a href="#Function接口" class="headerlink" title="Function接口"></a>Function<t,r>接口</t,r></h3><h4 id="Function接口概述"><a href="#Function接口概述" class="headerlink" title="Function接口概述:"></a>Function<t,r>接口概述:</t,r></h4><ul>
+<li>接口名 : Function<t,r></t,r></li>
+<li>参数类型 : T</li>
+<li>返回值类型 : R</li>
+<li>抽象方法名 : apply</li>
+<li>方法描述 : 处理T类型参数,返回R类型参数</li>
+<li>其他方法 : compose,andThen,identity</li>
+<li>补充知识点 : <ul>
+<li>提供了一个对应的非泛型接口: <code>IntFunction</code>,参数为int类型时建议使用,减少执行时的拆装箱 </li>
+<li>提供了处理两种类型参数的接口: <code>BiPredicate&lt;T,U,R&gt;</code>,表示传入参数是T,和U类型,返回值R类型 </li>
+</ul>
+</li>
+</ul>
+<h4 id="Function接口示例"><a href="#Function接口示例" class="headerlink" title="Function接口示例:"></a>Function<t,r>接口示例:</t,r></h4><ul>
+<li>示例说明:<ul>
+<li>示例是,传入一句话,算出里面多少个单词 </li>
+</ul>
+</li>
+</ul>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">String</span> test = <span class="string">"This is a word-count test"</span>;</div><div class="line"><span class="keyword">Function</span>&lt;<span class="built_in">String</span>,<span class="built_in">Integer</span>&gt; wordCount =</div><div class="line">        s -&gt; s.split(<span class="string">" "</span>).length;</div><div class="line">System.<span class="keyword">out</span>.println(wordCount.apply(test));</div></pre></td></tr></table></figure>
+<p>至此,完…… </p>
+<blockquote>
+<p><em>RIP Dolores O`Riordan</em> </p>
+</blockquote>
+<div align="center"><img src="http://storage.live.com/items/AEE68C12565C1619!203843?authkey=AJoh90nl3u6Wj4U" alt="Wake Up And Smell The Coffee"></div>
+
+<!-- 参考文献 -->
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Xiangyu Kong
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://duruonanni.com/Renovate-Java-Basic-05Lambda/20180117.html" title="Java基础重修_05Lambda表达式">http://duruonanni.com/Renovate-Java-Basic-05Lambda/20180117.html</a>
+    </li>
+    <!-- 添加文章更新历史 -->
+    <li>
+      <strong>发布时间：</strong>
+      <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-17T17:21:25+08:00">
+        2018年01月17日 - 17时21分
+      </time>
+    </li>
+    <li>
+      <strong>最后更新：</strong>
+      <time title="更新于" itemprop="dateModified" datetime="2018-01-17T19:50:20+08:00">
+        2018年01月17日 - 19时50分
+      </time>
+    </li>
+    <li>
+      <strong>更新历史：</strong>
+      <i class="fa fa-github" aria-hidden="true"></i>
+      <a href="https://github.com/duruonanni/blog_backup/blame/master/Renovate-Java-Basic-05Lambda.md" title="顺序查看文章各部分修改记录" target = "_blank">Blame</a>,
+      <a href="https://github.com/duruonanni/blog_backup/commits/master/Renovate-Java-Basic-05Lambda.md" title="查看文章有关更新记录" target = "_blank">History</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      <i class="fa fa-copyright" aria-hidden="true"></i>
+      <i class="copyright" /> <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">署名-非商业性使用-相同方式共享 3.0</a> 转载需保留原文链接及原作者
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag"># 笔记</a>
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/基础知识/" rel="tag"># 基础知识</a>
+          
+            <a href="/tags/Lambda/" rel="tag"># Lambda</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Renovate-Java-Basic-04generics/20180115.html" rel="next" title="Java中的泛型">
+                <i class="fa fa-chevron-left"></i> Java中的泛型
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODU5MC81MTYx"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Xiangyu Kong" />
+          <p class="site-author-name" itemprop="name">Xiangyu Kong</p>
+           
+              <p class="site-description motion-element" itemprop="description">Life is a gift,never take it for granted.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/duruonanni" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:kate_2012@outlook.com" target="_blank" title="E-mail">
+                  
+                    <i class="fa fa-fw fa-envelope-o"></i>
+                  
+                  E-mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Blogroll
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://bujige.net/" title="不羁阁" target="_blank">不羁阁</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在之前的话"><span class="nav-number">1.</span> <span class="nav-text">写在之前的话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lambda表达式概述"><span class="nav-number">2.</span> <span class="nav-text">Lambda表达式概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单Lambda表达式示例"><span class="nav-number">2.1.</span> <span class="nav-text">简单Lambda表达式示例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lambuda表达式语法"><span class="nav-number">3.</span> <span class="nav-text">lambuda表达式语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数式接口的定义"><span class="nav-number">3.1.</span> <span class="nav-text">函数式接口的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补充知识点-接口中的默认方法和静态方法"><span class="nav-number">3.2.</span> <span class="nav-text">补充知识点: 接口中的默认方法和静态方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数式接口的实现"><span class="nav-number">3.3.</span> <span class="nav-text">函数式接口的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lambda表达式1的详解"><span class="nav-number">3.3.1.</span> <span class="nav-text">Lambda表达式1的详解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Lambda表达式2的详解"><span class="nav-number">3.3.2.</span> <span class="nav-text">Lambda表达式2的详解</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lambda表达式注意事项"><span class="nav-number">3.4.</span> <span class="nav-text">Lambda表达式注意事项:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lambda表达式访问外部变量"><span class="nav-number">3.4.1.</span> <span class="nav-text">Lambda表达式访问外部变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Lambda表达式中使用this和super关键字"><span class="nav-number">3.4.2.</span> <span class="nav-text">Lambda表达式中使用this和super关键字</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补充知识点-effectively-final变量"><span class="nav-number">3.5.</span> <span class="nav-text">补充知识点: effectively final变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lambda表达式和匿名内部类"><span class="nav-number">4.</span> <span class="nav-text">Lambda表达式和匿名内部类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lambda表达式和匿名内部类对比说明"><span class="nav-number">4.1.</span> <span class="nav-text">Lambda表达式和匿名内部类对比说明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法引用"><span class="nav-number">5.</span> <span class="nav-text">方法引用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法引用概述"><span class="nav-number">5.1.</span> <span class="nav-text">方法引用概述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用函数式接口"><span class="nav-number">6.</span> <span class="nav-text">常用函数式接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用函数式接口概述"><span class="nav-number">6.1.</span> <span class="nav-text">常用函数式接口概述:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Consumer接口"><span class="nav-number">6.2.</span> <span class="nav-text">Consumer接口</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Consumer接口概述"><span class="nav-number">6.2.1.</span> <span class="nav-text">Consumer接口概述:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Consumer接口示例"><span class="nav-number">6.2.2.</span> <span class="nav-text">Consumer接口示例:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Predicate接口"><span class="nav-number">6.3.</span> <span class="nav-text">Predicate接口</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Predicate接口概述"><span class="nav-number">6.3.1.</span> <span class="nav-text">Predicate接口概述:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Predicate接口示例"><span class="nav-number">6.3.2.</span> <span class="nav-text">Predicate接口示例:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Function接口"><span class="nav-number">6.4.</span> <span class="nav-text">Function接口</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Function接口概述"><span class="nav-number">6.4.1.</span> <span class="nav-text">Function接口概述:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Function接口示例"><span class="nav-number">6.4.2.</span> <span class="nav-text">Function接口示例:</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xiangyu Kong</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("sp4GxIsquuzrVglpq6qBhnNE-gzGzoHsz", "tf96rsytceW1gRFWbIFyfudn");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
