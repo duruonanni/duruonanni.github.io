@@ -96,21 +96,23 @@
 
 
 
-<meta name="description" content="写在之前的话 本文是杜若学习GitHub的笔记整理,主要参考了以下书籍,博客:  廖雪峰先生的git教程 Por Git (推荐,官方教程)   由于我的开发环境是Windows,所以主要记录这上面的使用方法 PS: 为了添加操作对应的图片,基本重写了整个笔记,真是够了   在笔记的末尾,总结了笔记示例中用到的常用Git命令,供以查询 笔记只涉及Git和Github的概念性介绍,和简单的Git命令">
+<meta name="description" content="写在之前的话 本文是杜若学习GitHub的笔记整理,主要参考了以下书籍,博客: 《GitHub入门与实践》 廖雪峰先生的git教程 Por Git (推荐,官方教程)   由于我的开发环境是Windows,所以主要记录这上面的使用方法 PS: 为了添加操作对应的图片,基本重写了整个笔记,真是够了   在笔记的末尾,总结了笔记示例中用到的常用Git命令,供以查询 笔记只涉及Git和Github的概念">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GitHub入门与实践读书笔记">
+<meta property="og:title" content="《GitHub入门与实践》读书笔记">
 <meta property="og:url" content="http://duruonanni.com/git-summary/20180121.html">
 <meta property="og:site_name" content="杜若喃呢">
-<meta property="og:description" content="写在之前的话 本文是杜若学习GitHub的笔记整理,主要参考了以下书籍,博客:  廖雪峰先生的git教程 Por Git (推荐,官方教程)   由于我的开发环境是Windows,所以主要记录这上面的使用方法 PS: 为了添加操作对应的图片,基本重写了整个笔记,真是够了   在笔记的末尾,总结了笔记示例中用到的常用Git命令,供以查询 笔记只涉及Git和Github的概念性介绍,和简单的Git命令">
+<meta property="og:description" content="写在之前的话 本文是杜若学习GitHub的笔记整理,主要参考了以下书籍,博客: 《GitHub入门与实践》 廖雪峰先生的git教程 Por Git (推荐,官方教程)   由于我的开发环境是Windows,所以主要记录这上面的使用方法 PS: 为了添加操作对应的图片,基本重写了整个笔记,真是够了   在笔记的末尾,总结了笔记示例中用到的常用Git命令,供以查询 笔记只涉及Git和Github的概念">
 <meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!199203:/github_portal.png?authkey=AJoh90nl3u6Wj4U">
 <meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!199201:/octocat.png?authkey=AJoh90nl3u6Wj4U">
 <meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!199205:/Git_Bash.png?authkey=AJoh90nl3u6Wj4U">
+<meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!201530:/git_SSH_Key13.png?authkey=AJoh90nl3u6Wj4U">
 <meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!201522:/git_diff.png?authkey=AJoh90nl3u6Wj4U">
 <meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!201523:/git_status.png?authkey=AJoh90nl3u6Wj4U">
 <meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!201525:/github7.png?authkey=AJoh90nl3u6Wj4U">
 <meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!201527:/git_log9.png?authkey=AJoh90nl3u6Wj4U">
 <meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!201526:/github_GitGui8.png?authkey=AJoh90nl3u6Wj4U">
 <meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!201528:/git_reset2.png?authkey=AJoh90nl3u6Wj4U">
+<meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!201529:/git_delete12.png?authkey=AJoh90nl3u6Wj4U">
 <meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!201531:/git_new_repo14.png?authkey=AJoh90nl3u6Wj4U">
 <meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!201532:/git_new_repo15.png?authkey=AJoh90nl3u6Wj4U">
 <meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!201533:/git_push16.png?authkey=AJoh90nl3u6Wj4U">
@@ -132,10 +134,10 @@
 <meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!206352:/git_tag_remote_delete.png?authkey=AJoh90nl3u6Wj4U">
 <meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!206354:/git_lg.png?authkey=AJoh90nl3u6Wj4U">
 <meta property="og:image" content="http://storage.live.com/items/AEE68C12565C1619!199202:/Album_Cover_清风二式_西皮士.jpg?authkey=AJoh90nl3u6Wj4U">
-<meta property="og:updated_time" content="2018-01-21T10:45:02.856Z">
+<meta property="og:updated_time" content="2018-01-21T13:00:42.701Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GitHub入门与实践读书笔记">
-<meta name="twitter:description" content="写在之前的话 本文是杜若学习GitHub的笔记整理,主要参考了以下书籍,博客:  廖雪峰先生的git教程 Por Git (推荐,官方教程)   由于我的开发环境是Windows,所以主要记录这上面的使用方法 PS: 为了添加操作对应的图片,基本重写了整个笔记,真是够了   在笔记的末尾,总结了笔记示例中用到的常用Git命令,供以查询 笔记只涉及Git和Github的概念性介绍,和简单的Git命令">
+<meta name="twitter:title" content="《GitHub入门与实践》读书笔记">
+<meta name="twitter:description" content="写在之前的话 本文是杜若学习GitHub的笔记整理,主要参考了以下书籍,博客: 《GitHub入门与实践》 廖雪峰先生的git教程 Por Git (推荐,官方教程)   由于我的开发环境是Windows,所以主要记录这上面的使用方法 PS: 为了添加操作对应的图片,基本重写了整个笔记,真是够了   在笔记的末尾,总结了笔记示例中用到的常用Git命令,供以查询 笔记只涉及Git和Github的概念">
 <meta name="twitter:image" content="http://storage.live.com/items/AEE68C12565C1619!199203:/github_portal.png?authkey=AJoh90nl3u6Wj4U">
 
 
@@ -170,7 +172,7 @@
 
 
 
-  <title>GitHub入门与实践读书笔记 | 杜若喃呢</title>
+  <title>《GitHub入门与实践》读书笔记 | 杜若喃呢</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -326,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">GitHub入门与实践读书笔记</h1>
+          <h1 class="post-title" itemprop="name headline">《GitHub入门与实践》读书笔记</h1>
         
 
         <div class="post-meta">
@@ -356,7 +358,7 @@
 
           
           
-             <span id="/git-summary/20180121.html" class="leancloud_visitors" data-flag-title="GitHub入门与实践读书笔记">
+             <span id="/git-summary/20180121.html" class="leancloud_visitors" data-flag-title="《GitHub入门与实践》读书笔记">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -381,7 +383,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  8,349
+                  8,353
                 </span>
               
 
@@ -405,7 +407,7 @@
       
         <h2 id="写在之前的话"><a href="#写在之前的话" class="headerlink" title="写在之前的话"></a>写在之前的话</h2><ul>
 <li>本文是杜若学习GitHub的笔记整理,主要参考了以下书籍,博客:<ol>
-<li><a href="http://www.ituring.com.cn/book/1581" title="图灵出版社 &lt;GitHub入门与实践&gt;" target="_blank" rel="external"><github入门与实践></github入门与实践></a></li>
+<li><a href="http://www.ituring.com.cn/book/1581" target="_blank" rel="external">《GitHub入门与实践》</a></li>
 <li><a href="https://liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">廖雪峰先生的git教程</a></li>
 <li><a href="https://git-scm.com/book/zh/v2" title="Por Git 官方教程" target="_blank" rel="external">Por Git</a> (推荐,官方教程)</li>
 </ol>
@@ -416,11 +418,12 @@
 </li>
 <li>在笔记的末尾,总结了笔记示例中用到的<a href="#git_command">常用Git命令</a>,供以查询<ul>
 <li>笔记只涉及Git和Github的概念性介绍,和简单的Git命令</li>
-<li>更多厉害的功能,我也还不会,待以后扩充吧<br>呐~正文开始啦~🐱‍👤</li>
+<li>更多厉害的功能,我也还不会,待以后扩充吧 </li>
 </ul>
 </li>
 </ul>
-<div align="center"><img src="http://storage.live.com/items/AEE68C12565C1619!199203:/github_portal.png?authkey=AJoh90nl3u6Wj4U" alt="github_portal"></div>
+<p>呐~正文开始啦~🐱‍👤</p>
+<div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!199203:/github_portal.png?authkey=AJoh90nl3u6Wj4U" alt="github_portal"></div>
 
 <hr>
 <h2 id="Git简介"><a href="#Git简介" class="headerlink" title="Git简介:"></a>Git简介:</h2><ul>
@@ -488,7 +491,7 @@
 </ul>
 </li>
 <li><p>GitHub的标志很萌,叫<code>octocat</code>–&gt; <code>octopus</code>+<code>cat</code></p>
-<div align="center"><img src="http://storage.live.com/items/AEE68C12565C1619!199201:/octocat.png?authkey=AJoh90nl3u6Wj4U" alt="octocat"></div>
+<div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!199201:/octocat.png?authkey=AJoh90nl3u6Wj4U" alt="octocat"></div>
 </li>
 <li><p>GitHub上绝大多数都是公开的代码,这影响了人们的开发方式</p>
 <ul>
@@ -519,7 +522,7 @@
 </li>
 <li>安装好后,会出现一个<code>Git Bash</code>应用<ul>
 <li>这是一个命令提示符界面,类似CMD</li>
-<li>所有的Git命令都在这个应用中使用 <div align="center"><img src="http://storage.live.com/items/AEE68C12565C1619!199205:/Git_Bash.png?authkey=AJoh90nl3u6Wj4U" alt="Git_Bash"></div>
+<li>所有的Git命令都在这个应用中使用 <div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!199205:/Git_Bash.png?authkey=AJoh90nl3u6Wj4U" alt="Git_Bash"></div>
 
 </li>
 </ul>
@@ -566,7 +569,7 @@
 </li>
 </ul>
 <h4 id="向GitHub添加公钥用于连接"><a href="#向GitHub添加公钥用于连接" class="headerlink" title="向GitHub添加公钥用于连接"></a>向GitHub添加公钥用于连接</h4><ul>
-<li>登陆GitHub,找到<code>setting</code>–&gt;<code>SSH Keys and GPG Keys</code>  <div align="center">![git_SSH_Key13]</div></li>
+<li>登陆GitHub,找到<code>setting</code>–&gt;<code>SSH Keys and GPG Keys</code>  <div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201530:/git_SSH_Key13.png?authkey=AJoh90nl3u6Wj4U" alt="git_SSH_Key13"></div></li>
 <li>选<code>Add SSH Key</code><ul>
 <li>title填你喜欢的</li>
 <li>Key填刚才生成的公有密钥<code>id_rsa.pub</code>中的值</li>
@@ -629,13 +632,13 @@
 <li>具体用法:<ol>
 <li>向之前的<code>hello_world.php</code>添加一句注释,<code>&lt;!-- 添加注释 --&gt;</code><ul>
 <li>此时这个文件中的数据就已经改变了</li>
-<li>可以通过<code>git status</code>命令查看文件状态,会显示<code>modified</code> <div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201522:/git_diff.png?authkey=AJoh90nl3u6Wj4U" alt="git_diff"></div></li>
+<li>可以通过<code>git status</code>命令查看文件状态,会显示<code>modified</code> <div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201522:/git_diff.png?authkey=AJoh90nl3u6Wj4U" alt="git_diff"></div></li>
 </ul>
 </li>
 <li>执行<code>git diff 文件名</code>命令<ul>
 <li>diff就是different的简写,注意后面要加文件名</li>
 <li>执行后会显示该文件的未提交的具体变化 </li>
-<li>添加的注释是绿色的,前面有个<code>+</code><div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201523:/git_status.png?authkey=AJoh90nl3u6Wj4U" alt="git_status"></div></li>
+<li>添加的注释是绿色的,前面有个<code>+</code><div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201523:/git_status.png?authkey=AJoh90nl3u6Wj4U" alt="git_status"></div></li>
 </ul>
 </li>
 <li>执行<code>git add 文件名</code>命令<ul>
@@ -650,7 +653,7 @@
 </li>
 <li>执行<code>git status</code>查看当前文件状态<ul>
 <li>会看到之前没有需要提交的修改了</li>
-<li><code>working three is clean</code><div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201525:/github7.png?authkey=AJoh90nl3u6Wj4U" alt="github7"></div></li>
+<li><code>working three is clean</code><div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201525:/github7.png?authkey=AJoh90nl3u6Wj4U" alt="github7"></div></li>
 </ul>
 </li>
 <li>建议多次尝试修改,进行练习 </li>
@@ -662,12 +665,12 @@
 <li>执行<code>git log</code>命令<ul>
 <li>查看仓库日志,就是<code>commit</code>的执行和说明<ul>
 <li>日志中<code>commit</code>后面的一串字符是系统生成的id</li>
-<li>用来标识那次改动的版本<div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201527:/git_log9.png?authkey=AJoh90nl3u6Wj4U" alt="git_log9"></div></li>
+<li>用来标识那次改动的版本<div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201527:/git_log9.png?authkey=AJoh90nl3u6Wj4U" alt="git_log9"></div></li>
 </ul>
 </li>
 <li>多次提交<code>commit</code>Git会把执行存成一条时间线</li>
 <li>通过<code>Git Gui</code>可以查看提交历史的时间线<ul>
-<li>不建议使用这个软件,因为我们主要会在<code>github</code>上看啦<div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201526:/github_GitGui8.png?authkey=AJoh90nl3u6Wj4U" alt="github_GitGui8"></div></li>
+<li>不建议使用这个软件,因为我们主要会在<code>github</code>上看啦<div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201526:/github_GitGui8.png?authkey=AJoh90nl3u6Wj4U" alt="github_GitGui8"></div></li>
 </ul>
 </li>
 <li>在<code>Git Bash</code>中查看完日志后的退出<ul>
@@ -777,7 +780,7 @@
 </li>
 <li>执行<code>git reset HEAD hello_world.php</code><ul>
 <li>看这里<code>reset</code>命令也可以撤销暂存区中的修改哈</li>
-<li>现在看<code>status</code>,修改显示为未纳入暂存区的红色状态,那就用情形1的方法搞定吧<div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201528:/git_reset2.png?authkey=AJoh90nl3u6Wj4U" alt="git_reset2"></div></li>
+<li>现在看<code>status</code>,修改显示为未纳入暂存区的红色状态,那就用情形1的方法搞定吧<div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201528:/git_reset2.png?authkey=AJoh90nl3u6Wj4U" alt="git_reset2"></div></li>
 </ul>
 </li>
 <li>执行<code>git checkout -- hello_world.php</code></li>
@@ -794,7 +797,7 @@
 </li>
 <li>在本地删除该文件,执行<code>git status</code><ul>
 <li>信息说名该文件被删除了</li>
-<li>但本地删除了,版本库里还有,需要删除版本库中的执行<code>5.</code>操作<br><div aling="center">![git_delete12]</div><ol>
+<li>但本地删除了,版本库里还有,需要删除版本库中的执行<code>5.</code>操作<br><div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201529:/git_delete12.png?authkey=AJoh90nl3u6Wj4U" alt="git_delete12"></div><ol>
 <li>执行<code>git rm hello_git.txt</code></li>
 </ol>
 </li>
@@ -823,14 +826,14 @@
 <li>听<a href="http://music.163.com/m/song?id=801824&amp;userid=9567158" target="_blank" rel="external">这首歌</a>时候取的名字…</li>
 </ul>
 </li>
-<li>选<code>Create repository</code>确认创建<div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201531:/git_new_repo14.png?authkey=AJoh90nl3u6Wj4U" alt="git_new_repo14"></div></li>
+<li>选<code>Create repository</code>确认创建<div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201531:/git_new_repo14.png?authkey=AJoh90nl3u6Wj4U" alt="git_new_repo14"></div></li>
 </ul>
 </li>
 <li>将本地仓库与GitHub上新建的仓库连接<ul>
 <li>进入本地仓库,在<code>Git Bash</code>中输入:</li>
 <li><code>git remote add origin git@github.com:你的帐户名/你的仓库名.git</code></li>
 <li>这个操作,看GitHub上都有提醒的,复制代码来运行即可</li>
-<li>操作中的<code>origin</code>,是远程库的名字,默认使用这个名字,这样看到就知道是远程库了<div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201532:/git_new_repo15.png?authkey=AJoh90nl3u6Wj4U" alt="git_new_repo15"></div></li>
+<li>操作中的<code>origin</code>,是远程库的名字,默认使用这个名字,这样看到就知道是远程库了<div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201532:/git_new_repo15.png?authkey=AJoh90nl3u6Wj4U" alt="git_new_repo15"></div></li>
 </ul>
 </li>
 <li>将本地库内容推送到GitHub远程库上<ul>
@@ -840,13 +843,13 @@
 </ul>
 </li>
 <li><code>origin</code> : 说明推送到的远程仓库的名字</li>
-<li><code>master</code> : 主分支,关于分支,[后面][#branch]会详细讲<div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201533:/git_push16.png?authkey=AJoh90nl3u6Wj4U" alt="git_push16"></div></li>
+<li><code>master</code> : 主分支,关于分支,[后面][#branch]会详细讲<div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201533:/git_push16.png?authkey=AJoh90nl3u6Wj4U" alt="git_push16"></div></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>打开GitHub上的<code>noastalgic</code>项目,本地仓库的内容就已经推送到了<ul>
-<li>随时将本地项目<code>push</code>到GitHub上,就能防止代码丢失等情况<div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201534:/github_push17.png?authkey=AJoh90nl3u6Wj4U" alt="github_push17"></div></li>
+<li>随时将本地项目<code>push</code>到GitHub上,就能防止代码丢失等情况<div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201534:/github_push17.png?authkey=AJoh90nl3u6Wj4U" alt="github_push17"></div></li>
 </ul>
 </li>
 </ol>
@@ -869,7 +872,7 @@
 <li>选择一个本地文件夹,打开<code>Git Bash</code><ul>
 <li>文件夹不要和原有仓库文件夹一样,会出错</li>
 <li>执行:<code>git clone git@github.com:duruonanni/ClonePractice.git</code><ul>
-<li>换成自己的仓库地址<div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201535:/git_clone18.jpg?authkey=AJoh90nl3u6Wj4U" alt="git_clone18"></div><br><div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201536:/git_clone19.png?authkey=AJoh90nl3u6Wj4U" alt="git_clone19"></div></li>
+<li>换成自己的仓库地址<div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201535:/git_clone18.jpg?authkey=AJoh90nl3u6Wj4U" alt="git_clone18"></div><br><div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201536:/git_clone19.png?authkey=AJoh90nl3u6Wj4U" alt="git_clone19"></div></li>
 </ul>
 </li>
 </ul>
@@ -919,7 +922,7 @@
 </li>
 <li>查看当前项目的本地分支:<ul>
 <li>执行: <code>git branch</code><ul>
-<li><code>*</code>表示当前所在分支<div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201539:/git_master22.png?authkey=AJoh90nl3u6Wj4U" alt="git_branch20"></div></li>
+<li><code>*</code>表示当前所在分支<div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201539:/git_master22.png?authkey=AJoh90nl3u6Wj4U" alt="git_branch20"></div></li>
 </ul>
 </li>
 <li>执行: <code>git status</code><ul>
@@ -947,7 +950,7 @@
 <li>执行的是将<code>dev</code>分支合并到当前分支,当前分支这里是<code>master</code>主分支</li>
 <li>执行后显示的<code>Fast-forward</code>意思是<ul>
 <li>这次合并是”快进模式”,也就是直接把master指向dev的当前提交,所以合并速度非常快</li>
-<li>后面还会讲到其他合并模式<div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201538:/git_merge21.png?authkey=AJoh90nl3u6Wj4U" alt="git_merge21"></div></li>
+<li>后面还会讲到其他合并模式<div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201538:/git_merge21.png?authkey=AJoh90nl3u6Wj4U" alt="git_merge21"></div></li>
 </ul>
 </li>
 </ul>
@@ -995,7 +998,7 @@
 <li>切换到master分支<ul>
 <li>执行: <code>git checkout master</code><ul>
 <li>显示: <code>Your branch is ahead of &#39;origin/master&#39; by 1 commit.</code><ul>
-<li>说明本地的<code>master</code>分支比远程的<code>origin/maste</code>超前一个版本(<code>commit</code>)<div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201539:/git_master22.png?authkey=AJoh90nl3u6Wj4U" alt="git_master22"></div></li>
+<li>说明本地的<code>master</code>分支比远程的<code>origin/maste</code>超前一个版本(<code>commit</code>)<div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201539:/git_master22.png?authkey=AJoh90nl3u6Wj4U" alt="git_master22"></div></li>
 </ul>
 </li>
 </ul>
@@ -1014,7 +1017,7 @@
 <li>尝试合并feature1分支<ul>
 <li>执行: <code>git merge feature1</code></li>
 <li>显示合并失败,文件冲突<code>CONFILCT</code></li>
-<li>也开始在尝试合并后,使用<code>status</code>查看状态,系统有给出解决冲突的建议<div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201540:/git_master23.png?authkey=AJoh90nl3u6Wj4U" alt="git_master23"></div></li>
+<li>也开始在尝试合并后,使用<code>status</code>查看状态,系统有给出解决冲突的建议<div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201540:/git_master23.png?authkey=AJoh90nl3u6Wj4U" alt="git_master23"></div></li>
 </ul>
 </li>
 <li>解决文件冲突<ul>
@@ -1027,7 +1030,7 @@
 <li>我们可以根据需要手动对内容进行修改并保存<ul>
 <li>我们只留下master的修改</li>
 <li>当然在更智能的编辑器上,可以更方便的修改冲突</li>
-<li>VSCODE上集成了Git,它的冲突修改界面入下图2<div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201542:/git_merge_config24.png?authkey=AJoh90nl3u6Wj4U" alt="git_merge_config24"></div><br><div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201543:/git_merge_config_vscode25.png?authkey=AJoh90nl3u6Wj4U" alt="git_merge_config_vscode25"></div></li>
+<li>VSCODE上集成了Git,它的冲突修改界面入下图2<div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201542:/git_merge_config24.png?authkey=AJoh90nl3u6Wj4U" alt="git_merge_config24"></div><br><div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201543:/git_merge_config_vscode25.png?authkey=AJoh90nl3u6Wj4U" alt="git_merge_config_vscode25"></div></li>
 </ul>
 </li>
 </ul>
@@ -1043,7 +1046,7 @@
 </li>
 <li>用log查看分支情况<ul>
 <li>执行: <code>git log --graph</code></li>
-<li>可以看到分支启用和合并的情况<div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!201544:/git_log_graph26.png?authkey=AJoh90nl3u6Wj4U" alt="git_log_graph26"></div>
+<li>可以看到分支启用和合并的情况<div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!201544:/git_log_graph26.png?authkey=AJoh90nl3u6Wj4U" alt="git_log_graph26"></div>
 
 </li>
 </ul>
@@ -1079,14 +1082,14 @@
 </ul>
 </li>
 <li>合并<code>dev</code>分支,注意<code>-no-ff</code> 参数<ul>
-<li><code>git merge --no-ff -m &quot;merge dev with no-ff&quot; dev</code><div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!203845:/git_merge_no-ff27.png?authkey=AJoh90nl3u6Wj4U" alt="git_merge_no-ff27"></div></li>
+<li><code>git merge --no-ff -m &quot;merge dev with no-ff&quot; dev</code><div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!203845:/git_merge_no-ff27.png?authkey=AJoh90nl3u6Wj4U" alt="git_merge_no-ff27"></div></li>
 </ul>
 </li>
 <li>使用<code>log</code>查看分支历史<ul>
 <li><code>git log --graph --pretty=oneline --abbrev-commit&quot;</code><ul>
 <li><code>--pretty=oneline</code> : 让log的显示格式为简略1行</li>
 <li><code>--abbrev-commit</code> : id值只显示前面几个字符</li>
-<li><code>log</code>的更多查看方式,见<span id="log">下面</span><div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!203846:/git_log_no-ff28.png?authkey=AJoh90nl3u6Wj4U" alt="git_log_no-ff28"></div></li>
+<li><code>log</code>的更多查看方式,见<a href="#log">下面</a><div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!203846:/git_log_no-ff28.png?authkey=AJoh90nl3u6Wj4U" alt="git_log_no-ff28"></div></li>
 </ul>
 </li>
 </ul>
@@ -1116,7 +1119,7 @@
 </ul>
 </li>
 <li>这时候master分支有bug需要立即处理,使用<code>stash</code>将当前工作”储藏”起来<ul>
-<li><code>git stash</code><div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!203847:/git_stash29.png?authkey=AJoh90nl3u6Wj4U" alt="git_stash29"></div></li>
+<li><code>git stash</code><div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!203847:/git_stash29.png?authkey=AJoh90nl3u6Wj4U" alt="git_stash29"></div></li>
 </ul>
 </li>
 <li>切换到master分支,修复bug<ul>
@@ -1160,7 +1163,7 @@
 </li>
 </ol>
 </li>
-<li>可使用<code>git stash list</code>命令查看保存的stash<div aling="center"><img src="http://storage.live.com/items/AEE68C12565C1619!203848:/git_stash_pop30.png?authkey=AJoh90nl3u6Wj4U" alt="git_stash_pop30"></div>
+<li>可使用<code>git stash list</code>命令查看保存的stash<div align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!203848:/git_stash_pop30.png?authkey=AJoh90nl3u6Wj4U" alt="git_stash_pop30"></div>
 
 </li>
 </ul>
@@ -1217,7 +1220,7 @@
 </li>
 <li>具体做法:<ol>
 <li>把一个标签推送到远程<ul>
-<li><code>git push origin v1.0</code><br><span align="center"><img src="http://storage.live.com/items/AEE68C12565C1619!206351:/git_tag_remote_add.png?authkey=AJoh90nl3u6Wj4U" alt="git_tag_remote_add"></span></li>
+<li><code>git push origin v1.0</code><br><span align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!206351:/git_tag_remote_add.png?authkey=AJoh90nl3u6Wj4U" alt="git_tag_remote_add"></span></li>
 </ul>
 </li>
 <li>把本地所有标签推送到远程<ul>
@@ -1225,7 +1228,7 @@
 </ul>
 </li>
 <li>删除远程的标签<ul>
-<li><code>git push origin :refs/tags/v1.0</code><br><span align="center"><img src="http://storage.live.com/items/AEE68C12565C1619!206352:/git_tag_remote_delete.png?authkey=AJoh90nl3u6Wj4U" alt="git_tag_remote_delete"></span></li>
+<li><code>git push origin :refs/tags/v1.0</code><br><span align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!206352:/git_tag_remote_delete.png?authkey=AJoh90nl3u6Wj4U" alt="git_tag_remote_delete"></span></li>
 </ul>
 </li>
 </ol>
@@ -1270,10 +1273,10 @@
 <h4 id="别名配置专属-log"><a href="#别名配置专属-log" class="headerlink" title="别名配置专属 log"></a>别名配置专属 log</h4><ul>
 <li>可以把log配置成自己想要显示的格式,然后用一个别名进行保存</li>
 <li><code>git config --global alias.lg &quot;log --color --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit&quot;</code></li>
-<li>配置完成后,输入<code>git lg</code>,显示效果如下:<br><span align="center"><img src="http://storage.live.com/items/AEE68C12565C1619!206354:/git_lg.png?authkey=AJoh90nl3u6Wj4U" alt="git_lg"></span></li>
+<li>配置完成后,输入<code>git lg</code>,显示效果如下:<br><span align="left"><img src="http://storage.live.com/items/AEE68C12565C1619!206354:/git_lg.png?authkey=AJoh90nl3u6Wj4U" alt="git_lg"></span></li>
 </ul>
 <hr>
-<h2 id="常用git命令总结"><a href="#常用git命令总结" class="headerlink" title="常用git命令总结"></a><span id="git_command">常用git命令总结</span></h2><h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><ul>
+<h2 id="常用git命令总结"><a href="#常用git命令总结" class="headerlink" title="[常用git命令总结"></a><span id="git_command">[常用git命令总结</span></h2><h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><ul>
 <li><code>git init [project-name]</code><ul>
 <li>创建本地仓库 </li>
 </ul>
@@ -1349,7 +1352,7 @@
 <h3 id="查看提交历史"><a href="#查看提交历史" class="headerlink" title="查看提交历史"></a>查看提交历史</h3><ul>
 <li><code>git log</code><ul>
 <li>显示<code>Git Bash</code>操作日志详情,包括每次提交的id号</li>
-<li>有多种形式的显示方式,详情见<span id="log">下面</span></li>
+<li>有多种形式的显示方式,详情见<a href="#log">下面</a></li>
 </ul>
 </li>
 <li><code>git log --graph</code><ul>
@@ -1368,7 +1371,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="log输出的常用选项"><a href="#log输出的常用选项" class="headerlink" title="log输出的常用选项"></a><a href="#log">log输出的常用选项</a></h4><p>说明: 这些输出命名效果可以叠加的,可以在一句log命令中使用多个,生成符合自己要求的日志信息: </p>
+<h4 id="log输出的常用选项"><a href="#log输出的常用选项" class="headerlink" title="log输出的常用选项"></a><span id="log">log输出的常用选项</span></h4><p>说明: 这些输出命名效果可以叠加的,可以在一句log命令中使用多个,生成符合自己要求的日志信息: </p>
 <ol>
 <li>末尾加文件名<ul>
 <li>只显示某个文件名相关的日志信息</li>
@@ -1544,7 +1547,11 @@
 </ul>
 </li>
 </ul>
-<p>至此,完……<br><span align="center"><img src="http://storage.live.com/items/AEE68C12565C1619!199202:/Album_Cover_清风二式_西皮士.jpg?authkey=AJoh90nl3u6Wj4U" alt="Album_Cover_清风二式_西皮士"></span></p>
+<p>至此,完…… </p>
+<div align="center"><img src="http://storage.live.com/items/AEE68C12565C1619!199202:/Album_Cover_清风二式_西皮士.jpg?authkey=AJoh90nl3u6Wj4U" alt="Album_Cover_清风二式_西皮士"></div>
+
+
+
 <!-- 参考文献 -->
 
       
@@ -1574,7 +1581,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://duruonanni.com/git-summary/20180121.html" title="GitHub入门与实践读书笔记">http://duruonanni.com/git-summary/20180121.html</a>
+      <a href="http://duruonanni.com/git-summary/20180121.html" title="《GitHub入门与实践》读书笔记">http://duruonanni.com/git-summary/20180121.html</a>
     </li>
     <!-- 添加文章更新历史 -->
     <li>
@@ -1585,8 +1592,8 @@
     </li>
     <li>
       <strong>最后更新：</strong>
-      <time title="更新于" itemprop="dateModified" datetime="2018-01-21T18:45:02+08:00">
-        2018年01月21日 - 18时45分
+      <time title="更新于" itemprop="dateModified" datetime="2018-01-21T21:00:42+08:00">
+        2018年01月21日 - 21时00分
       </time>
     </li>
     <li>
@@ -1803,7 +1810,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在之前的话"><span class="nav-number">1.</span> <span class="nav-text">写在之前的话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git简介"><span class="nav-number">2.</span> <span class="nav-text">Git简介:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git暂存区"><span class="nav-number">2.1.</span> <span class="nav-text">Git暂存区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git中文件的三种状态"><span class="nav-number">2.2.</span> <span class="nav-text">Git中文件的三种状态:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub简介"><span class="nav-number">3.</span> <span class="nav-text">GitHub简介:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git在Windows下的安装和初始化"><span class="nav-number">4.</span> <span class="nav-text">Git在Windows下的安装和初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git安装"><span class="nav-number">4.1.</span> <span class="nav-text">Git安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git初始设置"><span class="nav-number">4.2.</span> <span class="nav-text">Git初始设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub的注册"><span class="nav-number">4.3.</span> <span class="nav-text">GitHub的注册</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH-Key的作用"><span class="nav-number">4.4.</span> <span class="nav-text">SSH Key的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SSH-Key简介"><span class="nav-number">4.4.1.</span> <span class="nav-text">SSH Key简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SSH-Key生成"><span class="nav-number">4.4.2.</span> <span class="nav-text">SSH Key生成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向GitHub添加公钥用于连接"><span class="nav-number">4.4.3.</span> <span class="nav-text">向GitHub添加公钥用于连接</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git常用命令"><span class="nav-number">5.</span> <span class="nav-text">Git常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建本地版本库-init"><span class="nav-number">5.1.</span> <span class="nav-text">创建本地版本库 : init</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向本地仓库添加-amp-提交文件-add-amp-commit"><span class="nav-number">5.2.</span> <span class="nav-text">向本地仓库添加&提交文件 : add&commit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本控制基本用法1-修改文件"><span class="nav-number">5.3.</span> <span class="nav-text">版本控制基本用法1 : 修改文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本控制基本用法2-退回之前版本"><span class="nav-number">5.4.</span> <span class="nav-text">版本控制基本用法2 : 退回之前版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本控制基本用法3-commit前-撤销修改"><span class="nav-number">5.5.</span> <span class="nav-text">版本控制基本用法3: commit前,撤销修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本控制基本用法3-删除文件"><span class="nav-number">5.6.</span> <span class="nav-text">版本控制基本用法3: 删除文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub远程仓库的使用"><span class="nav-number">6.</span> <span class="nav-text">GitHub远程仓库的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加远程库-amp-与本地仓库关联"><span class="nav-number">6.1.</span> <span class="nav-text">添加远程库&与本地仓库关联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从远程仓库克隆"><span class="nav-number">6.2.</span> <span class="nav-text">从远程仓库克隆</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub分支管理"><span class="nav-number">7.</span> <span class="nav-text">GitHub分支管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理概述"><span class="nav-number">7.1.</span> <span class="nav-text">分支管理概述:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理的使用1-新分支的创建-合并与删除"><span class="nav-number">7.2.</span> <span class="nav-text">分支管理的使用1 : 新分支的创建,合并与删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理的使用2-解决文件冲突"><span class="nav-number">7.3.</span> <span class="nav-text">分支管理的使用2: 解决文件冲突</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理的使用3-分支管理策略"><span class="nav-number">7.4.</span> <span class="nav-text">分支管理的使用3: 分支管理策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理的使用4-暂存当前工作"><span class="nav-number">7.5.</span> <span class="nav-text">分支管理的使用4: 暂存当前工作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git标签-tag-管理"><span class="nav-number">8.</span> <span class="nav-text">Git标签(tag)管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git标签概述"><span class="nav-number">8.1.</span> <span class="nav-text">Git标签概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git标签操作1-标签的创建和删除"><span class="nav-number">8.2.</span> <span class="nav-text">Git标签操作1: 标签的创建和删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git标签操作2-远程标签操作"><span class="nav-number">8.3.</span> <span class="nav-text">Git标签操作2: 远程标签操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git命令优化-配置别名"><span class="nav-number">9.</span> <span class="nav-text">Git命令优化: 配置别名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置别名概述"><span class="nav-number">9.1.</span> <span class="nav-text">配置别名概述:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#别名配置示例"><span class="nav-number">9.2.</span> <span class="nav-text">别名配置示例:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#别名配置专属-log"><span class="nav-number">9.2.1.</span> <span class="nav-text">别名配置专属 log</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用git命令总结"><span class="nav-number">10.</span> <span class="nav-text">常用git命令总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建版本库"><span class="nav-number">10.1.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改和提交"><span class="nav-number">10.2.</span> <span class="nav-text">修改和提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除和重命名"><span class="nav-number">10.3.</span> <span class="nav-text">删除和重命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#撤销操作"><span class="nav-number">10.4.</span> <span class="nav-text">撤销操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看提交历史"><span class="nav-number">10.5.</span> <span class="nav-text">查看提交历史</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#log输出的常用选项"><span class="nav-number">10.5.1.</span> <span class="nav-text">log输出的常用选项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GitHub远程操作命令"><span class="nav-number">10.5.2.</span> <span class="nav-text">GitHub远程操作命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支操作"><span class="nav-number">10.6.</span> <span class="nav-text">分支操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐藏储存区操作"><span class="nav-number">10.7.</span> <span class="nav-text">隐藏储存区操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签管理"><span class="nav-number">10.8.</span> <span class="nav-text">标签管理</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在之前的话"><span class="nav-number">1.</span> <span class="nav-text">写在之前的话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git简介"><span class="nav-number">2.</span> <span class="nav-text">Git简介:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git暂存区"><span class="nav-number">2.1.</span> <span class="nav-text">Git暂存区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git中文件的三种状态"><span class="nav-number">2.2.</span> <span class="nav-text">Git中文件的三种状态:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub简介"><span class="nav-number">3.</span> <span class="nav-text">GitHub简介:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git在Windows下的安装和初始化"><span class="nav-number">4.</span> <span class="nav-text">Git在Windows下的安装和初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git安装"><span class="nav-number">4.1.</span> <span class="nav-text">Git安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git初始设置"><span class="nav-number">4.2.</span> <span class="nav-text">Git初始设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub的注册"><span class="nav-number">4.3.</span> <span class="nav-text">GitHub的注册</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH-Key的作用"><span class="nav-number">4.4.</span> <span class="nav-text">SSH Key的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SSH-Key简介"><span class="nav-number">4.4.1.</span> <span class="nav-text">SSH Key简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SSH-Key生成"><span class="nav-number">4.4.2.</span> <span class="nav-text">SSH Key生成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#向GitHub添加公钥用于连接"><span class="nav-number">4.4.3.</span> <span class="nav-text">向GitHub添加公钥用于连接</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git常用命令"><span class="nav-number">5.</span> <span class="nav-text">Git常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建本地版本库-init"><span class="nav-number">5.1.</span> <span class="nav-text">创建本地版本库 : init</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向本地仓库添加-amp-提交文件-add-amp-commit"><span class="nav-number">5.2.</span> <span class="nav-text">向本地仓库添加&提交文件 : add&commit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本控制基本用法1-修改文件"><span class="nav-number">5.3.</span> <span class="nav-text">版本控制基本用法1 : 修改文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本控制基本用法2-退回之前版本"><span class="nav-number">5.4.</span> <span class="nav-text">版本控制基本用法2 : 退回之前版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本控制基本用法3-commit前-撤销修改"><span class="nav-number">5.5.</span> <span class="nav-text">版本控制基本用法3: commit前,撤销修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本控制基本用法3-删除文件"><span class="nav-number">5.6.</span> <span class="nav-text">版本控制基本用法3: 删除文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub远程仓库的使用"><span class="nav-number">6.</span> <span class="nav-text">GitHub远程仓库的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加远程库-amp-与本地仓库关联"><span class="nav-number">6.1.</span> <span class="nav-text">添加远程库&与本地仓库关联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从远程仓库克隆"><span class="nav-number">6.2.</span> <span class="nav-text">从远程仓库克隆</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub分支管理"><span class="nav-number">7.</span> <span class="nav-text">GitHub分支管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理概述"><span class="nav-number">7.1.</span> <span class="nav-text">分支管理概述:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理的使用1-新分支的创建-合并与删除"><span class="nav-number">7.2.</span> <span class="nav-text">分支管理的使用1 : 新分支的创建,合并与删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理的使用2-解决文件冲突"><span class="nav-number">7.3.</span> <span class="nav-text">分支管理的使用2: 解决文件冲突</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理的使用3-分支管理策略"><span class="nav-number">7.4.</span> <span class="nav-text">分支管理的使用3: 分支管理策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理的使用4-暂存当前工作"><span class="nav-number">7.5.</span> <span class="nav-text">分支管理的使用4: 暂存当前工作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git标签-tag-管理"><span class="nav-number">8.</span> <span class="nav-text">Git标签(tag)管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git标签概述"><span class="nav-number">8.1.</span> <span class="nav-text">Git标签概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git标签操作1-标签的创建和删除"><span class="nav-number">8.2.</span> <span class="nav-text">Git标签操作1: 标签的创建和删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git标签操作2-远程标签操作"><span class="nav-number">8.3.</span> <span class="nav-text">Git标签操作2: 远程标签操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git命令优化-配置别名"><span class="nav-number">9.</span> <span class="nav-text">Git命令优化: 配置别名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置别名概述"><span class="nav-number">9.1.</span> <span class="nav-text">配置别名概述:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#别名配置示例"><span class="nav-number">9.2.</span> <span class="nav-text">别名配置示例:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#别名配置专属-log"><span class="nav-number">9.2.1.</span> <span class="nav-text">别名配置专属 log</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用git命令总结"><span class="nav-number">10.</span> <span class="nav-text">[常用git命令总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建版本库"><span class="nav-number">10.1.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改和提交"><span class="nav-number">10.2.</span> <span class="nav-text">修改和提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除和重命名"><span class="nav-number">10.3.</span> <span class="nav-text">删除和重命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#撤销操作"><span class="nav-number">10.4.</span> <span class="nav-text">撤销操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看提交历史"><span class="nav-number">10.5.</span> <span class="nav-text">查看提交历史</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#log输出的常用选项"><span class="nav-number">10.5.1.</span> <span class="nav-text">log输出的常用选项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GitHub远程操作命令"><span class="nav-number">10.5.2.</span> <span class="nav-text">GitHub远程操作命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支操作"><span class="nav-number">10.6.</span> <span class="nav-text">分支操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐藏储存区操作"><span class="nav-number">10.7.</span> <span class="nav-text">隐藏储存区操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签管理"><span class="nav-number">10.8.</span> <span class="nav-text">标签管理</span></a></li></ol></li></ol></div>
             
 
           </div>
