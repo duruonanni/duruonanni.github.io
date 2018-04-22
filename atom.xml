@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://duruonanni.com/"/>
-  <updated>2018-01-24T13:11:19.457Z</updated>
+  <updated>2018-04-22T14:08:42.961Z</updated>
   <id>http://duruonanni.com/</id>
   
   <author>
@@ -14,6 +14,159 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Win10应用推荐</title>
+    <link href="http://duruonanni.com/Recommendation01-application-for-windos10/20180422.html"/>
+    <id>http://duruonanni.com/Recommendation01-application-for-windos10/20180422.html</id>
+    <published>2018-04-22T14:06:38.000Z</published>
+    <updated>2018-04-22T14:08:42.961Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="写在之前的话"><a href="#写在之前的话" class="headerlink" title="写在之前的话"></a>写在之前的话</h2><p>本文主要概略介绍了,杜若在平时工作生活中用到的一些软件.<br>本文撰写灵感来自: <a href="https://amazing-apps.gitbooks.io/windows-apps-that-amaze-us/content/zh-CN/" target="_blank" rel="external">Windows绝赞应用推荐</a><br>文中软件以免费软件为主(收费或特殊情况在鼠标移到超链接处会有说明)<br>呐~正文开始啦~🐱‍👤</p>
+<h2 id="好软推荐列表"><a href="#好软推荐列表" class="headerlink" title="好软推荐列表"></a>好软推荐列表</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">应用类型</th>
+<th style="text-align:center">应用名称</th>
+<th style="text-align:left">推荐理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">浏览器</td>
+<td style="text-align:center"><a href="https://www.centbrowser.com/" target="_blank" rel="external">CentBrowser</a></td>
+<td style="text-align:left">chromium内核 <a href="https://www.centbrowser.com/forum/" target="_blank" rel="external">论坛</a>活跃更新积极 Chrome功能完备(google登录,webstore支持) 保留旧版主页九宫格样式</td>
+</tr>
+<tr>
+<td style="text-align:center">输入法</td>
+<td style="text-align:center">微软拼音</td>
+<td style="text-align:left">win10自带 界面简洁 支持默认中文环境使用半角标点(开发友好) 支持表情符号输入(需设定快捷键)</td>
+</tr>
+<tr>
+<td style="text-align:center">图片浏览器</td>
+<td style="text-align:center"><a href="http://faststone.org/FSViewerDetail.htm" title="遭遇结界可能需要特殊姿势访问官网" target="_blank" rel="external">FSViewer</a></td>
+<td style="text-align:left">操作逻辑优秀 支持类型丰富 图片信息全面(直方图,EXIF,GPS) 编辑功能实用(图文符添加,倾斜修正,色彩调整)</td>
+</tr>
+<tr>
+<td style="text-align:center">视频播放器</td>
+<td style="text-align:center"><a href="http://potplayer.daum.net/?lang=zh_CN" target="_blank" rel="external">PotPlayer</a></td>
+<td style="text-align:left">界面简洁主题丰富 可调整参数丰富 任意倍速播放不卡顿(n刷学习视频友好)</td>
+</tr>
+<tr>
+<td style="text-align:center">密码管理</td>
+<td style="text-align:center"><a href="https://keepass.info/" target="_blank" rel="external">keepass</a></td>
+<td style="text-align:left">强大好用的密码管理软件 加密算法优秀 基础操作简单 密码保存在本地更安心(个人认为密码管理蛮重要,后面会出该软件详细教程)</td>
+</tr>
+<tr>
+<td style="text-align:center">文稿演示</td>
+<td style="text-align:center"><a href="https://www.microsoft.com/store/productId/9WZDNCRD2G0J" title="UWP是微软商店的软件格式" target="_blank" rel="external">sway(uwp)</a></td>
+<td style="text-align:left">微软新出文稿演示应用 成品效果清新独特 属于Office套件软件 操作简单上手快 值得PPTer体验</td>
+</tr>
+<tr>
+<td style="text-align:center">下载器</td>
+<td style="text-align:center"><a href="http://www.zdfans.com/575.html" title="收费软件,链接指向破解版" target="_blank" rel="external">IDM</a></td>
+<td style="text-align:left">强大的多线程下载 批量下载 浏览器嗅探(下载在线视频等)</td>
+</tr>
+<tr>
+<td style="text-align:center">文件搜索</td>
+<td style="text-align:center"><a href="http://www.voidtools.com/" target="_blank" rel="external">Everything</a></td>
+<td style="text-align:left">全硬盘检索 搜索迅速精准 支持模糊查询</td>
+</tr>
+<tr>
+<td style="text-align:center">全局截图</td>
+<td style="text-align:center"><a href="http://ngwin.com/picpick" target="_blank" rel="external">picpick</a></td>
+<td style="text-align:left">个人免费 高画质截图 多截图方式(全屏,长页面) 自带量尺,取色器等工具 截图自定义保存路径保存标题格式 截图后自动复制到剪切板</td>
+</tr>
+<tr>
+<td style="text-align:center">剪切板增强</td>
+<td style="text-align:center"><a href="https://ditto-cp.sourceforge.io/" target="_blank" rel="external">ditto</a><a href="https://www.microsoft.com/zh-cn/store/p/ditto-clipboard/9nblggh3zbjq" title="UWP是微软商店的软件格式" target="_blank" rel="external">(uwp)</a></td>
+<td style="text-align:left">剪切板功能 记住复制历史 复制多个文件后可快速选出需要的文件进行粘贴 配合快捷键超方便(建议设定快捷键<code>右ctrl+\</code>)</td>
+</tr>
+<tr>
+<td style="text-align:center">垃圾清理1</td>
+<td style="text-align:center"><a href="https://www.ccleaner.com/ccleaner" target="_blank" rel="external">ccleaner</a></td>
+<td style="text-align:left">Piriform出品 免费版功能强大够用 缓存清理 注册表垃圾清理 开机启动管理 右键菜单管理 (建议集成到回收站右键快捷方式打开)</td>
+</tr>
+<tr>
+<td style="text-align:center">垃圾清理2</td>
+<td style="text-align:center"><a href="https://www.chuyu.me/en/index.html" target="_blank" rel="external">Dism++</a></td>
+<td style="text-align:left">春雨工作室出品 深度清理系统垃圾 清理迅速 操作简单</td>
+</tr>
+<tr>
+<td style="text-align:center">PDF阅读</td>
+<td style="text-align:center"><a href="http://www.gaaiho.com/index.php/en/products/reader/pdf-reader/overview" target="_blank" rel="external">gaaihoReader</a></td>
+<td style="text-align:left">国人企业出品 个人免费 简洁无广告 符合Office365界面设计</td>
+</tr>
+<tr>
+<td style="text-align:center">压缩软件</td>
+<td style="text-align:center"><a href="https://www.rarlab.com/download.htm" target="_blank" rel="external">winrar</a></td>
+<td style="text-align:left">老牌压缩软件 曾经的收费软件 界面和图标习惯了</td>
+</tr>
+<tr>
+<td style="text-align:center">文件管理器</td>
+<td style="text-align:center"><a href="http://cn.ejie.me/" title="官网版本非原作者维护版,存在广告,可联系杜若索要无广告版" target="_blank" rel="external">clover</a></td>
+<td style="text-align:left">让我的电脑界面变得像chrome样(多开窗口,双击空白位置返回,书签栏功能)</td>
+</tr>
+<tr>
+<td style="text-align:center">文本编辑器</td>
+<td style="text-align:center"><a href="https://code.visualstudio.com/" target="_blank" rel="external">VisualStudio Code</a></td>
+<td style="text-align:left">微软良心出品 VS血统 丰富插件 补全智能 反应迅速 Git完备集成</td>
+</tr>
+<tr>
+<td style="text-align:center">状态栏美化</td>
+<td style="text-align:center"><a href="https://github.com/TranslucentTB/TranslucentTB/releases" target="_blank" rel="external">TranslucentTB</a></td>
+<td style="text-align:left">让win10标题栏透明的开源小插件 调用系统api实现功能 轻量好用 几乎不占用系统资源 效果明显</td>
+</tr>
+<tr>
+<td style="text-align:center">音乐播放器</td>
+<td style="text-align:center"><a href="https://www.microsoft.com/store/productId/9PDJ8X9SPF2K" title="UWP是微软商店的软件格式" target="_blank" rel="external">foobar2000 (uwp)</a></td>
+<td style="text-align:left">知名音乐播放器完整版新加入UWP 无损播放 插件丰富 可定制性高</td>
+</tr>
+<tr>
+<td style="text-align:center">番茄钟</td>
+<td style="text-align:center"><a href="https://www.microsoft.com/store/productId/9NBLGGH5G2XH" title="UWP是微软商店的软件格式" target="_blank" rel="external">番茄钟10(uwp)</a></td>
+<td style="text-align:left">简单的UWP小番茄钟 自定义时间和铃声 适合学习时使用</td>
+</tr>
+<tr>
+<td style="text-align:center">安全防护</td>
+<td style="text-align:center">Windows Defender</td>
+<td style="text-align:left">系统自带 安静可靠</td>
+</tr>
+<tr>
+<td style="text-align:center">视频字幕制作</td>
+<td style="text-align:center"><a href="http://arctime.org/" target="_blank" rel="external">arctime</a></td>
+<td style="text-align:left">国人自制 简单好用的视频字幕制作软件 界面友好 学习成本低 成品效果好</td>
+</tr>
+<tr>
+<td style="text-align:center">音乐歌词制作</td>
+<td style="text-align:center"><a href="https://github.com/BensonLaur/BesLyric" target="_blank" rel="external">BesLyric</a></td>
+<td style="text-align:left">国人自制 开源的歌词制作软件 界面友好 学习成本低 成品效果好</td>
+</tr>
+</tbody>
+</table>
+<div align="center"><img src="http://storage.live.com/items/AEE68C12565C1619!252476" alt="Album_Cover_Let_There_Be_Love_Oasis" title="Album_Cover_Let_There_Be_Love_Oasis"></div>
+
+<!-- 参考文献 -->
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;写在之前的话&quot;&gt;&lt;a href=&quot;#写在之前的话&quot; class=&quot;headerlink&quot; title=&quot;写在之前的话&quot;&gt;&lt;/a&gt;写在之前的话&lt;/h2&gt;&lt;p&gt;本文主要概略介绍了,杜若在平时工作生活中用到的一些软件.&lt;br&gt;本文撰写灵感来自: &lt;a href=&quot;htt
+    
+    </summary>
+    
+      <category term="笔记" scheme="http://duruonanni.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="软件&amp;技巧" scheme="http://duruonanni.com/categories/%E7%AC%94%E8%AE%B0/%E8%BD%AF%E4%BB%B6-%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="笔记" scheme="http://duruonanni.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="应用推荐" scheme="http://duruonanni.com/tags/%E5%BA%94%E7%94%A8%E6%8E%A8%E8%8D%90/"/>
+    
+      <category term="win10" scheme="http://duruonanni.com/tags/win10/"/>
+    
+  </entry>
   
   <entry>
     <title>MySQL 笔记整理</title>
